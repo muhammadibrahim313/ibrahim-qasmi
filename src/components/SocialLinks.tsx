@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, FileText, Trophy, MessageCircle, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const SocialLinks = () => {
@@ -6,38 +6,44 @@ const SocialLinks = () => {
     {
       name: 'GitHub',
       url: 'https://github.com/muhammadibrahim313',
-      icon: '🔗',
+      icon: Github,
       description: 'Open source projects'
     },
     {
       name: 'Medium',
       url: 'https://medium.com/@ibrahim313',
-      icon: '📝',
+      icon: MessageCircle,
       description: 'Technical articles'
     },
     {
       name: 'LinkedIn',
-      url: '#',
-      icon: '💼',
+      url: 'https://linkedin.com/in/muhammad-ibrahim-qasmi',
+      icon: Linkedin,
       description: 'Professional network'
     },
     {
       name: 'Topmate',
       url: 'https://topmate.io/ibrahim_qasmi',
-      icon: '🎯',
+      icon: ExternalLink,
       description: 'Book sessions'
     },
     {
       name: 'Kaggle',
-      url: '#',
-      icon: '🏆',
+      url: 'https://kaggle.com/muhammadibrahim313',
+      icon: Trophy,
       description: 'ML competitions'
     },
     {
       name: 'Devpost',
-      url: '#',
-      icon: '🚀',
+      url: 'https://devpost.com/muhammadibrahim313',
+      icon: Rocket,
       description: 'Hackathon projects'
+    },
+    {
+      name: 'Resume',
+      url: '#', // Add Google Drive PDF link here
+      icon: FileText,
+      description: 'Download resume'
     }
   ];
 
@@ -59,9 +65,7 @@ const SocialLinks = () => {
               rel="noopener noreferrer"
               aria-label={`Visit ${link.name} profile`}
             >
-              <span className="text-lg group-hover:scale-110 transition-transform">
-                {link.icon}
-              </span>
+              <link.icon className="h-5 w-5 group-hover:scale-110 transition-transform" />
             </a>
           </Button>
         ))}
