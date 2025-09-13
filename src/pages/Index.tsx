@@ -22,7 +22,7 @@ const Index = () => {
       <Navigation />
       <SocialLinks />
       
-      <main id="main-content">
+      <main id="main-content" className="pt-20">
         <Hero />
         <About />
         <Skills />
