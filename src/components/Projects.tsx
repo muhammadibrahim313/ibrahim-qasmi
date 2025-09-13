@@ -6,8 +6,16 @@ import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [kaggleFilter, setKaggleFilter] = useState('All');
   
   const filters = ['All', 'NLP', 'CV', 'ML', 'EDA', 'Web Dev'];
+  
+  const kaggleFilters = [
+    'All', 'Data Analysis', 'EDA', 'Machine Learning', 'Optuna Tuning', 
+    'Kaggle Competition', 'Deep Learning', 'Computer Vision', 'NLP', 'CNN', 
+    'RNN', 'Transformers', 'LLM', 'Fine-tuning', 'Time Series', 'Tabular Data', 
+    'Image Classification', 'Object Detection', 'Recommendation Systems'
+  ];
 
   const projects = [
     {
@@ -80,35 +88,40 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "Customer Segmentation Analysis", domain: "ML", metric: "0.95 AUC" },
-    { title: "Sentiment Analysis Challenge", domain: "NLP", metric: "0.89 F1-Score" },
-    { title: "Image Classification Contest", domain: "CV", metric: "0.92 Accuracy" },
-    { title: "Time Series Forecasting", domain: "ML", metric: "0.12 RMSE" },
-    { title: "Text Generation Model", domain: "NLP", metric: "0.85 BLEU" },
-    { title: "Object Detection Task", domain: "CV", metric: "0.78 mAP" },
-    { title: "Recommendation System", domain: "ML", metric: "0.91 Precision" },
-    { title: "Question Answering", domain: "NLP", metric: "0.88 Exact Match" },
-    { title: "Medical Image Analysis", domain: "CV", metric: "0.94 Sensitivity" },
-    { title: "Financial Prediction", domain: "ML", metric: "0.16 MAE" },
-    { title: "Language Translation", domain: "NLP", metric: "0.82 COMET" },
-    { title: "Video Analysis", domain: "CV", metric: "0.76 IoU" },
-    { title: "Anomaly Detection", domain: "ML", metric: "0.93 ROC-AUC" },
-    { title: "Speech Recognition", domain: "NLP", metric: "0.87 WER" },
-    { title: "Facial Recognition", domain: "CV", metric: "0.95 Verification" },
-    { title: "Market Analysis", domain: "EDA", metric: "Comprehensive Insights" },
-    { title: "Social Media Analytics", domain: "EDA", metric: "Interactive Dashboard" },
-    { title: "Sales Forecasting", domain: "EDA", metric: "Business Intelligence" },
-    { title: "Customer Behavior Study", domain: "EDA", metric: "Actionable Insights" },
-    { title: "Performance Metrics", domain: "EDA", metric: "Statistical Analysis" }
+    { title: "Customer Segmentation Analysis", categories: ["Machine Learning", "Tabular Data"], metric: "0.95 AUC" },
+    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score" },
+    { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy" },
+    { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE" },
+    { title: "Text Generation Model", categories: ["NLP", "LLM", "Transformers"], metric: "0.85 BLEU" },
+    { title: "Object Detection Task", categories: ["Computer Vision", "Object Detection", "Deep Learning"], metric: "0.78 mAP" },
+    { title: "Recommendation System", categories: ["Machine Learning", "Recommendation Systems"], metric: "0.91 Precision" },
+    { title: "Question Answering", categories: ["NLP", "Transformers", "LLM"], metric: "0.88 Exact Match" },
+    { title: "Medical Image Analysis", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.94 Sensitivity" },
+    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series", "Tabular Data"], metric: "0.16 MAE" },
+    { title: "Language Translation", categories: ["NLP", "Transformers", "LLM"], metric: "0.82 COMET" },
+    { title: "Video Analysis", categories: ["Computer Vision", "Deep Learning", "CNN"], metric: "0.76 IoU" },
+    { title: "Anomaly Detection", categories: ["Machine Learning", "Tabular Data"], metric: "0.93 ROC-AUC" },
+    { title: "Speech Recognition", categories: ["NLP", "RNN", "Deep Learning"], metric: "0.87 WER" },
+    { title: "Facial Recognition", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.95 Verification" },
+    { title: "Market Analysis", categories: ["Data Analysis", "EDA"], metric: "Comprehensive Insights" },
+    { title: "Social Media Analytics", categories: ["Data Analysis", "EDA", "NLP"], metric: "Interactive Dashboard" },
+    { title: "Sales Forecasting", categories: ["Data Analysis", "Time Series"], metric: "Business Intelligence" },
+    { title: "Customer Behavior Study", categories: ["Data Analysis", "EDA"], metric: "Actionable Insights" },
+    { title: "Performance Metrics", categories: ["Data Analysis", "EDA"], metric: "Statistical Analysis" },
+    { title: "Hyperparameter Optimization", categories: ["Optuna Tuning", "Machine Learning"], metric: "15% Performance Boost" },
+    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Tabular Data", "Machine Learning"], metric: "Gold Medal" },
+    { title: "BERT Fine-tuning", categories: ["Fine-tuning", "NLP", "Transformers"], metric: "0.94 F1-Score" },
+    { title: "CNN Architecture Design", categories: ["CNN", "Deep Learning", "Computer Vision"], metric: "0.89 Accuracy" },
+    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE" }
   ];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
     : projects.filter(project => project.domain === activeFilter);
 
-  const filteredKaggle = activeFilter === 'All' 
+  const filteredKaggle = kaggleFilter === 'All' 
     ? kagglePlaceholders 
-    : kagglePlaceholders.filter(project => project.domain === activeFilter);
+    : kagglePlaceholders.filter(project => project.categories.includes(kaggleFilter));
 
   return (
     <section id="projects" className="section-padding bg-card/30">
@@ -214,6 +227,23 @@ const Projects = () => {
             <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
               Kaggle Gallery
             </h3>
+            
+            {/* Kaggle Filter Tabs */}
+            <div className="flex flex-wrap justify-center gap-2 mb-12">
+              {kaggleFilters.map((filter) => (
+                <Button
+                  key={filter}
+                  variant={kaggleFilter === filter ? "default" : "outline"}
+                  onClick={() => setKaggleFilter(filter)}
+                  className={kaggleFilter === filter 
+                    ? "bg-primary text-primary-foreground neon-glow" 
+                    : "border-primary/30 text-foreground hover:bg-primary/10"
+                  }
+                >
+                  {filter}
+                </Button>
+              ))}
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {filteredKaggle.map((project, index) => (
                 <Card 
@@ -222,8 +252,13 @@ const Projects = () => {
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="space-y-3">
-                    <div className="flex justify-between items-start">
-                      <Badge className="bg-primary/10 text-primary text-xs">{project.domain}</Badge>
+                    <div className="flex flex-wrap gap-1">
+                      {project.categories.slice(0, 2).map((category) => (
+                        <Badge key={category} className="bg-primary/10 text-primary text-xs">{category}</Badge>
+                      ))}
+                      {project.categories.length > 2 && (
+                        <Badge className="bg-muted text-muted-foreground text-xs">+{project.categories.length - 2}</Badge>
+                      )}
                     </div>
                     <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
                     <div className="text-xs text-primary font-mono">{project.metric}</div>
