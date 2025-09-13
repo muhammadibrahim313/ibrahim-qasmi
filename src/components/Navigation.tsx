@@ -87,7 +87,7 @@ const Navigation = () => {
               className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
               aria-label="Go to top"
             >
-              MIQ
+              Ibrahim Qasmi
             </button>
 
             {/* Desktop Navigation */}
