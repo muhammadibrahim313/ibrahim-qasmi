@@ -24,8 +24,9 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-4 fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="block text-foreground group-hover:text-primary transition-colors duration-300">Muhammad Ibrahim</span>
-              <span className="block text-primary neon-glow hover:scale-105 hover:text-accent transition-all duration-500 ease-out cursor-default hover:drop-shadow-[0_0_15px_rgba(0,188,212,0.4)]">Qasmi</span>
+              <span className="block bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent hover:from-primary hover:to-accent transition-all duration-500 ease-out">
+                Muhammad Ibrahim Qasmi
+              </span>
             </h1>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium">
@@ -84,8 +85,8 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Scroll Indicator - positioned lower to avoid button overlap */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* Scroll Indicator - positioned with more spacing below buttons */}
+          <div className="absolute bottom-[-2rem] left-1/2 transform -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
               <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
             </div>

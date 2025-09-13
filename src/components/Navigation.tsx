@@ -134,10 +134,10 @@ const Navigation = () => {
                         <button
                           key={item.id}
                           onClick={() => scrollToSection(item.id)}
-                          className={`w-full text-left px-4 py-2 text-sm font-medium rounded-md mx-2 transition-all duration-200 ${
+                          className={`w-full text-left px-4 py-2 text-sm font-medium rounded-md mx-2 transition-all duration-200 hover:text-primary hover:bg-primary/5 ${
                             activeSection === item.id
                               ? 'text-primary bg-primary/10'
-                              : 'text-foreground hover:text-primary hover:bg-primary/5'
+                              : 'text-foreground'
                           }`}
                           aria-label={`Navigate to ${item.label} section`}
                         >
