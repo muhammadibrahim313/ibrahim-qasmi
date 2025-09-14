@@ -143,9 +143,9 @@ const Navigation = () => {
                 <button onClick={e => {
               e.stopPropagation();
               scrollToSection('home');
-            }} className="text-xl font-bold text-primary hover:text-primary/80 transition-colors" aria-label="Go to top" style={{
+            }} aria-label="Go to top" style={{
               animation: 'slideInLeft 0.3s ease-out 0.1s both'
-            }}>MIQ
+            }} className="font-bold text-primary hover:text-primary/80 transition-colors text-3xl">MIQ
             </button>
 
                 {/* Desktop Navigation */}
