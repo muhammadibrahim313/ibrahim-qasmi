@@ -1,22 +1,12 @@
 import { ExternalLink, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroBackground from '@/assets/hero-background.jpg';
+import AnimatedGridBackground from './AnimatedGridBackground';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 hero-gradient opacity-90"></div>
-      </div>
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Grid Background */}
+      <AnimatedGridBackground />
 
       {/* Content */}
       <div className="relative z-10 container-custom section-padding">
@@ -85,8 +75,8 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Scroll Indicator - positioned with more spacing below buttons */}
-          <div className="absolute bottom-[-2rem] left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
               <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
             </div>
