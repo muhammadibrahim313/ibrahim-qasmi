@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button';
+import kaggleLogo from '@/assets/kaggle-logo.png';
+import topmateLogo from '@/assets/topmate-logo.jfif';
 
 const SocialLinks = () => {
   const socialLinks = [
@@ -16,10 +18,7 @@ const SocialLinks = () => {
       name: 'Kaggle',
       url: 'https://www.kaggle.com/ibrahimqasimi',
       logo: (
-        <svg className="h-5 w-5" fill="#20BEFF" viewBox="0 0 32 32">
-          <path d="M12.5 4.5l-7.5 7.75v15.25h4v-11.5l7.5-7.75v-3.75zM20 4.5v6.25l7.5 7.5v11.25h4v-15l-7.5-7.5h-4z"/>
-          <path d="M12.5 8.25v11.25l7.5 7.5v-6.25l-7.5-7.5v-5z"/>
-        </svg>
+        <img src={kaggleLogo} alt="Kaggle" className="h-5 w-5 object-contain" />
       ),
       description: 'ML competitions'
     },
@@ -37,9 +36,7 @@ const SocialLinks = () => {
       name: 'Topmate',
       url: 'https://topmate.io/ibrahim_qasmi',
       logo: (
-        <svg className="h-5 w-5" fill="#FF4444" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-        </svg>
+        <img src={topmateLogo} alt="Topmate" className="h-5 w-5 object-contain" />
       ),
       description: 'Book sessions'
     },
