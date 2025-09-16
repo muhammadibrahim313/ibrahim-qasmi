@@ -4,6 +4,33 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+// Anime-aesthetic Kaggle project images
+import customerSegmentation from '@/assets/kaggle/customer-segmentation.jpg';
+import sentimentAnalysis from '@/assets/kaggle/sentiment-analysis.jpg';
+import imageClassification from '@/assets/kaggle/image-classification.jpg';
+import timeSeries from '@/assets/kaggle/time-series.jpg';
+import textGeneration from '@/assets/kaggle/text-generation.jpg';
+import objectDetection from '@/assets/kaggle/object-detection.jpg';
+import recommendationSystem from '@/assets/kaggle/recommendation-system.jpg';
+import questionAnswering from '@/assets/kaggle/question-answering.jpg';
+import medicalAnalysis from '@/assets/kaggle/medical-analysis.jpg';
+import financialPrediction from '@/assets/kaggle/financial-prediction.jpg';
+import languageTranslation from '@/assets/kaggle/language-translation.jpg';
+import videoAnalysis from '@/assets/kaggle/video-analysis.jpg';
+import anomalyDetection from '@/assets/kaggle/anomaly-detection.jpg';
+import speechRecognition from '@/assets/kaggle/speech-recognition.jpg';
+import facialRecognition from '@/assets/kaggle/facial-recognition.jpg';
+import marketAnalysis from '@/assets/kaggle/market-analysis.jpg';
+import socialAnalytics from '@/assets/kaggle/social-analytics.jpg';
+import salesForecasting from '@/assets/kaggle/sales-forecasting.jpg';
+import customerBehavior from '@/assets/kaggle/customer-behavior.jpg';
+import performanceMetrics from '@/assets/kaggle/performance-metrics.jpg';
+import hyperparameterOptimization from '@/assets/kaggle/hyperparameter-optimization.jpg';
+import competitionWinner from '@/assets/kaggle/competition-winner.jpg';
+import bertFinetuning from '@/assets/kaggle/bert-finetuning.jpg';
+import cnnArchitecture from '@/assets/kaggle/cnn-architecture.jpg';
+import rnnStockPrediction from '@/assets/kaggle/rnn-stock-prediction.jpg';
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [kaggleFilter, setKaggleFilter] = useState('All');
@@ -88,31 +115,31 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "Customer Segmentation Analysis", categories: ["Machine Learning", "Tabular Data"], metric: "0.95 AUC" },
-    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score" },
-    { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy" },
-    { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE" },
-    { title: "Text Generation Model", categories: ["NLP", "LLM", "Transformers"], metric: "0.85 BLEU" },
-    { title: "Object Detection Task", categories: ["Computer Vision", "Object Detection", "Deep Learning"], metric: "0.78 mAP" },
-    { title: "Recommendation System", categories: ["Machine Learning", "Recommendation Systems"], metric: "0.91 Precision" },
-    { title: "Question Answering", categories: ["NLP", "Transformers", "LLM"], metric: "0.88 Exact Match" },
-    { title: "Medical Image Analysis", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.94 Sensitivity" },
-    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series", "Tabular Data"], metric: "0.16 MAE" },
-    { title: "Language Translation", categories: ["NLP", "Transformers", "LLM"], metric: "0.82 COMET" },
-    { title: "Video Analysis", categories: ["Computer Vision", "Deep Learning", "CNN"], metric: "0.76 IoU" },
-    { title: "Anomaly Detection", categories: ["Machine Learning", "Tabular Data"], metric: "0.93 ROC-AUC" },
-    { title: "Speech Recognition", categories: ["NLP", "RNN", "Deep Learning"], metric: "0.87 WER" },
-    { title: "Facial Recognition", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.95 Verification" },
-    { title: "Market Analysis", categories: ["Data Analysis", "EDA"], metric: "Comprehensive Insights" },
-    { title: "Social Media Analytics", categories: ["Data Analysis", "EDA", "NLP"], metric: "Interactive Dashboard" },
-    { title: "Sales Forecasting", categories: ["Data Analysis", "Time Series"], metric: "Business Intelligence" },
-    { title: "Customer Behavior Study", categories: ["Data Analysis", "EDA"], metric: "Actionable Insights" },
-    { title: "Performance Metrics", categories: ["Data Analysis", "EDA"], metric: "Statistical Analysis" },
-    { title: "Hyperparameter Optimization", categories: ["Optuna Tuning", "Machine Learning"], metric: "15% Performance Boost" },
-    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Tabular Data", "Machine Learning"], metric: "Gold Medal" },
-    { title: "BERT Fine-tuning", categories: ["Fine-tuning", "NLP", "Transformers"], metric: "0.94 F1-Score" },
-    { title: "CNN Architecture Design", categories: ["CNN", "Deep Learning", "Computer Vision"], metric: "0.89 Accuracy" },
-    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE" }
+    { title: "Customer Segmentation Analysis", categories: ["Machine Learning", "Tabular Data"], metric: "0.95 AUC", image: customerSegmentation },
+    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score", image: sentimentAnalysis },
+    { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy", image: imageClassification },
+    { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
+    { title: "Text Generation Model", categories: ["NLP", "LLM", "Transformers"], metric: "0.85 BLEU", image: textGeneration },
+    { title: "Object Detection Task", categories: ["Computer Vision", "Object Detection", "Deep Learning"], metric: "0.78 mAP", image: objectDetection },
+    { title: "Recommendation System", categories: ["Machine Learning", "Recommendation Systems"], metric: "0.91 Precision", image: recommendationSystem },
+    { title: "Question Answering", categories: ["NLP", "Transformers", "LLM"], metric: "0.88 Exact Match", image: questionAnswering },
+    { title: "Medical Image Analysis", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.94 Sensitivity", image: medicalAnalysis },
+    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series", "Tabular Data"], metric: "0.16 MAE", image: financialPrediction },
+    { title: "Language Translation", categories: ["NLP", "Transformers", "LLM"], metric: "0.82 COMET", image: languageTranslation },
+    { title: "Video Analysis", categories: ["Computer Vision", "Deep Learning", "CNN"], metric: "0.76 IoU", image: videoAnalysis },
+    { title: "Anomaly Detection", categories: ["Machine Learning", "Tabular Data"], metric: "0.93 ROC-AUC", image: anomalyDetection },
+    { title: "Speech Recognition", categories: ["NLP", "RNN", "Deep Learning"], metric: "0.87 WER", image: speechRecognition },
+    { title: "Facial Recognition", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.95 Verification", image: facialRecognition },
+    { title: "Market Analysis", categories: ["Data Analysis", "EDA"], metric: "Comprehensive Insights", image: marketAnalysis },
+    { title: "Social Media Analytics", categories: ["Data Analysis", "EDA", "NLP"], metric: "Interactive Dashboard", image: socialAnalytics },
+    { title: "Sales Forecasting", categories: ["Data Analysis", "Time Series"], metric: "Business Intelligence", image: salesForecasting },
+    { title: "Customer Behavior Study", categories: ["Data Analysis", "EDA"], metric: "Actionable Insights", image: customerBehavior },
+    { title: "Performance Metrics", categories: ["Data Analysis", "EDA"], metric: "Statistical Analysis", image: performanceMetrics },
+    { title: "Hyperparameter Optimization", categories: ["Optuna Tuning", "Machine Learning"], metric: "15% Performance Boost", image: hyperparameterOptimization },
+    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Tabular Data", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
+    { title: "BERT Fine-tuning", categories: ["Fine-tuning", "NLP", "Transformers"], metric: "0.94 F1-Score", image: bertFinetuning },
+    { title: "CNN Architecture Design", categories: ["CNN", "Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
+    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE", image: rnnStockPrediction }
   ];
 
   const filteredProjects = activeFilter === 'All' 
@@ -248,24 +275,44 @@ const Projects = () => {
               {filteredKaggle.map((project, index) => (
                 <Card 
                   key={project.title} 
-                  className="p-4 card-hover neon-border slide-up"
+                  className="p-0 card-hover neon-border slide-up overflow-hidden group"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="space-y-3">
-                    <div className="flex flex-wrap gap-1">
-                      {project.categories.slice(0, 2).map((category) => (
-                        <Badge key={category} className="bg-primary/10 text-primary text-xs">{category}</Badge>
-                      ))}
-                      {project.categories.length > 2 && (
-                        <Badge className="bg-muted text-muted-foreground text-xs">+{project.categories.length - 2}</Badge>
-                      )}
+                  <div className="relative">
+                    {/* Anime-aesthetic image */}
+                    <div 
+                      className="w-full h-32 bg-cover bg-center relative overflow-hidden"
+                      style={{ backgroundImage: `url(${project.image})` }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300"></div>
+                      
+                      {/* Anime-style particles overlay */}
+                      <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                        <div className="w-full h-full animate-pulse" style={{
+                          background: 'radial-gradient(circle at 20% 30%, rgba(0,206,209,0.2) 1px, transparent 1px), radial-gradient(circle at 70% 80%, rgba(147,112,219,0.2) 1px, transparent 1px)',
+                          backgroundSize: '30px 30px, 50px 50px'
+                        }}></div>
+                      </div>
                     </div>
-                    <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
-                    <div className="text-xs text-primary font-mono">{project.metric}</div>
-                    <Button size="sm" variant="outline" className="w-full text-xs">
-                      <BarChart3 className="h-3 w-3 mr-1" />
-                      Replace with Kaggle link
-                    </Button>
+                    
+                    {/* Content overlay */}
+                    <div className="p-4 space-y-3">
+                      <div className="flex flex-wrap gap-1">
+                        {project.categories.slice(0, 2).map((category) => (
+                          <Badge key={category} className="bg-primary/10 text-primary text-xs">{category}</Badge>
+                        ))}
+                        {project.categories.length > 2 && (
+                          <Badge className="bg-muted text-muted-foreground text-xs">+{project.categories.length - 2}</Badge>
+                        )}
+                      </div>
+                      <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
+                      <div className="text-xs text-primary font-mono">{project.metric}</div>
+                      <Button size="sm" variant="outline" className="w-full text-xs">
+                        <BarChart3 className="h-3 w-3 mr-1" />
+                        Replace with Kaggle link
+                      </Button>
+                    </div>
                   </div>
                 </Card>
               ))}

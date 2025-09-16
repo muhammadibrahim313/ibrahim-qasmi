@@ -26,6 +26,7 @@ const Index = () => {
       <main id="main-content" className="pt-20">
         <Hero />
         <About />
+        <Achievements />
         <Skills />
         <Projects />
         <Hackathons />
@@ -36,7 +37,6 @@ const Index = () => {
         <Recommendations />
         <Talks />
         <Experience />
-        <Achievements />
         <Education />
         <OpenSource />
 
