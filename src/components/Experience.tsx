@@ -5,18 +5,50 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
+      title: "AI Software Engineer",
+      company: "Zendesk",
+      location: "USA (Remote)",
+      period: "March 2025 – Present",
+      type: "Full-time",
+      description: "Building data analytics solutions and full-stack applications for USA-based startup.",
+      responsibilities: [
+        "Build and deploy data analytics solutions for business intelligence",
+        "Develop full-stack applications with modern web technologies",
+        "Create machine learning models for predictive analytics and automation",
+        "Collaborate with cross-functional teams to deliver scalable solutions",
+        "Optimize application performance and ensure code quality"
+      ],
+      skills: ["Python", "React", "Machine Learning", "Data Analytics", "Full-Stack Development"]
+    },
+    {
+      title: "AI Engineer",
+      company: "Grinda.ai",
+      location: "South Korea (Remote)",
+      period: "October 2024 – March 2025",
+      type: "Full-time",
+      description: "Developed AI pipelines and conversational agents for South Korean startup focused on lead generation.",
+      responsibilities: [
+        "Developed and deployed AI pipelines for conversational agents",
+        "Implemented lead generation systems using machine learning",
+        "Built backend ML services with FastAPI and modern frameworks",
+        "Integrated LangChain for advanced natural language processing",
+        "Optimized AI model performance and scalability"
+      ],
+      skills: ["LangChain", "FastAPI", "Machine Learning", "NLP", "AI Pipelines"]
+    },
+    {
       title: "Health Data Analyst / AI Engineer",
       company: "Eminent Enterprise Pakistan",
       location: "Pakistan",
-      period: "Jan 2023 – Present",
+      period: "Jan 2023 – October 2024",
       type: "Full-time",
-      description: "Leading AI/ML initiatives in healthcare data analysis and developing scalable solutions for improved patient outcomes.",
+      description: "Led AI/ML initiatives in healthcare data analysis and developed scalable solutions for improved patient outcomes.",
       responsibilities: [
-        "Analyze complex health datasets to extract meaningful insights and patterns",
-        "Build and deploy machine learning models for predictive healthcare analytics", 
-        "Collaborate with cross-functional teams to implement AI-driven solutions",
-        "Develop data pipelines and automated reporting systems",
-        "Ensure data quality, security, and compliance with healthcare standards"
+        "Analyzed complex health datasets to extract meaningful insights and patterns",
+        "Built and deployed machine learning models for predictive healthcare analytics", 
+        "Collaborated with cross-functional teams to implement AI-driven solutions",
+        "Developed data pipelines and automated reporting systems",
+        "Ensured data quality, security, and compliance with healthcare standards"
       ],
       skills: ["Python", "Machine Learning", "Healthcare Analytics", "Data Pipeline", "SQL"]
     }
