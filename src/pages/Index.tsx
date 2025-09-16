@@ -16,6 +16,7 @@ import Experience from '@/components/Experience';
 import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import OpenSource from '@/components/OpenSource';
+import MentorshipVolunteering from '@/components/MentorshipVolunteering';
 
 const Index = () => {
   return (
@@ -33,6 +34,7 @@ const Index = () => {
         <Blogs />
         <Badges />
         <Certificates />
+        <MentorshipVolunteering />
         <Testimonials />
         <Recommendations />
         <Talks />
@@ -74,7 +76,7 @@ const Index = () => {
             </div>
             <div>
               <p>&copy; 2025 Muhammad Ibrahim Qasmi. All rights reserved.</p>
-              <p className="text-sm mt-2">AI Engineer & 3× Kaggle Grandmaster</p>
+              <p className="text-sm mt-2">AI Engineer & 3× Kaggle Grandmaster | 7× Hackathon Winner</p>
             </div>
           </div>
         </div>

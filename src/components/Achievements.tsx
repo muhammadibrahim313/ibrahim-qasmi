@@ -9,6 +9,14 @@ import hackathonGoldImage from '@/assets/hackathon_gold.jfif';
 import kaggleGMImage from '@/assets/kagglegm.jfif';
 import calcioCertImage from '@/assets/certificate_calcio_fall_24.jfif';
 import harvardCertImage from '@/assets/certificates_harvard.jfif';
+import aiAstronatImage from '@/assets/ai_astronat_hack.jfif';
+import gpt5HackImage from '@/assets/gpt_5_hack_most_like_dpost_one.jfif';
+import hackathonGold2Image from '@/assets/hackathon_gold-2.jfif';
+import mitInfornaticsImage from '@/assets/mit_infornatics.jfif';
+import nationalHackImage from '@/assets/national_hack_1.jfif';
+import top6HackImage from '@/assets/top6_hack.jfif';
+import womensHealthImage from '@/assets/womens_health.jfif';
+import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
 
 const Achievements = () => {
   const majorAchievements = [
@@ -44,36 +52,42 @@ const Achievements = () => {
       title: "AI Astronauts Space Agents",
       result: "🥈 Silver Medal",
       description: "Mars AI Exploration project",
+      image: aiAstronatImage,
       icon: <Star className="h-5 w-5" />
     },
     {
       title: "WordSprint Hackathon",
       result: "🥈 2nd Place",
       description: "WordPress Plugin Development",
+      image: hackathonGold2Image,
       icon: <Code className="h-5 w-5" />
     },
     {
       title: "National Healthcare Hack",
       result: "🏆 1st Place",
       description: "Dr. Well Healthcare AI Platform",
+      image: nationalHackImage,
       icon: <Trophy className="h-5 w-5" />
     },
     {
       title: "Women's Health Hackathon",
       result: "🏆 2nd Place",
       description: "PeriodCare Platform Development",
+      image: womensHealthImage,
       icon: <Award className="h-5 w-5" />
     },
     {
       title: "GPT-5 B2B Sales Innovation",
       result: "🏆 Most Liked Post Winner",
       description: "Business innovation challenge",
+      image: gpt5HackImage,
       icon: <Target className="h-5 w-5" />
     },
     {
       title: "BTaji Crew Hackathon",
       result: "🏅 Top 6 Finalist",
       description: "Team collaboration project",
+      image: top6HackImage,
       icon: <Users className="h-5 w-5" />
     }
   ];
@@ -90,12 +104,14 @@ const Achievements = () => {
       title: "Meta Hacker Cup 2024",
       result: "Advanced to Round 2",
       description: "Facebook's global programming contest",
+      image: metaHackerCupImage,
       icon: <Target className="h-5 w-5" />
     },
     {
       title: "MIT Winter Informatics",
       result: "65th/500+ (Team BeTa Degree)",
       description: "Prestigious MIT programming competition",
+      image: mitInfornaticsImage,
       icon: <Trophy className="h-5 w-5" />
     },
     {

@@ -34,7 +34,7 @@ const About = () => {
                   </p>
                   
                   <p className="text-muted-foreground leading-relaxed">
-                    My journey includes being a 5× international hackathon winner and finalist, where I've 
+                    My journey includes being a 7× international hackathon winner and finalist, where I've 
                     developed innovative solutions that bridge the gap between cutting-edge research and 
                     real-world applications. I'm committed to turning complex problems into scalable AI 
                     solutions while mentoring new data scientists.
@@ -42,7 +42,7 @@ const About = () => {
 
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>Lahore, Pakistan</span>
+                    <span>Sahiwal, Pakistan</span>
                   </div>
 
                   <div className="flex flex-wrap gap-4 pt-4">
@@ -71,7 +71,7 @@ const About = () => {
               </Card>
               
               <Card className="p-6 text-center card-hover neon-border">
-                <div className="text-3xl font-bold text-primary mb-2">5×</div>
+                <div className="text-3xl font-bold text-primary mb-2">7×</div>
                 <div className="text-sm text-muted-foreground">Hackathon Winner</div>
               </Card>
               
