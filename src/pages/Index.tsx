@@ -13,6 +13,7 @@ import Testimonials from '@/components/Testimonials';
 import Recommendations from '@/components/Recommendations';
 import Talks from '@/components/Talks';
 import Experience from '@/components/Experience';
+import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import OpenSource from '@/components/OpenSource';
 
@@ -35,6 +36,7 @@ const Index = () => {
         <Recommendations />
         <Talks />
         <Experience />
+        <Achievements />
         <Education />
         <OpenSource />
 
