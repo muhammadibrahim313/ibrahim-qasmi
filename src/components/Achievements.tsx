@@ -11,7 +11,7 @@ import calcioCertImage from '@/assets/certificate_calcio_fall_24.jfif';
 import harvardCertImage from '@/assets/certificates_harvard.jfif';
 import aiAstronatImage from '@/assets/ai_astronat_hack.jfif';
 import gpt5HackImage from '@/assets/gpt_5_hack_most_like_dpost_one.jfif';
-import hackathonGold2Image from '@/assets/hackathon_gold-2.jfif';
+import wordSprintImage from '@/assets/wordsprint_hackathon.jfif';
 import mitInfornaticsImage from '@/assets/mit_infornatics.jfif';
 import nationalHackImage from '@/assets/national_hack_1.jfif';
 import top6HackImage from '@/assets/top6_hack.jfif';
@@ -59,7 +59,7 @@ const Achievements = () => {
       title: "WordSprint Hackathon",
       result: "🥈 2nd Place",
       description: "WordPress Plugin Development",
-      image: hackathonGold2Image,
+      image: wordSprintImage,
       icon: <Code className="h-5 w-5" />
     },
     {
