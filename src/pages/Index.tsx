@@ -17,6 +17,8 @@ import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import OpenSource from '@/components/OpenSource';
 import MentorshipVolunteering from '@/components/MentorshipVolunteering';
+import FAQ from '@/components/FAQ';
+import StickyFooterCTA from '@/components/StickyFooterCTA';
 
 const Index = () => {
   return (
@@ -41,9 +43,11 @@ const Index = () => {
         <Experience />
         <Education />
         <OpenSource />
-
+        <FAQ />
         <Contact />
       </main>
+      
+      <StickyFooterCTA />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border">
