@@ -6,6 +6,13 @@ import { Badge } from '@/components/ui/badge';
 const Blogs = () => {
   const blogs = [
     {
+      title: "Advanced Kaggle Techniques: Beyond Basic Models",
+      date: "Feb 25, 2025",
+      summary: "Dive deep into advanced ensemble methods, feature engineering, and optimization strategies that separate Kaggle Masters from competitors.",
+      tags: ["Kaggle", "Advanced ML", "Competitions"],
+      link: "https://medium.com/@ibrahim313"
+    },
+    {
       title: "Set a Deadline and watch your Productivity Skyrocket!",
       date: "Feb 13, 2025",
       summary: "Discover how setting clear deadlines can transform your productivity and help you achieve your goals faster.",

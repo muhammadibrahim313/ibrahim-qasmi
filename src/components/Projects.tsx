@@ -30,6 +30,9 @@ import competitionWinner from '@/assets/kaggle/competition-winner.jpg';
 import bertFinetuning from '@/assets/kaggle/bert-finetuning.jpg';
 import cnnArchitecture from '@/assets/kaggle/cnn-architecture.jpg';
 import rnnStockPrediction from '@/assets/kaggle/rnn-stock-prediction.jpg';
+import graphNeuralNetworks from '@/assets/kaggle/graph-neural-networks.jpg';
+import multimodalLearning from '@/assets/kaggle/multimodal-learning.jpg';
+import reinforcementLearning from '@/assets/kaggle/reinforcement-learning.jpg';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -139,7 +142,10 @@ const Projects = () => {
     { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Tabular Data", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
     { title: "BERT Fine-tuning", categories: ["Fine-tuning", "NLP", "Transformers"], metric: "0.94 F1-Score", image: bertFinetuning },
     { title: "CNN Architecture Design", categories: ["CNN", "Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
-    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE", image: rnnStockPrediction }
+    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE", image: rnnStockPrediction },
+    { title: "Graph Neural Networks", categories: ["Deep Learning", "Machine Learning", "CNN"], metric: "0.91 Accuracy", image: graphNeuralNetworks },
+    { title: "Multimodal Learning System", categories: ["NLP", "Computer Vision", "Transformers"], metric: "0.86 Combined Score", image: multimodalLearning },
+    { title: "Reinforcement Learning Agent", categories: ["Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
   ];
 
   const filteredProjects = activeFilter === 'All' 
