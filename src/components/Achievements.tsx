@@ -84,7 +84,7 @@ const Achievements = () => {
       icon: <Target className="h-5 w-5" />
     },
     {
-      title: "BTaji Crew Hackathon",
+      title: "Aria & Allegro Multimodal Hackathon",
       result: "🏅 Top 6 Finalist",
       description: "Team collaboration project",
       image: top6HackImage,
