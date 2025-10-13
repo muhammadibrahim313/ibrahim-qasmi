@@ -130,12 +130,6 @@ const Achievements = () => {
     }
   ];
 
-  const additionalStats = [
-    { metric: "100+", label: "AI Projects Delivered" },
-    { metric: "500+", label: "Mentorship Hours" },
-    { metric: "Top 40", label: "Pakistani GitHub Contributor" },
-    { metric: "7×", label: "International Hackathon Winner" }
-  ];
 
   return (
     <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -186,16 +180,6 @@ const Achievements = () => {
                 </CardContent>
               </div>
             </Card>
-          ))}
-        </div>
-
-        {/* Statistics Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {additionalStats.map((stat, index) => (
-            <div key={index} className="text-center p-6 rounded-lg bg-card/30 backdrop-blur-sm border hover:bg-card/50 transition-colors">
-              <div className="text-3xl font-bold text-primary mb-2">{stat.metric}</div>
-              <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
-            </div>
           ))}
         </div>
 
