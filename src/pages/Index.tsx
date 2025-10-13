@@ -12,6 +12,8 @@ import Experience from '@/components/Experience';
 import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import MentorshipVolunteering from '@/components/MentorshipVolunteering';
+import CommunityLeadership from '@/components/CommunityLeadership';
+import KaggleDatasets from '@/components/KaggleDatasets';
 
 const Index = () => {
   return (
@@ -25,8 +27,10 @@ const Index = () => {
         <Achievements />
         <Skills />
         <Projects />
+        <KaggleDatasets />
         <Blogs />
         <MentorshipVolunteering />
+        <CommunityLeadership />
         <Testimonials />
         <Recommendations />
         <Experience />

@@ -31,6 +31,14 @@ const Hero = () => {
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
                   🏆 7× International Hackathon Winner
                 </span>
+                <a 
+                  href="https://topmate.io/ibrahim_qasmi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/10 to-red-500/10 text-pink-600 dark:text-pink-400 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105"
+                >
+                  ⭐ Top 0.1% Mentor on Topmate
+                </a>
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
                   📍 Sahiwal, Pakistan
                 </span>
