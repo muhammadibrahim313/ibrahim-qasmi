@@ -31,10 +31,10 @@ const Index = () => {
         <Blogs />
         <MentorshipVolunteering />
         <CommunityLeadership />
-        <Testimonials />
         <Recommendations />
         <Experience />
         <Education />
+        <Testimonials />
 
         <Contact />
       </main>

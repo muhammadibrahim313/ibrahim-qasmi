@@ -5,6 +5,21 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
+      title: "AI/ML Engineer & Marketing",
+      company: "Reimagine.org",
+      location: "Remote",
+      period: "March 2025 – Present",
+      type: "Startup",
+      description: "Developing AI-powered solutions while contributing to marketing strategy for an innovative edtech startup. Bridging technical development with go-to-market execution.",
+      responsibilities: [
+        "Building production ML systems for educational technology",
+        "Contributing to marketing campaigns and user acquisition strategy",
+        "Collaborating with cross-functional teams on product development",
+        "Implementing AI/ML features to enhance learning experiences"
+      ],
+      skills: ["AI/ML", "Marketing", "EdTech", "Product Development", "User Acquisition"]
+    },
+    {
       title: "AI Software Engineer",
       company: "Zendesk",
       location: "USA (Remote)",
