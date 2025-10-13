@@ -67,7 +67,7 @@ const Testimonials = () => {
 
           {/* Testimonial Slider */}
           <div className="relative">
-            <Card className="p-8 md:p-12 card-hover neon-border bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm">
+            <Card className="p-8 md:p-12 card-hover neon-border bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 {/* Large Quote Icon */}
                 <div className="flex justify-center">
@@ -135,7 +135,7 @@ const Testimonials = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground neon-glow">
+            <Button asChild size="lg" className="h-12 bg-primary hover:bg-primary/90 text-primary-foreground neon-glow hover:scale-105 transition-all duration-300">
               <a href="https://topmate.io/ibrahim_qasmi" target="_blank" rel="noopener noreferrer">
                 <CalendarIcon className="mr-2 h-5 w-5" />
                 Book Your Session

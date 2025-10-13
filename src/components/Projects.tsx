@@ -458,9 +458,9 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.title} 
-                className="p-6 card-hover neon-border slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+                 className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1"
+                 style={{ animationDelay: `${index * 0.1}s` }}
+               >
                 <div className="space-y-4">
                   <div className="flex justify-between items-start gap-2">
                     <h4 className="text-xl font-semibold text-foreground">{project.title}</h4>
@@ -545,11 +545,11 @@ const Projects = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {filteredKaggle.map((project, index) => (
-                <Card 
-                  key={project.title} 
-                  className="p-0 card-hover neon-border slide-up overflow-hidden group"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
+                 <Card 
+                   key={project.title} 
+                   className="p-0 card-hover neon-border slide-up overflow-hidden group hover:shadow-xl hover:-translate-y-1"
+                   style={{ animationDelay: `${index * 0.05}s` }}
+                 >
                   <div className="relative">
                     {/* Anime-aesthetic image */}
                     <div 
@@ -580,10 +580,10 @@ const Projects = () => {
                       </div>
                       <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
                       <div className="text-xs text-primary font-mono">{project.metric}</div>
-                      <Button size="sm" variant="outline" className="w-full text-xs">
-                        <BarChart3 className="h-3 w-3 mr-1" />
-                        View on Kaggle
-                      </Button>
+                     <Button size="sm" variant="outline" className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                       <BarChart3 className="h-3 w-3 mr-1" />
+                       View on Kaggle
+                     </Button>
                     </div>
                   </div>
                 </Card>

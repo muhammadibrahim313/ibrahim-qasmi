@@ -214,7 +214,7 @@ const KaggleDatasets = () => {
             {filteredDatasets.map((dataset, index) => (
               <Card 
                 key={dataset.title} 
-                className="p-6 card-hover neon-border slide-up"
+                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="space-y-4">
@@ -242,7 +242,7 @@ const KaggleDatasets = () => {
                     </div>
                   </div>
                   
-                  <Button size="sm" variant="outline" asChild className="w-full">
+                  <Button size="sm" variant="outline" asChild className="w-full h-10 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                     <a href="https://www.kaggle.com/ibrahimqasimi/datasets" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1" />
                       View on Kaggle
@@ -255,7 +255,7 @@ const KaggleDatasets = () => {
 
           {/* View All Button */}
           <div className="text-center">
-            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+            <Button asChild size="lg" variant="outline" className="h-12 border-primary text-primary hover:bg-primary/10 hover:scale-105 transition-all duration-300">
               <a href="https://www.kaggle.com/ibrahimqasimi/datasets" target="_blank" rel="noopener noreferrer">
                 <Database className="mr-2 h-5 w-5" />
                 View All Datasets on Kaggle

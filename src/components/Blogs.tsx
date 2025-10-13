@@ -101,7 +101,7 @@ const Blogs = () => {
             {blogs.map((blog, index) => (
               <Card 
                 key={blog.title} 
-                className="p-6 card-hover neon-border slide-up"
+                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="space-y-4">
@@ -126,7 +126,7 @@ const Blogs = () => {
                     ))}
                   </div>
                   
-                  <Button size="sm" variant="outline" asChild className="w-full">
+                  <Button size="sm" variant="outline" asChild className="w-full h-10 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                     <a href={blog.link} target="_blank" rel="noopener noreferrer">
                       Read on Medium →
                     </a>
@@ -137,7 +137,7 @@ const Blogs = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="h-12 hover:scale-105 hover:bg-primary/10 transition-all duration-300">
               <a href="https://medium.com/@ibrahim313" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
                 View All Articles on Medium
