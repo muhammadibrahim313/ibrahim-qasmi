@@ -10,14 +10,14 @@ const Experience = () => {
       location: "Remote",
       period: "March 2025 – Present",
       type: "Startup",
-      description: "Developing AI-powered solutions while contributing to marketing strategy for an innovative edtech startup. Bridging technical development with go-to-market execution.",
+      description: "Building AI-powered web automation and assistance solutions at Reimagine. Developing cutting-edge technology that transforms how users interact with web content through intelligent AI agents.",
       responsibilities: [
-        "Building production ML systems for educational technology",
+        "Building production AI systems for web automation and intelligent assistance",
+        "Developing AI agents that enhance user web browsing and interaction",
         "Contributing to marketing campaigns and user acquisition strategy",
-        "Collaborating with cross-functional teams on product development",
-        "Implementing AI/ML features to enhance learning experiences"
+        "Implementing cutting-edge AI/ML features for web-based solutions"
       ],
-      skills: ["AI/ML", "Marketing", "EdTech", "Product Development", "User Acquisition"]
+      skills: ["AI/ML", "Web Automation", "AI Agents", "Marketing", "Product Development"]
     },
     {
       title: "AI Software Engineer",

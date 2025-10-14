@@ -51,7 +51,7 @@ const Index = () => {
                 📍 Sahiwal, Pakistan
               </p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-end">
               <a 
                 href="https://github.com/muhammadibrahim313" 
                 target="_blank" 
@@ -78,6 +78,87 @@ const Index = () => {
                 aria-label="Visit LinkedIn profile"
               >
                 LinkedIn
+              </a>
+              <a 
+                href="https://topmate.io/ibrahim_qasmi" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit Topmate profile"
+              >
+                Topmate
+              </a>
+              <a 
+                href="https://medium.com/@muhammadibrahim313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit Medium profile"
+              >
+                Medium
+              </a>
+              <a 
+                href="https://leetcode.com/u/muhammadibrahim313/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit LeetCode profile"
+              >
+                LeetCode
+              </a>
+              <a 
+                href="https://lablab.ai/u/@muhammad_ibrahim313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit LabLab profile"
+              >
+                LabLab.ai
+              </a>
+              <a 
+                href="https://devpost.com/muhammadibrahim313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit Devpost profile"
+              >
+                Devpost
+              </a>
+              <a 
+                href="https://www.youtube.com/@muhammadibrahim313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit YouTube channel"
+              >
+                YouTube
+              </a>
+              <a 
+                href="https://twitter.com/muhammadibra313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit X (Twitter) profile"
+              >
+                X (Twitter)
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=100069228483015" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit Facebook profile"
+              >
+                Facebook
+              </a>
+              <a 
+                href="https://www.instagram.com/muhammad_ibrahim_313" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit Instagram profile"
+              >
+                Instagram
               </a>
             </div>
           </div>

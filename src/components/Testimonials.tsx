@@ -8,22 +8,76 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      name: "Mairaj Fatima",
+      date: "Sep 23, 2025",
+      rating: 5,
+      quote: "I had a conversation with him about ML, his explanation is clear and easy to understand. It was a wonderful experience to have a conversation with AI engineer like him"
+    },
+    {
+      name: "Anonymous",
+      date: "Sep 11, 2025",
+      rating: 5,
+      quote: "I am having a really good time discuss about the career starting with ibrahim"
+    },
+    {
+      name: "Nuth Lovely",
+      date: "Sep 10, 2025",
+      rating: 5,
+      quote: "Ibrahim's advice is not only good but also inspiring, helping others make better decisions"
+    },
+    {
+      name: "Anonymous",
+      date: "Sep 10, 2025",
+      rating: 5,
+      quote: "Thank you, Ibrahim, for your excellent advice. It really helped me see things more clearly."
+    },
+    {
+      name: "Anonymous",
+      date: "Sep 10, 2025",
+      rating: 5,
+      quote: "Ibrahim provides well-thought-out and insightful advice that is truly helpful and valuable"
+    },
+    {
+      name: "Anonymous",
+      date: "Sep 10, 2025",
+      rating: 5,
+      quote: "I really like Ibrahim's advice — it's clear, practical, and easy to follow"
+    },
+    {
+      name: "Anonymous",
+      date: "Sep 10, 2025",
+      rating: 5,
+      quote: "Extremely helpful, friendly and down to earth person"
+    },
+    {
+      name: "Waqas Ishtiaq",
+      date: "Sep 6, 2025",
+      rating: 5,
+      quote: "Loved the session"
+    },
+    {
+      name: "Sumbal Fatima",
+      date: "Sep 4, 2025",
+      rating: 5,
+      quote: "I had a great experience during my 1:1 career consultation. In just 30 minutes, I received valuable guidance on career planning and hackathon strategies. The mentor provided me with a clear roadmap and practical advice that boosted my confidence and helped me see the right direction forward. Highly recommended for anyone looking for structured guidance and actionable insights!"
+    },
+    {
+      name: "Muhammad Fasih",
+      date: "Sep 1, 2025",
+      rating: 5,
+      quote: "I had a great experience. I shared a query and received a comprehensive response within just a few hours. The guidance was clear, insightful, and highly valuable. I really appreciate the timely support and thoughtful advice, it made things so much easier for me."
+    },
+    {
+      name: "Muhammad Husnain",
+      date: "Aug 13, 2025",
+      rating: 5,
+      quote: "I loved the way you answered all my questions and told me how to learn anything from scratch, how to be unbeatable, and how to strengthen the fundamentals, EDA, and Preprocessing. At last, how to learn by creating notebooks and participating in Kaggle competitions. I highly recommend @ibrahim for building a career in Data Science."
+    },
+    {
       name: "Abdullah",
-      date: "Jul 27, 2024",
+      date: "Jul 27, 2025",
       rating: 5,
-      quote: "Had a great session with Ibrahim. His insights into Kaggle competitions and AI engineering were invaluable."
-    },
-    {
-      name: "Ahmad Raza", 
-      date: "Jul 27, 2024",
-      rating: 5,
-      quote: "I loved the way you answered all my questions and provided practical guidance. Ibrahim's insights were invaluable."
-    },
-    {
-      name: "Sarah Khan",
-      date: "Jul 20, 2024", 
-      rating: 5,
-      quote: "Ibrahim helped me understand complex ML concepts with ease. His real-world examples were particularly helpful."
+      quote: "Had a great session with Ibrahim Qasmi Bhai. he was incredibly humble, kind, and genuinely helpful. Really appreciate his time and guidance"
     }
   ];
 
