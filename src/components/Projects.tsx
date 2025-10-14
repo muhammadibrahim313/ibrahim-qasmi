@@ -157,6 +157,7 @@ const Projects = () => {
       domain: "Legal Tech",
       platform: "LabLab/Devpost",
       achievement: "🏆 Multiple Wins",
+      multipleWins: true,
       event: "Stanford x Law AI & Others",
       description: "AI-powered legal document review and analysis with RAG",
       techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
@@ -473,20 +474,22 @@ const Projects = () => {
                     <Badge 
                       className={
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
-                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107]" 
+                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
                           : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
-                          ? "bg-[#E8E8E8] text-black font-bold border-[#C0C0C0]"
+                          ? "bg-[#E8E8E8] text-black font-bold border-[#C0C0C0] text-sm px-3 py-1.5"
                           : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
-                          ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32]"
-                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20"
+                          ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32] text-sm px-3 py-1.5"
+                          : project.multipleWins
+                          ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5"
+                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-sm px-3 py-1.5"
                       }
                     >
-                      <Trophy className="h-3 w-3 mr-1" />
+                      <Trophy className="h-4 w-4 mr-1" />
                       {project.achievement}
                     </Badge>
                   )}
                   
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
+                  <p className="text-muted-foreground text-sm line-clamp-2">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-1">
                     {project.techStack.slice(0, 3).map((tech) => (
@@ -510,7 +513,7 @@ const Projects = () => {
                         </a>
                       </Button>
                     )}
-                    {project.links.github && !project.links.demo && (
+                    {project.links.github && project.links.demo && (
                       <Button size="sm" variant="outline" asChild className="flex-1">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
@@ -518,15 +521,7 @@ const Projects = () => {
                         </a>
                       </Button>
                     )}
-                    {project.links.submission && (!project.links.demo || project.links.github) && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
-                        <a href={project.links.submission} target="_blank" rel="noopener noreferrer">
-                          <FileText className="h-4 w-4 mr-1" />
-                          Submission
-                        </a>
-                      </Button>
-                    )}
-                    {project.links.github && project.links.demo && (
+                    {project.links.github && !project.links.demo && (
                       <Button size="sm" variant="outline" asChild className="flex-1">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />

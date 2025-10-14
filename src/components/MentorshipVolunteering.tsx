@@ -70,8 +70,9 @@ const MentorshipVolunteering = () => {
   ];
 
   return (
-    <section id="mentorship" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/20">
-      <div className="max-w-7xl mx-auto">
+    <section id="mentorship" className="section-padding bg-card/30">
+      <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
             Mentorship & Volunteering
@@ -84,7 +85,7 @@ const MentorshipVolunteering = () => {
         {/* Main Mentorship Activities */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mentorshipActivities.map((activity, index) => (
-            <Card key={index} className="group border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl mentorship-card">
+            <Card key={index} className="p-6 card-hover neon-border slide-up group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
               <CardHeader className="relative">
                 <div className="flex items-start gap-4">
@@ -135,7 +136,7 @@ const MentorshipVolunteering = () => {
 
         {/* Topmate Stats */}
         <div className="mb-16">
-          <Card className="border-0 bg-gradient-to-r from-primary/5 to-cyan-500/5 backdrop-blur-sm">
+          <Card className="p-6 card-hover neon-border bg-card/50 backdrop-blur-sm">
             <CardHeader className="text-center pb-6">
               <CardTitle className="text-2xl mb-2 flex items-center justify-center gap-3">
                 <Users className="h-6 w-6 text-primary" />
@@ -198,7 +199,7 @@ const MentorshipVolunteering = () => {
             Volunteer Work
           </h3>
           
-          <Card className="group border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-500">
+          <Card className="p-6 card-hover neon-border slide-up group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
             <CardHeader className="relative">
               <div className="flex items-start gap-4">
@@ -246,8 +247,8 @@ const MentorshipVolunteering = () => {
             </CardContent>
           </Card>
         </div>
+        </div>
       </div>
-
     </section>
   );
 };
