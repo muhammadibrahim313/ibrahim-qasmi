@@ -31,6 +31,9 @@ const Hero = () => {
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
                   🏆 7× International Hackathon Winner
                 </span>
+                <span className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 dark:text-cyan-400 border border-blue-500/20">
+                  🥇 Top 1% on Kaggle
+                </span>
                 <a 
                   href="https://topmate.io/ibrahim_qasmi" 
                   target="_blank" 

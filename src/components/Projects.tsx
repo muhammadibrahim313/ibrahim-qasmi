@@ -379,7 +379,9 @@ const Projects = () => {
       event: "WordPress Hackathon",
       description: "WordPress plugin for development workflows",
       techStack: ["PHP", "WordPress", "JavaScript", "Plugin Development"],
-      links: {}
+      links: {
+        submission: "https://wordpress.org/plugins"
+      }
     }
   ];
 
@@ -468,7 +470,17 @@ const Projects = () => {
                   </div>
                   
                   {project.achievement && (
-                    <Badge className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20">
+                    <Badge 
+                      className={
+                        project.achievement.includes('#1') || project.achievement.includes('1st') 
+                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107]" 
+                          : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
+                          ? "bg-[#E8E8E8] text-black font-bold border-[#C0C0C0]"
+                          : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
+                          ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32]"
+                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20"
+                      }
+                    >
                       <Trophy className="h-3 w-3 mr-1" />
                       {project.achievement}
                     </Badge>
@@ -498,7 +510,7 @@ const Projects = () => {
                         </a>
                       </Button>
                     )}
-                    {project.links.github && (
+                    {project.links.github && !project.links.demo && (
                       <Button size="sm" variant="outline" asChild className="flex-1">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
@@ -506,11 +518,19 @@ const Projects = () => {
                         </a>
                       </Button>
                     )}
-                    {project.links.submission && (
+                    {project.links.submission && (!project.links.demo || project.links.github) && (
                       <Button size="sm" variant="outline" asChild className="flex-1">
                         <a href={project.links.submission} target="_blank" rel="noopener noreferrer">
                           <FileText className="h-4 w-4 mr-1" />
                           Submission
+                        </a>
+                      </Button>
+                    )}
+                    {project.links.github && project.links.demo && (
+                      <Button size="sm" variant="outline" asChild className="flex-1">
+                        <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-1" />
+                          GitHub
                         </a>
                       </Button>
                     )}
@@ -580,10 +600,12 @@ const Projects = () => {
                       </div>
                       <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
                       <div className="text-xs text-primary font-mono">{project.metric}</div>
-                     <Button size="sm" variant="outline" className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
-                       <BarChart3 className="h-3 w-3 mr-1" />
-                       View on Kaggle
-                     </Button>
+                      <Button size="sm" variant="outline" asChild className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                        <a href="https://www.kaggle.com/ibrahimqasimi/code" target="_blank" rel="noopener noreferrer">
+                          <BarChart3 className="h-3 w-3 mr-1" />
+                          View on Kaggle
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </Card>
