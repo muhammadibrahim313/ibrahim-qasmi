@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import AnimatedGridBackground from './AnimatedGridBackground';
 import profileImage from '@/assets/profile-image.png';
 const Hero = () => {
-  return <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
       {/* Animated Grid Background */}
       <AnimatedGridBackground />
 
@@ -25,27 +25,17 @@ const Hero = () => {
 
             {/* Description */}
             <div className="space-y-6 slide-up">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-left lg:text-left">Transforming real-world challenges into scalable AI solutions. Passionate about machine learning, data science, and mentoring the next generation of AI engineers.</p>
+              <p className="text-lg leading-relaxed text-muted-foreground/90 text-left lg:text-left">
+                Solving real problems with AI. Sharing what I learn with students who want to grow in data science.
+              </p>
               
-              <div className="flex flex-wrap gap-4 text-sm md:text-base justify-start">
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-                  🏆 7× International Hackathon Winner
-                </span>
-                <span className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 dark:text-cyan-400 border border-blue-500/20">
-                  🥇 Top 1% on Kaggle
-                </span>
-                <a 
-                  href="https://topmate.io/ibrahim_qasmi" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/10 to-red-500/10 text-pink-600 dark:text-pink-400 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105"
-                >
-                  ⭐ Top 0.1% Mentor on Topmate
-                </a>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-                  📍 Sahiwal, Pakistan
-                </span>
-              </div>
+              <p className="text-base text-cyan-400/80 text-left lg:text-left">
+                7× Hackathon Winner • Top 1% on Kaggle • Top 0.1% Topmate Mentor
+              </p>
+              
+              <p className="text-sm text-muted-foreground/70 text-left lg:text-left">
+                📍 Sahiwal, Pakistan
+              </p>
             </div>
 
             {/* Call to Action */}

@@ -27,17 +27,16 @@ const About = () => {
                     AI Engineer & Kaggle Grandmaster
                   </h3>
                   
-                  <p className="text-foreground leading-relaxed">
-                    I'm a passionate AI engineer from Pakistan with a proven track record of excellence. 
-                    As a three-time Kaggle Grandmaster, I've demonstrated expertise across machine learning, 
-                    computer vision, and natural language processing domains.
+                  <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
+                    I'm Ibrahim from Sahiwal, Pakistan. I'm a complete data scientist who works across the full AI stack - from classical machine learning and deep learning to modern LLMs and RAG systems.
                   </p>
                   
-                  <p className="text-muted-foreground leading-relaxed">
-                    My journey includes being a 7× international hackathon winner and finalist, where I've 
-                    developed innovative solutions that bridge the gap between cutting-edge research and 
-                    real-world applications. I'm committed to turning complex problems into scalable AI 
-                    solutions while mentoring new data scientists.
+                  <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
+                    As a 3× Kaggle Grandmaster, I've built solutions in computer vision, NLP, time-series forecasting, and tabular data modeling. I don't just prompt LLMs - I fine-tune models, build end-to-end ML pipelines, and deploy production systems.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed text-muted-foreground/90">
+                    Whether it's training neural networks from scratch, building agentic AI systems, or teaching traditional ML fundamentals, I believe in mastering the full spectrum of data science. Now I share these skills with students who want to become well-rounded AI engineers.
                   </p>
 
                   <div className="flex items-center gap-2 text-muted-foreground">
