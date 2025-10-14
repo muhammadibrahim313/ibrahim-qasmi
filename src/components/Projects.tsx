@@ -72,7 +72,7 @@ const Projects = () => {
       techStack: ["Aria AI", "Allegro", "Python", "React", "Video Processing"],
       links: {
         github: "https://github.com/bilal77511/aria-and-allegro-hackathon",
-        submission: "https://lablab.ai/event/aria-and-allegro-multimodal-hackathon"
+        demo: "https://pulse-and-prism.streamlit.app/"
       }
     },
     {
@@ -98,7 +98,7 @@ const Projects = () => {
       techStack: ["React", "Node.js", "MongoDB", "AI/ML", "Health Analytics"],
       links: {
         github: "https://github.com/muhammadibrahim313/PeriodCare",
-        submission: "https://lablab.ai/event/replit-and-cursor-hackathon"
+        demo: "https://period-care.netlify.app/"
       }
     },
     {
@@ -146,9 +146,12 @@ const Projects = () => {
       platform: "Onsite",
       achievement: "🏆 1st Place",
       event: "Jet Park Henders Hackathon",
-      description: "Healthcare AI platform for medical assistance",
-      techStack: ["Python", "AI/ML", "Healthcare APIs", "React"],
-      links: {}
+      description: "Dr. Well is an AI-powered health dashboard built with Streamlit. Track your vital health metrics, schedule appointments, and receive personalized medical advice from AI.",
+      techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/dr_well",
+        demo: "https://drwell.streamlit.app/"
+      }
     },
     
     // LEGAL TECH
@@ -162,6 +165,7 @@ const Projects = () => {
       description: "AI-powered legal document review and analysis with RAG",
       techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
       links: {
+        github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
         demo: "https://legal-buddy-v3-frontend-deployed.vercel.app/"
       }
     },
@@ -230,7 +234,7 @@ const Projects = () => {
       techStack: ["Python", "IBM Granite", "AI Agents", "Business Intelligence"],
       links: {
         github: "https://github.com/muhammadibrahim313/OmniBoost",
-        submission: "https://lablab.ai/event/generative-ai-hackathon-with-ibm-granite/team-x/omniboost"
+        demo: "https://github.com/muhammadibrahim313/OmniBoost"
       }
     },
     {
@@ -353,7 +357,7 @@ const Projects = () => {
       techStack: ["Python", "Solana", "Multi-Agent Systems", "Blockchain"],
       links: {
         github: "https://github.com/muhammadibrahim313/Agent-Force-",
-        submission: "https://lablab.ai/event/internet-of-agents/btaji-crew/agent-force"
+        demo: "https://github.com/muhammadibrahim313/Agent-Force-"
       }
     },
     
@@ -367,7 +371,8 @@ const Projects = () => {
       description: "Global e-commerce buyer discovery platform",
       techStack: ["Python", "E-commerce APIs", "React", "AI"],
       links: {
-        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
+        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout",
+        demo: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
       }
     },
     
