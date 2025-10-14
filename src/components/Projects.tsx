@@ -79,7 +79,7 @@ const Projects = () => {
       title: "AI Post Creator Agent",
       domain: "Content Creation",
       platform: "Gen AI Works",
-      description: "Automated social media content creation with AI",
+      description: "Automated social media content creation with AI for engaging posts and captions",
       techStack: ["Python", "LLM", "Streamlit", "Social Media APIs"],
       links: {
         github: "https://github.com/muhammadibrahim313/AI-Post-Creator2",
@@ -132,7 +132,7 @@ const Projects = () => {
       domain: "Healthcare & Wellness",
       platform: "LabLab.ai",
       event: "Fall in Love with DeepSeek",
-      description: "Mental wellness AI companion for emotional support",
+      description: "Mental wellness AI companion for emotional support and mental health guidance",
       techStack: ["DeepSeek", "React", "Node.js", "AI Psychology"],
       links: {
         github: "https://github.com/muhammadibrahim313/Deep-Love",
@@ -146,7 +146,7 @@ const Projects = () => {
       platform: "Onsite",
       achievement: "🏆 1st Place",
       event: "Jet Park Henders Hackathon",
-      description: "Dr. Well is an AI-powered health dashboard built with Streamlit. Track your vital health metrics, schedule appointments, and receive personalized medical advice from AI.",
+      description: "AI-powered health dashboard for tracking vital health metrics and medical schedules",
       techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
       links: {
         github: "https://github.com/muhammadibrahim313/dr_well",
@@ -162,7 +162,7 @@ const Projects = () => {
       achievement: "🏆 Multiple Wins",
       multipleWins: true,
       event: "Stanford x Law AI & Others",
-      description: "AI-powered legal document review and analysis with RAG",
+      description: "AI-powered legal document review and analysis with RAG technology",
       techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
       links: {
         github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
@@ -285,7 +285,7 @@ const Projects = () => {
       domain: "Infrastructure & Networking",
       platform: "LabLab.ai",
       event: "Edge Runners 3.2",
-      description: "Telecommunications troubleshooting platform",
+      description: "Telecommunications troubleshooting platform for network diagnostics and issue resolution",
       techStack: ["Python", "Network Analysis", "Streamlit", "Telecom"],
       links: {
         github: "https://github.com/muhammadibrahim313/TeleGuide",
@@ -466,11 +466,11 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.title} 
-                 className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1"
-                 style={{ animationDelay: `${index * 0.1}s` }}
-               >
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start gap-2">
+                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col min-h-[440px]"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex flex-col flex-1">
+                  <div className="flex justify-between items-start gap-2 mb-2">
                     <h4 className="text-xl font-semibold text-foreground">{project.title}</h4>
                     <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
                   </div>
@@ -479,24 +479,40 @@ const Projects = () => {
                     <Badge 
                       className={
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
-                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
-                          : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
-                          ? "bg-[#E8E8E8] text-black font-bold border-[#C0C0C0] text-sm px-3 py-1.5"
-                          : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
-                          ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32] text-sm px-3 py-1.5"
+                          ? "bg-[#FFD700] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4" 
+                          : project.achievement.includes('Top 5')
+                          ? "bg-[#FFFFFF] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4"
+                          : project.achievement.includes('#2') || project.achievement.includes('2nd')
+                          ? "bg-[#E8E8E8] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4"
+                          : project.achievement.includes('Runner Up')
+                          ? "bg-[#FF8C00] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4"
                           : project.multipleWins
-                          ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5"
-                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-sm px-3 py-1.5"
+                          ? "bg-[#FFD700] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4"
+                          : "bg-[#FF8C00] text-[#000000] font-bold text-sm px-3.5 py-1.5 rounded-2xl mb-4"
                       }
                     >
-                      <Trophy className="h-4 w-4 mr-1" />
+                      <Trophy className="h-4 w-4 mr-1 inline" />
                       {project.achievement}
                     </Badge>
                   )}
                   
-                  <p className="text-muted-foreground text-sm line-clamp-2">{project.description}</p>
+                  <p 
+                    className="text-muted-foreground text-sm mb-5"
+                    style={{
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      minHeight: '40px',
+                      maxHeight: '40px',
+                      lineHeight: '20px'
+                    }}
+                  >
+                    {project.description}
+                  </p>
                   
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mb-5">
                     {project.techStack.slice(0, 3).map((tech) => (
                       <span key={tech} className="skill-chip text-xs px-2 py-1 rounded">
                         {tech}
@@ -509,9 +525,9 @@ const Projects = () => {
                     )}
                   </div>
                   
-                  <div className="flex gap-2 pt-2">
+                  <div className="flex gap-3 mt-auto pt-6">
                     {project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-10">
                         <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-1" />
                           Demo
@@ -519,7 +535,7 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.links.github && project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-10">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
                           GitHub
@@ -527,7 +543,7 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.links.github && !project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-10">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
                           GitHub
