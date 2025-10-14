@@ -22,21 +22,21 @@ const Index = () => {
       <SocialLinks />
       
       <main id="main-content" className="pt-20">
-        <Hero />
-        <About />
+        <div id="home"><Hero /></div>
+        <div id="about"><About /></div>
         <Achievements />
-        <Skills />
-        <Projects />
-        <KaggleDatasets />
-        <Blogs />
-        <MentorshipVolunteering />
-        <CommunityLeadership />
+        <div id="skills"><Skills /></div>
+        <div id="projects"><Projects /></div>
+        <div id="kaggle-datasets"><KaggleDatasets /></div>
+        <div id="blogs"><Blogs /></div>
+        <div id="mentorship"><MentorshipVolunteering /></div>
+        <div id="community-leadership"><CommunityLeadership /></div>
         <Recommendations />
-        <Experience />
+        <div id="experience"><Experience /></div>
         <Education />
-        <Testimonials />
+        <div id="testimonials"><Testimonials /></div>
 
-        <Contact />
+        <div id="contact"><Contact /></div>
       </main>
 
       {/* Footer */}

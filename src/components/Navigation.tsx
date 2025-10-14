@@ -19,38 +19,32 @@ const Navigation = () => {
     label: 'Projects'
   }];
   const secondaryNavItems = [{
-    id: 'hackathons',
-    label: 'Hackathons'
+    id: 'kaggle-gallery',
+    label: 'Kaggle Gallery'
+  }, {
+    id: 'kaggle-datasets',
+    label: 'Kaggle Datasets'
   }, {
     id: 'blogs',
-    label: 'Blogs'
+    label: 'Blog & Articles'
   }, {
-    id: 'badges',
-    label: 'Badges'
+    id: 'competitive-programming',
+    label: 'Competitive Programming'
   }, {
-    id: 'certificates',
-    label: 'Certificates'
+    id: 'mentorship',
+    label: 'Mentorship & Volunteering'
+  }, {
+    id: 'community-leadership',
+    label: 'Community Leadership'
   }, {
     id: 'testimonials',
     label: 'Testimonials'
   }, {
-    id: 'recommendations',
-    label: 'Recommendations'
-  }, {
-    id: 'talks',
-    label: 'Talks & Sessions'
-  }, {
     id: 'experience',
-    label: 'Experience'
-  }, {
-    id: 'education',
-    label: 'Education'
-  }, {
-    id: 'opensource',
-    label: 'Open Source'
+    label: 'Professional Experience'
   }, {
     id: 'contact',
-    label: 'Contact'
+    label: 'Get in Touch'
   }];
   const allNavItems = [...primaryNavItems, ...secondaryNavItems];
   useEffect(() => {

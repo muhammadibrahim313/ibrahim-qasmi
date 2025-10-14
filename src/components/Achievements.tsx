@@ -183,6 +183,20 @@ const Achievements = () => {
           ))}
         </div>
 
+        {/* Kaggle Gallery - Major Achievements */}
+        <div id="kaggle-gallery" className="mb-16">
+          <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <Trophy className="h-6 w-6 text-primary" />
+            Kaggle Grandmaster Achievements
+          </h3>
+          <div className="mb-8">
+            <p className="text-muted-foreground">
+              Achieved elite Grandmaster status across three categories on Kaggle, 
+              the world's largest data science platform.
+            </p>
+          </div>
+        </div>
+
         {/* Hackathon Victories */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
@@ -223,7 +237,7 @@ const Achievements = () => {
         </div>
 
         {/* Competitive Programming */}
-        <div>
+        <div id="competitive-programming">
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
             <Code className="h-6 w-6 text-primary" />
             Competitive Programming & Contests
