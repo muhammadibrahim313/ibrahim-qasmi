@@ -44,49 +44,49 @@ const Achievements = () => {
     {
       title: "Cursor × Replit Hackathon",
       result: "🥇 Gold Medal (1st/800+ teams)",
-      description: "AI-powered development tools competition",
+      description: "🥇 Gold Medal - 1st place among 836 participants and 109 competing teams in this AI-powered development tools competition",
       image: hackathonGoldImage,
       icon: <Medal className="h-5 w-5" />
     },
     {
-      title: "AI Astronauts Space Agents",
+      title: "AI Astronauts: Space Agents",
       result: "🥈 Silver Medal",
-      description: "Mars AI Exploration project",
+      description: "🥈 Silver Medal - 2nd place among 1,056 participants and 126 teams, developing Mars colonization solutions using AI agents",
       image: aiAstronatImage,
       icon: <Star className="h-5 w-5" />
     },
     {
       title: "WordSprint Hackathon",
       result: "🥈 2nd Place",
-      description: "WordPress Plugin Development",
+      description: "🥈 2nd Place - WordPress plugin innovation competition with streamlined development workflow tools",
       image: wordSprintImage,
       icon: <Code className="h-5 w-5" />
     },
     {
-      title: "National Healthcare Hack",
+      title: "ULEFUSA Generative AI Training Hackathon",
       result: "🏆 1st Place",
-      description: "Dr. Well Healthcare AI Platform",
+      description: "🏆 1st Place - Developed Dr. Well AI healthcare platform among 100+ participants (Pak Angels, iCodeGuru, Aspire Pakistan)",
       image: nationalHackImage,
       icon: <Trophy className="h-5 w-5" />
     },
     {
       title: "Women's Health Hackathon",
-      result: "🏆 2nd Place",
-      description: "PeriodCare Platform Development",
+      result: "🥈 2nd Place",
+      description: "🥈 2nd Place - Created PeriodCare platform among 100+ participants for women's health tracking",
       image: womensHealthImage,
       icon: <Award className="h-5 w-5" />
     },
     {
-      title: "GPT-5 B2B Sales Innovation",
+      title: "Co-Creating with GPT-5",
       result: "🏆 Most Liked Post Winner",
-      description: "Business innovation challenge",
+      description: "Competed against 3,736 participants across 785 teams in this cutting-edge GPT-5 innovation challenge",
       image: gpt5HackImage,
       icon: <Target className="h-5 w-5" />
     },
     {
       title: "Aria & Allegro Multimodal Hackathon",
       result: "🏅 Top 6 Finalist",
-      description: "Team collaboration project",
+      description: "🏅 Top 6 Finalist - Selected from 511 participants and 63 teams, building cutting-edge multimodal AI applications",
       image: top6HackImage,
       icon: <Users className="h-5 w-5" />
     }
@@ -183,19 +183,6 @@ const Achievements = () => {
           ))}
         </div>
 
-        {/* Kaggle Gallery - Major Achievements */}
-        <div id="kaggle-gallery" className="mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 flex items-center justify-center gap-3">
-            <Trophy className="h-8 w-8 text-primary" />
-            Kaggle <span className="text-primary">Grandmaster Achievements</span>
-          </h3>
-          <div className="mb-8">
-            <p className="text-muted-foreground">
-              Achieved elite Grandmaster status across three categories on Kaggle, 
-              the world's largest data science platform.
-            </p>
-          </div>
-        </div>
 
         {/* Hackathon Victories */}
         <div className="mb-16">

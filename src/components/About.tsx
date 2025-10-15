@@ -28,15 +28,15 @@ const About = () => {
                   </h3>
                   
                   <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
-                    I'm Ibrahim from Sahiwal, Pakistan. I'm a complete data scientist who works across the full AI stack - from classical machine learning and deep learning to modern LLMs and RAG systems.
+                    At 19, I became Pakistan's youngest and first-ever 3× Kaggle Grandmaster (Global Rank #20). But I didn't stop there. I've since competed in 50+ hackathons, winning several international competitions, while also judging, hosting, and organizing events in the AI community.
                   </p>
                   
                   <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
-                    As a 3× Kaggle Grandmaster, I've built solutions in computer vision, NLP, time-series forecasting, and tabular data modeling. I don't just prompt LLMs - I fine-tune models, build end-to-end ML pipelines, and deploy production systems.
+                    Beyond Kaggle, I've participated in prestigious coding competitions including UC Berkeley CALICO Fall 2024, Meta Hacker Cup, Advent of Code 2024, MIT Winter Informatics, and Harvard CS50. I work across the full AI stack—from classical ML and deep learning to modern LLMs, RAG systems, and agentic AI. Whether training neural networks from scratch, fine-tuning models, or building production pipelines, I believe in mastering the complete spectrum of data science.
                   </p>
                   
                   <p className="text-lg leading-relaxed text-muted-foreground/90">
-                    Whether it's training neural networks from scratch, building agentic AI systems, or teaching traditional ML fundamentals, I believe in mastering the full spectrum of data science. Now I share these skills with students who want to become well-rounded AI engineers.
+                    Currently, I'm a full-time AI Engineer at Blue Whale (US-based startup), where I'm helping build the foundation of something big. When I'm not coding, I'm sharing my knowledge, teaching the next generation of AI engineers who want to become well-rounded data scientists, not just prompt engineers.
                   </p>
 
                   <div className="flex items-center gap-2 text-muted-foreground">

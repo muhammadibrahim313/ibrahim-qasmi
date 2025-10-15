@@ -510,7 +510,7 @@ const Projects = () => {
                     )}
                   </div>
                   
-                  <div className="flex gap-2 mt-auto pt-6">
+                  <div className="flex gap-2 mt-auto pt-4">
                     {project.links.demo && (
                       <Button size="sm" variant="outline" asChild className="flex-1 h-9">
                         <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
