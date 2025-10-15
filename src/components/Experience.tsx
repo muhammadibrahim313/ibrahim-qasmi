@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       title: "AI/ML Engineer & Marketing",
-      company: "Reimagine.org",
+      company: "reimagine.dev",
       location: "Remote",
       period: "March 2025 – Present",
       type: "Startup",
@@ -21,7 +21,7 @@ const Experience = () => {
     },
     {
       title: "AI Software Engineer",
-      company: "Zendesk",
+      company: "BluWhale",
       location: "USA (Remote)",
       period: "March 2025 – Present",
       type: "Full-time",

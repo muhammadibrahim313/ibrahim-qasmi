@@ -185,9 +185,9 @@ const Achievements = () => {
 
         {/* Kaggle Gallery - Major Achievements */}
         <div id="kaggle-gallery" className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-            <Trophy className="h-6 w-6 text-primary" />
-            Kaggle Grandmaster Achievements
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 flex items-center justify-center gap-3">
+            <Trophy className="h-8 w-8 text-primary" />
+            Kaggle <span className="text-primary">Grandmaster Achievements</span>
           </h3>
           <div className="mb-8">
             <p className="text-muted-foreground">

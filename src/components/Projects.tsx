@@ -61,6 +61,89 @@ const Projects = () => {
   ];
 
   const projects = [
+    // WINNER PROJECTS FIRST
+    {
+      title: "PeriodCare",
+      domain: "Healthcare & Wellness",
+      platform: "LabLab.ai",
+      achievement: "🏆 #1 Winner",
+      event: "Replit & Cursor Hackathon",
+      description: "Women's health platform for menstrual cycle tracking with AI-powered insights and personalized recommendations",
+      techStack: ["React", "Node.js", "MongoDB", "AI/ML", "Health Analytics"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/PeriodCare",
+        demo: "https://period-care.netlify.app/"
+      }
+    },
+    {
+      title: "Humans to Mars",
+      domain: "Space & Exploration",
+      platform: "LabLab.ai",
+      achievement: "🥈 #2 Winner",
+      event: "AIstronauts: Space Agents",
+      description: "Mars exploration project addressing space colonization challenges using AI agents and space technology",
+      techStack: ["Python", "Space Tech", "Streamlit", "AI Agents"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/Humans-to-Mars",
+        demo: "https://marsapp.streamlit.app/",
+        submission: "https://lablab.ai/event/aistronauts-space-agents-on-a-mission/default/humans-to-mars"
+      }
+    },
+    {
+      title: "Dr. Well",
+      domain: "Healthcare & Wellness",
+      platform: "Onsite",
+      achievement: "🏆 1st Place",
+      event: "Jet Park Henders Hackathon",
+      description: "AI-powered health dashboard built with Streamlit. Track vital health metrics, schedule appointments, and get personalized advice",
+      techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/dr_well",
+        demo: "https://drwell.streamlit.app/"
+      }
+    },
+    {
+      title: "Legal Buddy",
+      domain: "Legal Tech",
+      platform: "LabLab/Devpost",
+      achievement: "🏆 Multiple Wins",
+      multipleWins: true,
+      event: "Stanford x Law AI & Others",
+      description: "AI-powered legal document review and analysis with RAG technology for intelligent legal assistance",
+      techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
+        demo: "https://legal-buddy-v3-frontend-deployed.vercel.app/"
+      }
+    },
+    {
+      title: "Global Buyer Scout",
+      domain: "E-commerce",
+      platform: "Onsite",
+      achievement: "🥉 Runner Up",
+      event: "FAST University",
+      description: "Global e-commerce buyer discovery platform connecting businesses with international buyers using AI",
+      techStack: ["Python", "E-commerce APIs", "React", "AI"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout",
+        demo: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
+      }
+    },
+    {
+      title: "WordSprint Hack Plugin",
+      domain: "Developer Tools",
+      platform: "WordPress",
+      achievement: "🥈 2nd Place",
+      event: "WordPress Hackathon",
+      description: "WordPress plugin for streamlined development workflows with automated code generation and optimization features",
+      techStack: ["PHP", "WordPress", "JavaScript", "Plugin Development", "Web APIs"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/wordsprint-plugin",
+        demo: "https://wordpress.org/plugins",
+        submission: "https://wordpress.org/plugins"
+      }
+    },
+    
     // CONTENT CREATION & MEDIA
     {
       title: "Pulse & Prism",
@@ -68,7 +151,7 @@ const Projects = () => {
       platform: "LabLab.ai",
       achievement: "🥈 Top 5",
       event: "Aria & Allegro Multimodal Hackathon",
-      description: "AI-powered short-form video creator for TikTok/YouTube Shorts",
+      description: "AI-powered short-form video creator for TikTok/YouTube Shorts with automated editing and effects",
       techStack: ["Aria AI", "Allegro", "Python", "React", "Video Processing"],
       links: {
         github: "https://github.com/bilal77511/aria-and-allegro-hackathon",
@@ -79,8 +162,8 @@ const Projects = () => {
       title: "AI Post Creator Agent",
       domain: "Content Creation",
       platform: "Gen AI Works",
-      description: "Automated social media content creation with AI",
-      techStack: ["Python", "LLM", "Streamlit", "Social Media APIs"],
+      description: "Automated social media content creation with AI for LinkedIn, Facebook, and Instagram marketing campaigns",
+      techStack: ["Python", "LLM", "Streamlit", "Marketing", "Social Media APIs"],
       links: {
         github: "https://github.com/muhammadibrahim313/AI-Post-Creator2",
         demo: "https://ai-post-creator2-btaji.streamlit.app/"
@@ -89,24 +172,11 @@ const Projects = () => {
     
     // HEALTHCARE & WELLNESS
     {
-      title: "PeriodCare",
-      domain: "Healthcare & Wellness",
-      platform: "LabLab.ai",
-      achievement: "🏆 #1 Winner",
-      event: "Replit & Cursor Hackathon",
-      description: "Women's health platform for menstrual cycle tracking",
-      techStack: ["React", "Node.js", "MongoDB", "AI/ML", "Health Analytics"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/PeriodCare",
-        demo: "https://period-care.netlify.app/"
-      }
-    },
-    {
       title: "Sehat Connect",
       domain: "Healthcare & Wellness",
       platform: "Devpost",
       event: "GPT4o: Code & Conquer",
-      description: "Virtual doctor & nutritionist platform using GPT-4",
+      description: "Virtual doctor and nutritionist platform using GPT-4 for personalized health consultations and meal planning",
       techStack: ["Python", "GPT-4", "Streamlit", "Healthcare APIs"],
       links: {
         github: "https://github.com/muhammadibrahim313/Sehat-Connect",
@@ -132,7 +202,7 @@ const Projects = () => {
       domain: "Healthcare & Wellness",
       platform: "LabLab.ai",
       event: "Fall in Love with DeepSeek",
-      description: "Mental wellness AI companion for emotional support",
+      description: "Mental wellness AI companion for emotional support and mental health guidance using DeepSeek AI",
       techStack: ["DeepSeek", "React", "Node.js", "AI Psychology"],
       links: {
         github: "https://github.com/muhammadibrahim313/Deep-Love",
@@ -140,41 +210,14 @@ const Projects = () => {
         submission: "https://lablab.ai/event/fall-in-love-with-deepseek/gen-r1/deeplove-ai"
       }
     },
-    {
-      title: "Dr. Well",
-      domain: "Healthcare & Wellness",
-      platform: "Onsite",
-      achievement: "🏆 1st Place",
-      event: "Jet Park Henders Hackathon",
-      description: "Dr. Well is an AI-powered health dashboard built with Streamlit. Track your vital health metrics, schedule appointments, and receive personalized medical advice from AI.",
-      techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/dr_well",
-        demo: "https://drwell.streamlit.app/"
-      }
-    },
     
     // LEGAL TECH
-    {
-      title: "Legal Buddy",
-      domain: "Legal Tech",
-      platform: "LabLab/Devpost",
-      achievement: "🏆 Multiple Wins",
-      multipleWins: true,
-      event: "Stanford x Law AI & Others",
-      description: "AI-powered legal document review and analysis with RAG",
-      techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
-        demo: "https://legal-buddy-v3-frontend-deployed.vercel.app/"
-      }
-    },
     {
       title: "Third Chair",
       domain: "Legal Tech",
       platform: "LabLab.ai",
       event: "Trae AI IDE: Zero Limits",
-      description: "Legal document guardian - AI assistant for legal professionals",
+      description: "Legal document guardian - AI assistant for legal professionals with intelligent contract analysis",
       techStack: ["Python", "LangChain", "Streamlit", "OpenAI", "Legal Tech"],
       links: {
         github: "https://github.com/muhammadibrahim313/Third-Chair",
@@ -202,7 +245,7 @@ const Projects = () => {
       domain: "Education",
       platform: "Devpost",
       event: "World's Largest Hackathon by Bolt",
-      description: "Automated exam generation and grading system using NLP",
+      description: "Automated exam generation and grading system using NLP for educational institutions and teachers",
       techStack: ["Python", "NLP", "React", "Education Tech"],
       links: {
         github: "https://github.com/muhammadibrahim313/Examinator",
@@ -215,7 +258,7 @@ const Projects = () => {
       domain: "Education",
       platform: "LabLab.ai",
       event: "Pak Angels Gen AI Cohort-1",
-      description: "Multi-task data visualization dashboard with AI agents",
+      description: "Multi-task data visualization dashboard with AI agents for interactive analytics and insights",
       techStack: ["Python", "MindsDB", "Streamlit", "Data Viz", "AI Agents"],
       links: {
         github: "https://github.com/muhammadibrahim313/DataVue",
@@ -255,7 +298,7 @@ const Projects = () => {
       domain: "Business & Productivity",
       platform: "Kaggle",
       event: "Google DeepMind Hackathon",
-      description: "AI-powered marketing asset creation studio",
+      description: "AI-powered marketing asset creation studio for generating professional marketing content and visuals",
       techStack: ["Python", "Google DeepMind", "Streamlit", "Marketing AI"],
       links: {
         github: "https://github.com/muhammadibrahim313/Nano-Banana-Product-Marketing",
@@ -285,7 +328,7 @@ const Projects = () => {
       domain: "Infrastructure & Networking",
       platform: "LabLab.ai",
       event: "Edge Runners 3.2",
-      description: "Telecommunications troubleshooting platform",
+      description: "Telecommunications troubleshooting platform for network diagnostics and issue resolution with AI assistance",
       techStack: ["Python", "Network Analysis", "Streamlit", "Telecom"],
       links: {
         github: "https://github.com/muhammadibrahim313/TeleGuide",
@@ -311,28 +354,12 @@ const Projects = () => {
       domain: "Infrastructure & Networking",
       platform: "LabLab.ai",
       event: "AI for Connectivity Hackathon II",
-      description: "Network resilience platform using time-series analysis",
+      description: "Network resilience platform using time-series analysis for predicting and preventing network failures",
       techStack: ["Python", "Time Series", "React", "Network Resilience"],
       links: {
         github: "https://github.com/muhammadibrahim313/SPOT-CONNECT",
         demo: "https://spotconnect-two.vercel.app/",
         submission: "https://lablab.ai/event/ai-for-connectivity-hackathon-building-resilient-networks/default/spot-connect"
-      }
-    },
-    
-    // SPACE & EXPLORATION
-    {
-      title: "Humans to Mars",
-      domain: "Space & Exploration",
-      platform: "LabLab.ai",
-      achievement: "🥈 #2 Winner",
-      event: "AIstronauts: Space Agents",
-      description: "Mars exploration project addressing space colonization challenges",
-      techStack: ["Python", "Space Tech", "Streamlit", "AI Agents"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/Humans-to-Mars",
-        demo: "https://marsapp.streamlit.app/",
-        submission: "https://lablab.ai/event/aistronauts-space-agents-on-a-mission/default/humans-to-mars"
       }
     },
     
@@ -342,10 +369,11 @@ const Projects = () => {
       domain: "AI Research",
       platform: "Nvidia",
       event: "ODSC Hackathon",
-      description: "LLM fine-tuning using NVIDIA NeMo Framework",
+      description: "LLM fine-tuning using NVIDIA NeMo Framework for custom model optimization and deployment",
       techStack: ["Python", "NVIDIA NeMo", "LLM", "Fine-tuning"],
       links: {
-        github: "https://github.com/muhammadibrahim313/Nvidia-ODSC-Hackathon"
+        github: "https://github.com/muhammadibrahim313/Nvidia-ODSC-Hackathon",
+        demo: "https://github.com/muhammadibrahim313/Nvidia-ODSC-Hackathon"
       }
     },
     {
@@ -353,40 +381,11 @@ const Projects = () => {
       domain: "AI Research",
       platform: "LabLab.ai",
       event: "Internet of Agents @Solana Skyline",
-      description: "Multi-agent system on Solana blockchain",
+      description: "Multi-agent system on Solana blockchain for decentralized AI agent coordination",
       techStack: ["Python", "Solana", "Multi-Agent Systems", "Blockchain"],
       links: {
         github: "https://github.com/muhammadibrahim313/Agent-Force-",
         demo: "https://github.com/muhammadibrahim313/Agent-Force-"
-      }
-    },
-    
-    // E-COMMERCE
-    {
-      title: "Global Buyer Scout",
-      domain: "E-commerce",
-      platform: "Onsite",
-      achievement: "🥉 Runner Up",
-      event: "FAST University",
-      description: "Global e-commerce buyer discovery platform",
-      techStack: ["Python", "E-commerce APIs", "React", "AI"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout",
-        demo: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
-      }
-    },
-    
-    // DEVELOPER TOOLS
-    {
-      title: "WordSprint Hack Plugin",
-      domain: "Developer Tools",
-      platform: "WordPress",
-      achievement: "🥈 2nd Place",
-      event: "WordPress Hackathon",
-      description: "WordPress plugin for development workflows",
-      techStack: ["PHP", "WordPress", "JavaScript", "Plugin Development"],
-      links: {
-        submission: "https://wordpress.org/plugins"
       }
     }
   ];
@@ -466,10 +465,10 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.title} 
-                 className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1"
-                 style={{ animationDelay: `${index * 0.1}s` }}
-               >
-                <div className="space-y-4">
+                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col min-h-[440px]"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex flex-col flex-1">
                   <div className="flex justify-between items-start gap-2">
                     <h4 className="text-xl font-semibold text-foreground">{project.title}</h4>
                     <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
@@ -477,26 +476,28 @@ const Projects = () => {
                   
                   {project.achievement && (
                     <Badge 
-                      className={
+                      className={`mt-3 w-fit ${
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
                           ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
                           : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
-                          ? "bg-[#E8E8E8] text-black font-bold border-[#C0C0C0] text-sm px-3 py-1.5"
+                          ? "bg-[#FFFFFF] text-black font-bold border-[#C0C0C0] text-sm px-3 py-1.5"
                           : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
                           ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32] text-sm px-3 py-1.5"
                           : project.multipleWins
-                          ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5"
+                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5"
                           : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-sm px-3 py-1.5"
-                      }
+                      }`}
                     >
-                      <Trophy className="h-4 w-4 mr-1" />
+                      <Trophy className="h-4 w-4 mr-1 inline" />
                       {project.achievement}
                     </Badge>
                   )}
                   
-                  <p className="text-muted-foreground text-sm line-clamp-2">{project.description}</p>
+                  <p className="text-muted-foreground text-sm mt-3 min-h-[40px] max-h-[40px] line-clamp-2 leading-5">
+                    {project.description}
+                  </p>
                   
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mt-4">
                     {project.techStack.slice(0, 3).map((tech) => (
                       <span key={tech} className="skill-chip text-xs px-2 py-1 rounded">
                         {tech}
@@ -509,9 +510,9 @@ const Projects = () => {
                     )}
                   </div>
                   
-                  <div className="flex gap-2 pt-2">
+                  <div className="flex gap-2 mt-auto pt-6">
                     {project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
                         <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-1" />
                           Demo
@@ -519,7 +520,7 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.links.github && project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
                           GitHub
@@ -527,7 +528,7 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.links.github && !project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-1" />
                           GitHub
@@ -542,8 +543,8 @@ const Projects = () => {
 
           {/* Kaggle Gallery */}
           <div>
-            <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
-              Kaggle Gallery
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              Kaggle <span className="text-primary">Gallery</span>
             </h3>
             
             {/* Kaggle Filter Tabs */}
