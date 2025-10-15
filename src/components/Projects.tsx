@@ -465,18 +465,18 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.title} 
-                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col min-h-[400px]"
+                className="p-5 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex flex-col flex-1">
-                  <div className="flex justify-between items-start gap-2">
+                <div className="flex flex-col h-full">
+                  <div className="flex justify-between items-start gap-2 mb-2">
                     <h4 className="text-xl font-semibold text-foreground">{project.title}</h4>
                     <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
                   </div>
                   
                   {project.achievement && (
                     <Badge 
-                      className={`mt-3 w-fit ${
+                      className={`mb-2 w-fit ${
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
                           ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
                           : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
@@ -493,11 +493,11 @@ const Projects = () => {
                     </Badge>
                   )}
                   
-                  <p className="text-muted-foreground text-sm mt-2 min-h-[40px] max-h-[40px] line-clamp-2 leading-5">
+                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-1 mt-3">
+                  <div className="flex flex-wrap gap-1 mb-3">
                     {project.techStack.slice(0, 3).map((tech) => (
                       <span key={tech} className="skill-chip text-xs px-2 py-1 rounded">
                         {tech}
@@ -510,7 +510,7 @@ const Projects = () => {
                     )}
                   </div>
                   
-                  <div className="flex gap-2 mt-auto pt-1">
+                  <div className="flex gap-2 mt-auto">
                     {project.links.demo && (
                       <Button size="sm" variant="outline" asChild className="flex-1 h-9">
                         <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
