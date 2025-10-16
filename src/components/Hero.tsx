@@ -14,13 +14,13 @@ const Hero = () => {
           <div className="lg:col-span-3 space-y-8">
             {/* Main Heading */}
             <div className="space-y-4 fade-in">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-left lg:text-left">
+              <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-left lg:text-left">
                 <span className="block bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent hover:from-primary hover:to-accent transition-all duration-500 ease-out">
                   Muhammad Ibrahim Qasmi
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium text-left lg:text-left">Youngest 3× Kaggle Grandmaster</p>
+              <p className="font-playfair text-xl md:text-2xl lg:text-3xl text-muted-foreground font-semibold text-left lg:text-left">Youngest 3× Kaggle Grandmaster</p>
             </div>
 
             {/* Description */}
