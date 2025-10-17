@@ -110,8 +110,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-playfair;
     scroll-behavior: smooth;
+  }
+  
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
+  p, span, div {
+    @apply font-playfair;
   }
 
   /* Skip to content accessibility */

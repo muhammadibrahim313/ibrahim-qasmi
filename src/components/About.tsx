@@ -4,12 +4,12 @@ import { Card } from '@/components/ui/card';
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-card/30">
+    <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="container-custom">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-12 fade-in">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
               About <span className="text-primary">Me</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -23,20 +23,20 @@ const About = () => {
             <div className="space-y-6 slide-up">
               <Card className="p-8 neon-border">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-primary mb-4">
+                  <h3 className="font-playfair text-2xl font-semibold text-primary mb-3">
                     AI Engineer & Kaggle Grandmaster
                   </h3>
                   
-                  <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
-                    At 19, I became Pakistan's youngest and first-ever 3× Kaggle Grandmaster (Global Rank #20). But I didn't stop there. I've since competed in 50+ hackathons, winning several international competitions, while also judging, hosting, and organizing events in the AI community.
+                  <p className="font-playfair text-base leading-relaxed text-muted-foreground/90 mb-4">
+                    At 19, I became Pakistan's youngest and first-ever 3× Kaggle Grandmaster (Global Rank #20). I've competed in 50+ hackathons, winning several international competitions, while also judging, hosting, and organizing AI events.
                   </p>
                   
-                  <p className="text-lg leading-relaxed text-muted-foreground/90 mb-5">
-                    Beyond Kaggle, I've participated in prestigious coding competitions including UC Berkeley CALICO Fall 2024, Meta Hacker Cup, Advent of Code 2024, MIT Winter Informatics, and Harvard CS50. I work across the full AI stack—from classical ML and deep learning to modern LLMs, RAG systems, and agentic AI. Whether training neural networks from scratch, fine-tuning models, or building production pipelines, I believe in mastering the complete spectrum of data science.
+                  <p className="font-playfair text-base leading-relaxed text-muted-foreground/90 mb-4">
+                    I've participated in prestigious coding competitions including UC Berkeley CALICO, Meta Hacker Cup, Advent of Code, MIT Winter Informatics, and Harvard CS50. I work across the full AI stack—from classical ML and deep learning to modern LLMs, RAG systems, and agentic AI.
                   </p>
                   
-                  <p className="text-lg leading-relaxed text-muted-foreground/90">
-                    Currently, I'm a full-time AI Engineer at Blue Whale (US-based startup), where I'm helping build the foundation of something big. When I'm not coding, I'm sharing my knowledge, teaching the next generation of AI engineers who want to become well-rounded data scientists, not just prompt engineers.
+                  <p className="font-playfair text-base leading-relaxed text-muted-foreground/90">
+                    Currently, I'm a full-time AI Engineer at Blue Whale (US-based startup). When I'm not coding, I'm teaching the next generation of AI engineers who want to become well-rounded data scientists, not just prompt engineers.
                   </p>
 
                   <div className="flex items-center gap-2 text-muted-foreground">

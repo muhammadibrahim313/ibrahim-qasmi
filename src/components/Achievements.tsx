@@ -135,10 +135,10 @@ const Achievements = () => {
     <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="font-playfair text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
             Achievements & Recognition
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="font-playfair text-xl text-muted-foreground max-w-3xl mx-auto">
             A collection of competitive victories, global recognition, and technical achievements 
             spanning hackathons, programming contests, and industry acknowledgments.
           </p>

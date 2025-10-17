@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import AnimatedGridBackground from './AnimatedGridBackground';
 import profileImage from '@/assets/profile-image.png';
 const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-16">
       {/* Animated Grid Background */}
       <AnimatedGridBackground />
 
@@ -25,7 +25,7 @@ const Hero = () => {
 
             {/* Description */}
             <div className="space-y-6 slide-up">
-              <p className="text-lg leading-relaxed text-muted-foreground/90 text-left lg:text-left">
+              <p className="font-playfair text-lg leading-relaxed text-muted-foreground/90 text-left lg:text-left tracking-wide">
                 Solving real problems with AI. Sharing what I learn with students who want to grow in data science.
               </p>
               
@@ -105,7 +105,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator - Positioned Lower */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center opacity-80 hover:opacity-100 transition-opacity">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>

@@ -168,10 +168,10 @@ const KaggleDatasets = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
               Kaggle <span className="text-primary">Datasets</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-6">
+            <p className="font-playfair text-muted-foreground text-lg max-w-2xl mx-auto mb-6">
               Curated datasets for the ML community
             </p>
             

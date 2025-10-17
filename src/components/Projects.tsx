@@ -4,6 +4,32 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+// Project preview images
+import periodcareImg from '@/assets/projects/periodcare.jpg';
+import humansToMarsImg from '@/assets/projects/humans-to-mars.jpg';
+import drWellImg from '@/assets/projects/dr-well.jpg';
+import legalBuddyImg from '@/assets/projects/legal-buddy.jpg';
+import globalBuyerScoutImg from '@/assets/projects/global-buyer-scout.jpg';
+import wordsprintImg from '@/assets/projects/wordsprint.jpg';
+import pulsePrismImg from '@/assets/projects/pulse-prism.jpg';
+import aiPostCreatorImg from '@/assets/projects/ai-post-creator.jpg';
+import sehatConnectImg from '@/assets/projects/sehat-connect.jpg';
+import myBabyImg from '@/assets/projects/my-baby.jpg';
+import deepLoveImg from '@/assets/projects/deep-love.jpg';
+import thirdChairImg from '@/assets/projects/third-chair.jpg';
+import edunexusImg from '@/assets/projects/edunexus.jpg';
+import examinatorImg from '@/assets/projects/examinator.jpg';
+import datavueImg from '@/assets/projects/datavue.jpg';
+import omniboostImg from '@/assets/projects/omniboost.jpg';
+import auroraAiImg from '@/assets/projects/aurora-ai.jpg';
+import nanoBananaImg from '@/assets/projects/nano-banana.jpg';
+import goveaseImg from '@/assets/projects/govease.jpg';
+import teleguideImg from '@/assets/projects/teleguide.jpg';
+import networkLogTranslatorImg from '@/assets/projects/network-log-translator.jpg';
+import spotConnectImg from '@/assets/projects/spot-connect.jpg';
+import nemotronImg from '@/assets/projects/nemotron.jpg';
+import agentForceImg from '@/assets/projects/agent-force.jpg';
+
 // Anime-aesthetic Kaggle project images
 import customerSegmentation from '@/assets/kaggle/customer-segmentation.jpg';
 import sentimentAnalysis from '@/assets/kaggle/sentiment-analysis.jpg';
@@ -61,19 +87,51 @@ const Projects = () => {
   ];
 
   const projects = [
-    // WINNER PROJECTS FIRST
+    // WINNER PROJECTS (1-6) - Gold & Silver
     {
       title: "PeriodCare",
       domain: "Healthcare & Wellness",
       platform: "LabLab.ai",
-      achievement: "🏆 #1 Winner",
+      achievement: "🥇 #1 Winner",
       event: "Replit & Cursor Hackathon",
       description: "Women's health platform for menstrual cycle tracking with AI-powered insights and personalized recommendations",
       techStack: ["React", "Node.js", "MongoDB", "AI/ML", "Health Analytics"],
       links: {
         github: "https://github.com/muhammadibrahim313/PeriodCare",
         demo: "https://period-care.netlify.app/"
-      }
+      },
+      image: periodcareImg,
+      isGoldWinner: true
+    },
+    {
+      title: "Dr. Well",
+      domain: "Healthcare & Wellness",
+      platform: "Onsite",
+      achievement: "🥇 1st Place",
+      event: "Jet Park Henders Hackathon",
+      description: "AI-powered health dashboard built with Streamlit. Track vital health metrics, schedule appointments, and get personalized advice",
+      techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/dr_well",
+        demo: "https://drwell.streamlit.app/"
+      },
+      image: drWellImg,
+      isGoldWinner: true
+    },
+    {
+      title: "Global Buyer Scout",
+      domain: "E-commerce",
+      platform: "Onsite",
+      achievement: "🥉 Runner Up",
+      event: "FAST University",
+      description: "Global e-commerce buyer discovery platform connecting businesses with international buyers using AI",
+      techStack: ["Python", "E-commerce APIs", "React", "AI"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout",
+        demo: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
+      },
+      image: globalBuyerScoutImg,
+      isSilverWinner: true
     },
     {
       title: "Humans to Mars",
@@ -87,47 +145,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Humans-to-Mars",
         demo: "https://marsapp.streamlit.app/",
         submission: "https://lablab.ai/event/aistronauts-space-agents-on-a-mission/default/humans-to-mars"
-      }
-    },
-    {
-      title: "Dr. Well",
-      domain: "Healthcare & Wellness",
-      platform: "Onsite",
-      achievement: "🏆 1st Place",
-      event: "Jet Park Henders Hackathon",
-      description: "AI-powered health dashboard built with Streamlit. Track vital health metrics, schedule appointments, and get personalized advice",
-      techStack: ["Python", "Streamlit", "AI/ML", "Healthcare APIs"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/dr_well",
-        demo: "https://drwell.streamlit.app/"
-      }
-    },
-    {
-      title: "Legal Buddy",
-      domain: "Legal Tech",
-      platform: "LabLab/Devpost",
-      achievement: "🏆 Multiple Wins",
-      multipleWins: true,
-      event: "Stanford x Law AI & Others",
-      description: "AI-powered legal document review and analysis with RAG technology for intelligent legal assistance",
-      techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
-        demo: "https://legal-buddy-v3-frontend-deployed.vercel.app/"
-      }
-    },
-    {
-      title: "Global Buyer Scout",
-      domain: "E-commerce",
-      platform: "Onsite",
-      achievement: "🥉 Runner Up",
-      event: "FAST University",
-      description: "Global e-commerce buyer discovery platform connecting businesses with international buyers using AI",
-      techStack: ["Python", "E-commerce APIs", "React", "AI"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/Global_Buyer_Scout",
-        demo: "https://github.com/muhammadibrahim313/Global_Buyer_Scout"
-      }
+      },
+      image: humansToMarsImg,
+      isSilverWinner: true
     },
     {
       title: "WordSprint Hack Plugin",
@@ -141,10 +161,10 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/wordsprint-plugin",
         demo: "https://wordpress.org/plugins",
         submission: "https://wordpress.org/plugins"
-      }
+      },
+      image: wordsprintImg,
+      isSilverWinner: true
     },
-    
-    // CONTENT CREATION & MEDIA
     {
       title: "Pulse & Prism",
       domain: "Content Creation",
@@ -156,7 +176,24 @@ const Projects = () => {
       links: {
         github: "https://github.com/bilal77511/aria-and-allegro-hackathon",
         demo: "https://pulse-and-prism.streamlit.app/"
-      }
+      },
+      image: pulsePrismImg,
+      isSilverWinner: true
+    },
+    
+    // NON-WINNER PROJECTS (7+)
+    {
+      title: "Legal Buddy",
+      domain: "Legal Tech",
+      platform: "LabLab/Devpost",
+      event: "Stanford x Law AI & Others",
+      description: "AI-powered legal document review and analysis with RAG technology for intelligent legal assistance",
+      techStack: ["Python", "RAG", "LangChain", "React", "Legal NLP"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/legalbuddy-black-ponds-hack",
+        demo: "https://legal-buddy-v3-frontend-deployed.vercel.app/"
+      },
+      image: legalBuddyImg
     },
     {
       title: "AI Post Creator Agent",
@@ -167,10 +204,9 @@ const Projects = () => {
       links: {
         github: "https://github.com/muhammadibrahim313/AI-Post-Creator2",
         demo: "https://ai-post-creator2-btaji.streamlit.app/"
-      }
+      },
+      image: aiPostCreatorImg
     },
-    
-    // HEALTHCARE & WELLNESS
     {
       title: "Sehat Connect",
       domain: "Healthcare & Wellness",
@@ -182,7 +218,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Sehat-Connect",
         demo: "https://sehat-connect-b-taji.streamlit.app/",
         submission: "https://devpost.com/software/virtual-doctor-m6ajw0"
-      }
+      },
+      image: sehatConnectImg
     },
     {
       title: "My Baby",
@@ -195,7 +232,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/My_Baby",
         demo: "https://mybaby.streamlit.app/",
         submission: "https://devpost.com/software/my-baby-fqvpzw"
-      }
+      },
+      image: myBabyImg
     },
     {
       title: "Deep Love",
@@ -208,10 +246,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Deep-Love",
         demo: "https://deep-love.vercel.app/",
         submission: "https://lablab.ai/event/fall-in-love-with-deepseek/gen-r1/deeplove-ai"
-      }
+      },
+      image: deepLoveImg
     },
-    
-    // LEGAL TECH
     {
       title: "Third Chair",
       domain: "Legal Tech",
@@ -223,10 +260,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Third-Chair",
         demo: "https://third-chair.vercel.app/",
         submission: "https://lablab.ai/event/code-craft-ai-x-dev-hackathon/agentiaworld/third-chair-your-legal-document-guardian"
-      }
+      },
+      image: thirdChairImg
     },
-    
-    // EDUCATION
     {
       title: "EduNexus",
       domain: "Education",
@@ -238,7 +274,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/EDUNEXUS-2.0",
         demo: "https://edunexus-2.streamlit.app/",
         submission: "https://lablab.ai/event/ibm-watsonx-assistant/btaji-crew/edunexus-2"
-      }
+      },
+      image: edunexusImg
     },
     {
       title: "Examinator",
@@ -251,7 +288,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Examinator",
         demo: "https://brilliant-praline-0da92f.netlify.app/",
         submission: "https://devpost.com/software/exam-inator"
-      }
+      },
+      image: examinatorImg
     },
     {
       title: "DataVue",
@@ -264,10 +302,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/DataVue",
         demo: "https://data-vue.streamlit.app/",
         submission: "https://lablab.ai/event/ai-agents-hack-with-lablab-and-mindsdb/synaptic-synergy/datavue"
-      }
+      },
+      image: datavueImg
     },
-    
-    // BUSINESS & PRODUCTIVITY
     {
       title: "OmniBoost",
       domain: "Business & Productivity",
@@ -278,7 +315,8 @@ const Projects = () => {
       links: {
         github: "https://github.com/muhammadibrahim313/OmniBoost",
         demo: "https://github.com/muhammadibrahim313/OmniBoost"
-      }
+      },
+      image: omniboostImg
     },
     {
       title: "Aurora AI",
@@ -291,7 +329,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/aurora-ai",
         demo: "https://aurora-ai-psi.vercel.app/",
         submission: "https://lablab.ai/event/co-creating-with-gpt-5/btaji-crew/aurora-ai"
-      }
+      },
+      image: auroraAiImg
     },
     {
       title: "Nano Banana",
@@ -304,10 +343,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Nano-Banana-Product-Marketing",
         demo: "https://nano-banana-appuct-marketing.streamlit.app/",
         submission: "https://www.kaggle.com/competitions/banana/writeups"
-      }
+      },
+      image: nanoBananaImg
     },
-    
-    // GOVERNMENT & CIVIC
     {
       title: "GovEase",
       domain: "Government & Civic",
@@ -319,10 +357,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Llama_impact-3.2",
         demo: "https://llamaimpact-32-gjlgkbvyt5hsgjnay5yawz.streamlit.app/",
         submission: "https://lablab.ai/event/llama-impact-hackathon/btaji-crew/govease"
-      }
+      },
+      image: goveaseImg
     },
-    
-    // INFRASTRUCTURE & NETWORKING
     {
       title: "TeleGuide",
       domain: "Infrastructure & Networking",
@@ -334,7 +371,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/TeleGuide",
         demo: "https://teleguide-b8okhxznmhtwhgy9vnpmed.streamlit.app/",
         submission: "https://lablab.ai/event/edge-runners-3-point-2/b-taji-crew/teleguide"
-      }
+      },
+      image: teleguideImg
     },
     {
       title: "Network Log Translator",
@@ -347,7 +385,8 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/Network-Log-Translator",
         demo: "https://network-log-translator-1.streamlit.app/",
         submission: "https://lablab.ai/event/ai-for-connectivity-hackathon/ai-venture/network-log-translator"
-      }
+      },
+      image: networkLogTranslatorImg
     },
     {
       title: "SPOT Connect",
@@ -360,10 +399,9 @@ const Projects = () => {
         github: "https://github.com/muhammadibrahim313/SPOT-CONNECT",
         demo: "https://spotconnect-two.vercel.app/",
         submission: "https://lablab.ai/event/ai-for-connectivity-hackathon-building-resilient-networks/default/spot-connect"
-      }
+      },
+      image: spotConnectImg
     },
-    
-    // AI RESEARCH
     {
       title: "NemoTron Fine-tuning",
       domain: "AI Research",
@@ -374,7 +412,8 @@ const Projects = () => {
       links: {
         github: "https://github.com/muhammadibrahim313/Nvidia-ODSC-Hackathon",
         demo: "https://github.com/muhammadibrahim313/Nvidia-ODSC-Hackathon"
-      }
+      },
+      image: nemotronImg
     },
     {
       title: "Agent Force",
@@ -386,7 +425,8 @@ const Projects = () => {
       links: {
         github: "https://github.com/muhammadibrahim313/Agent-Force-",
         demo: "https://github.com/muhammadibrahim313/Agent-Force-"
-      }
+      },
+      image: agentForceImg
     }
   ];
 
@@ -435,10 +475,10 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
               Featured <span className="text-primary">Projects</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="font-playfair text-muted-foreground text-lg max-w-2xl mx-auto">
               AI solutions across industries - from healthcare to space exploration
             </p>
           </div>
@@ -465,26 +505,36 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <Card 
                 key={project.title} 
-                className="p-5 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col"
+                className={`p-0 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col overflow-hidden ${
+                  project.isGoldWinner 
+                    ? "shadow-[0_0_30px_rgba(255,215,0,0.3)] border-[#FFD700]/50" 
+                    : project.isSilverWinner 
+                    ? "shadow-[0_0_30px_rgba(192,192,192,0.3)] border-[#C0C0C0]/50" 
+                    : ""
+                }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex flex-col h-full">
-                  <div className="flex justify-between items-start gap-2 mb-2">
-                    <h4 className="text-xl font-semibold text-foreground">{project.title}</h4>
-                    <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
-                  </div>
-                  
+                {/* Preview Image */}
+                <div className="relative w-full h-48 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                </div>
+
+                <div className={`flex flex-col h-full ${project.isGoldWinner || project.isSilverWinner ? 'p-7' : 'p-5'}`}>
                   {project.achievement && (
                     <Badge 
-                      className={`mb-2 w-fit ${
+                      className={`mb-3 w-fit ${
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
                           ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
                           : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
-                          ? "bg-[#FFFFFF] text-black font-bold border-[#C0C0C0] text-sm px-3 py-1.5"
+                          ? "bg-[#C0C0C0] text-black font-bold border-[#A8A8A8] text-sm px-3 py-1.5"
                           : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
-                          ? "bg-[#FF8C00] text-black font-bold border-[#CD7F32] text-sm px-3 py-1.5"
-                          : project.multipleWins
-                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5"
+                          ? "bg-[#CD7F32] text-white font-bold border-[#8B5A3C] text-sm px-3 py-1.5"
                           : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-sm px-3 py-1.5"
                       }`}
                     >
@@ -493,11 +543,16 @@ const Projects = () => {
                     </Badge>
                   )}
                   
-                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                  <div className="flex justify-between items-start gap-2 mb-3">
+                    <h4 className="font-playfair text-xl font-semibold text-foreground">{project.title}</h4>
+                    <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
+                  </div>
+                  
+                  <p className="font-playfair text-muted-foreground text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-1 mb-3">
+                  <div className="flex flex-wrap gap-1 mb-4">
                     {project.techStack.slice(0, 3).map((tech) => (
                       <span key={tech} className="skill-chip text-xs px-2 py-1 rounded">
                         {tech}
@@ -543,7 +598,7 @@ const Projects = () => {
 
           {/* Kaggle Gallery */}
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
               Kaggle <span className="text-primary">Gallery</span>
             </h3>
             
@@ -599,7 +654,7 @@ const Projects = () => {
                           <Badge className="bg-muted text-muted-foreground text-xs">+{project.categories.length - 2}</Badge>
                         )}
                       </div>
-                      <h4 className="text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
+                      <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
                       <div className="text-xs text-primary font-mono">{project.metric}</div>
                       <Button size="sm" variant="outline" asChild className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                         <a href="https://www.kaggle.com/ibrahimqasimi/code" target="_blank" rel="noopener noreferrer">
