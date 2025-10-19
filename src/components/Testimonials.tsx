@@ -8,6 +8,12 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      name: "Moses Opaleye",
+      date: "Oct 08, 2025",
+      rating: 5,
+      quote: "This call cleared all my confusion and gave me a direct road map as to how I should navigate my path. It was very insightful."
+    },
+    {
       name: "Mairaj Fatima",
       date: "Sep 23, 2025",
       rating: 5,
