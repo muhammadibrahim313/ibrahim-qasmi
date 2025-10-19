@@ -14,28 +14,28 @@ const Testimonials = () => {
       quote: "I had a conversation with him about ML, his explanation is clear and easy to understand. It was a wonderful experience to have a conversation with AI engineer like him"
     },
     {
-      name: "Anonymous",
-      date: "Sep 11, 2025",
+      name: "Ahmad Raza",
+      date: "July 27, 2025",
       rating: 5,
-      quote: "I am having a really good time discuss about the career starting with ibrahim"
+      quote: "I loved the way you answered all my questions and told me how to learn anything from scratch, how to be unbeatable, and how to strengthen the fundamentals, EDA, and Preprocessing. At last, how to learn by creating notebooks and participating in Kaggle competitions. I highly recommend @Ibrahim for building a career in Data Science."
     },
     {
-      name: "Nuth Lovely",
-      date: "Sep 10, 2025",
+      name: "Mohammad Hassan",
+      date: "Sep 6, 2025",
       rating: 5,
-      quote: "Ibrahim's advice is not only good but also inspiring, helping others make better decisions"
+      quote: "I had a very insightful conversation with Ibrahim he is an amazing mentor the way he elaborated strategies to achieve my goals was awesome I really enjoyed my session with him"
     },
     {
-      name: "Anonymous",
-      date: "Sep 10, 2025",
+      name: "Youssef Hariri",
+      date: "Feb 16, 2025",
       rating: 5,
-      quote: "Thank you, Ibrahim, for your excellent advice. It really helped me see things more clearly."
+      quote: "Muhammed is a passionate AI Team leader who knows how to lead international teams towards success. He also knows how to mitigate the risks of cultural differences. His experience, his mindset and his dedication are an example to follow! Thank you Muhammed."
     },
     {
-      name: "Anonymous",
-      date: "Sep 10, 2025",
+      name: "Jibransaleem",
+      date: "Feb 19, 2025",
       rating: 5,
-      quote: "Ibrahim provides well-thought-out and insightful advice that is truly helpful and valuable"
+      quote: "I just loved , how he explains the things to me, including importance of slow learning, machine learning, maths and statistics, Eda . I would highly suggest everyone to look up to him"
     },
     {
       name: "Anonymous",
@@ -44,10 +44,10 @@ const Testimonials = () => {
       quote: "I really like Ibrahim's advice — it's clear, practical, and easy to follow"
     },
     {
-      name: "Anonymous",
-      date: "Sep 10, 2025",
+      name: "Muhammad Bilal",
+      date: "Aug 10, 2025",
       rating: 5,
-      quote: "Extremely helpful, friendly and down to earth person"
+      quote: "I had some questions regarding Kaggle and Ibrahim cleared all my concerns. he gave me a full roadmap on how I can also become a Kaglle grandmaster. Thanks, Ibrahim for the time highly recommend."
     },
     {
       name: "Waqas Ishtiaq",
