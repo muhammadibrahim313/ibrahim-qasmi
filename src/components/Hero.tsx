@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import AnimatedGridBackground from './AnimatedGridBackground';
 import profileImage from '@/assets/profile-image.png';
 const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-16">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-6 pb-16">
       {/* Animated Grid Background */}
       <AnimatedGridBackground />
 
@@ -25,13 +25,23 @@ const Hero = () => {
 
             {/* Description */}
             <div className="space-y-6 slide-up">
-              <p className="font-playfair text-lg leading-relaxed text-muted-foreground/90 text-left lg:text-left tracking-wide">
-                Solving real problems with AI. Sharing what I learn with students who want to grow in data science.
+              <p className="font-playfair text-lg leading-relaxed text-muted-foreground/90 text-left lg:text-left tracking-wider">
+                Solving real problems with <span className="text-primary font-semibold">AI</span>. Sharing what I learn with students who want to grow in <span className="text-primary font-semibold">data science</span>.
               </p>
               
-              <p className="text-base text-cyan-400/80 text-left lg:text-left">
-                7× Hackathon Winner • Top 1% on Kaggle • Top 0.1% Topmate Mentor
-              </p>
+              <div className="flex flex-wrap gap-3 items-center text-left lg:text-left">
+                <span className="text-base font-semibold">
+                  <span className="text-primary text-lg">7×</span> <span className="text-foreground">Hackathon Winner</span>
+                </span>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-base font-semibold">
+                  <span className="text-primary text-lg">Top 1%</span> <span className="text-foreground">on Kaggle</span>
+                </span>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-base font-semibold">
+                  <span className="text-primary text-lg">Top 0.1%</span> <span className="text-foreground">Topmate Mentor</span>
+                </span>
+              </div>
               
               <p className="text-sm text-muted-foreground/70 text-left lg:text-left">
                 📍 Sahiwal, Pakistan
