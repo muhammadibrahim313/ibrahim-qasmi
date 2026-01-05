@@ -5,21 +5,6 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "AI/ML Engineer & Marketing",
-      company: "reimagine.dev",
-      location: "Remote",
-      period: "March 2025 – Present",
-      type: "Startup",
-      description: "Building AI-powered web automation and assistance solutions at Reimagine. Developing cutting-edge technology that transforms how users interact with web content through intelligent AI agents.",
-      responsibilities: [
-        "Building production AI systems for web automation and intelligent assistance",
-        "Developing AI agents that enhance user web browsing and interaction",
-        "Contributing to marketing campaigns and user acquisition strategy",
-        "Implementing cutting-edge AI/ML features for web-based solutions"
-      ],
-      skills: ["AI/ML", "Web Automation", "AI Agents", "Marketing", "Product Development"]
-    },
-    {
       title: "AI Software Engineer",
       company: "BluWhale",
       location: "USA (Remote)",
@@ -34,6 +19,21 @@ const Experience = () => {
         "Optimize application performance and ensure code quality"
       ],
       skills: ["Python", "React", "Machine Learning", "Data Analytics", "Full-Stack Development"]
+    },
+    {
+      title: "Data Scientist",
+      company: "reimagine.dev",
+      location: "Remote",
+      period: "June 2025 – December 2025",
+      type: "Contract",
+      description: "Built AI-powered web automation and assistance solutions at Reimagine. Developed cutting-edge technology that transforms how users interact with web content through intelligent AI agents.",
+      responsibilities: [
+        "Built production AI systems for web automation and intelligent assistance",
+        "Developed AI agents that enhance user web browsing and interaction",
+        "Contributed to marketing campaigns and user acquisition strategy",
+        "Implemented cutting-edge AI/ML features for web-based solutions"
+      ],
+      skills: ["AI/ML", "Web Automation", "AI Agents", "Data Science", "Product Development"]
     },
     {
       title: "AI Engineer",
