@@ -13,7 +13,7 @@ import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import MentorshipVolunteering from '@/components/MentorshipVolunteering';
 import CommunityLeadership from '@/components/CommunityLeadership';
-import KaggleDatasets from '@/components/KaggleDatasets';
+
 
 const Index = () => {
   return (
@@ -27,7 +27,7 @@ const Index = () => {
         <Achievements />
         <div id="skills"><Skills /></div>
         <div id="projects"><Projects /></div>
-        <div id="kaggle-datasets"><KaggleDatasets /></div>
+        
         <div id="blogs"><Blogs /></div>
         <div id="mentorship"><MentorshipVolunteering /></div>
         <div id="community-leadership"><CommunityLeadership /></div>
