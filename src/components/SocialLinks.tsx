@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import kaggleLogo from '@/assets/kaggle-logo.png';
 import topmateLogo from '@/assets/topmate-logo.jfif';
+import lablabLogo from '@/assets/lablab-logo.png';
 
 const SocialLinks = () => {
   const socialLinks = [
@@ -81,9 +82,7 @@ const SocialLinks = () => {
       name: 'LabLab AI',
       url: 'https://lablab.ai/u/@qasmi92',
       logo: (
-        <svg className="h-5 w-5" fill="#6366F1" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
+        <img src={lablabLogo} alt="LabLab AI" className="h-5 w-5 object-contain" />
       ),
       description: 'AI hackathons',
       glowColor: 'rgba(0, 217, 255, 0.6)'
