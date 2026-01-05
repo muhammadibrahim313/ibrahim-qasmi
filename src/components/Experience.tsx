@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "Data Scientist",
+      title: "AI/ML Engineer",
       company: "BluWhale",
       location: "USA (Remote)",
       period: "March 2025 – Present",
