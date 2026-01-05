@@ -101,9 +101,9 @@ const Achievements = () => {
       icon: <Code className="h-5 w-5" />
     },
     {
-      title: "Meta Hacker Cup 2024",
-      result: "Advanced to Round 2",
-      description: "Facebook's global programming contest",
+      title: "Meta Hacker Cup 2024/2025",
+      result: "Advanced to Round 1",
+      description: "Participant in Meta Hacker Cup - Advanced to Round 1",
       image: metaHackerCupImage,
       icon: <Target className="h-5 w-5" />
     },
