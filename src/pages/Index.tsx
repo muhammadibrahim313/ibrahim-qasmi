@@ -13,6 +13,7 @@ import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import MentorshipVolunteering from '@/components/MentorshipVolunteering';
 import CommunityLeadership from '@/components/CommunityLeadership';
+import ScrollToTop from '@/components/ScrollToTop';
 
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <SocialLinks />
+      <ScrollToTop />
       
       <main id="main-content" className="pt-20">
         <div id="home"><Hero /></div>
