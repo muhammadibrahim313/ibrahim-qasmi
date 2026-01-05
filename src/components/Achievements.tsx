@@ -94,11 +94,18 @@ const Achievements = () => {
 
   const competitiveProgramming = [
     {
-      title: "Advent of Code 2024",
-      result: "222nd Global | 2nd Pakistan",
-      description: "Annual programming puzzle competition",
-      image: adventImage,
-      icon: <Code className="h-5 w-5" />
+      title: "UC Berkeley Calico Fall",
+      result: "Bronze Tier (Team BeTa Force)",
+      description: "Berkeley's competitive programming contest",
+      image: calcioCertImage,
+      icon: <Medal className="h-5 w-5" />
+    },
+    {
+      title: "Harvard CS50x Puzzle Day 2025",
+      result: "Certificate of Completion",
+      description: "Harvard's computer science puzzle challenge",
+      image: harvardCertImage,
+      icon: <Award className="h-5 w-5" />
     },
     {
       title: "Meta Hacker Cup 2024/2025",
@@ -115,18 +122,11 @@ const Achievements = () => {
       icon: <Trophy className="h-5 w-5" />
     },
     {
-      title: "UC Berkeley Calico Fall",
-      result: "Bronze Tier (Team BeTa Force)",
-      description: "Berkeley's competitive programming contest",
-      image: calcioCertImage,
-      icon: <Medal className="h-5 w-5" />
-    },
-    {
-      title: "Harvard CS50x Puzzle Day 2025",
-      result: "Certificate of Completion",
-      description: "Harvard's computer science puzzle challenge",
-      image: harvardCertImage,
-      icon: <Award className="h-5 w-5" />
+      title: "Advent of Code 2024",
+      result: "222nd Global | 2nd Pakistan",
+      description: "Annual programming puzzle competition",
+      image: adventImage,
+      icon: <Code className="h-5 w-5" />
     }
   ];
 
