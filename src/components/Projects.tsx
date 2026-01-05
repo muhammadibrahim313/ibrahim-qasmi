@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Github, FileText, Trophy, BarChart3 } from 'lucide-react';
+import { ExternalLink, Github, Trophy, BarChart3, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -61,33 +61,11 @@ import multimodalLearning from '@/assets/kaggle/multimodal-learning.jpg';
 import reinforcementLearning from '@/assets/kaggle/reinforcement-learning.jpg';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [kaggleFilter, setKaggleFilter] = useState('All');
-  
-  const filters = [
-    'All', 
-    'Healthcare & Wellness', 
-    'Legal Tech', 
-    'Education', 
-    'Content Creation',
-    'Business & Productivity', 
-    'Government & Civic', 
-    'Infrastructure & Networking',
-    'Space & Exploration',
-    'AI Research',
-    'E-commerce',
-    'Developer Tools'
-  ];
-
-  const kaggleFilters = [
-    'All', 'Data Analysis', 'EDA', 'Machine Learning', 'Optuna Tuning', 
-    'Kaggle Competition', 'Deep Learning', 'Computer Vision', 'NLP', 'CNN', 
-    'RNN', 'Transformers', 'LLM', 'Fine-tuning', 'Time Series', 'Tabular Data', 
-    'Image Classification', 'Object Detection', 'Recommendation Systems'
-  ];
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showAllKaggle, setShowAllKaggle] = useState(false);
 
   const projects = [
-    // WINNER PROJECTS (1-6) - Gold & Silver
+    // First 7 projects (WINNER PROJECTS)
     {
       title: "PeriodCare",
       domain: "Healthcare & Wellness",
@@ -180,8 +158,6 @@ const Projects = () => {
       image: pulsePrismImg,
       isSilverWinner: true
     },
-    
-    // NON-WINNER PROJECTS (7+)
     {
       title: "Legal Buddy",
       domain: "Legal Tech",
@@ -195,6 +171,22 @@ const Projects = () => {
       },
       image: legalBuddyImg
     },
+    // 8th project - Nano Banana
+    {
+      title: "Nano Banana",
+      domain: "Business & Productivity",
+      platform: "Kaggle",
+      event: "Google DeepMind Hackathon",
+      description: "AI-powered marketing asset creation studio for generating professional marketing content and visuals",
+      techStack: ["Python", "Google DeepMind", "Streamlit", "Marketing AI"],
+      links: {
+        github: "https://github.com/muhammadibrahim313/Nano-Banana-Product-Marketing",
+        demo: "https://nano-banana-appuct-marketing.streamlit.app/",
+        submission: "https://www.kaggle.com/competitions/banana/writeups"
+      },
+      image: nanoBananaImg
+    },
+    // Remaining projects (9+)
     {
       title: "AI Post Creator Agent",
       domain: "Content Creation",
@@ -333,20 +325,6 @@ const Projects = () => {
       image: auroraAiImg
     },
     {
-      title: "Nano Banana",
-      domain: "Business & Productivity",
-      platform: "Kaggle",
-      event: "Google DeepMind Hackathon",
-      description: "AI-powered marketing asset creation studio for generating professional marketing content and visuals",
-      techStack: ["Python", "Google DeepMind", "Streamlit", "Marketing AI"],
-      links: {
-        github: "https://github.com/muhammadibrahim313/Nano-Banana-Product-Marketing",
-        demo: "https://nano-banana-appuct-marketing.streamlit.app/",
-        submission: "https://www.kaggle.com/competitions/banana/writeups"
-      },
-      image: nanoBananaImg
-    },
-    {
       title: "GovEase",
       domain: "Government & Civic",
       platform: "LabLab.ai",
@@ -461,13 +439,9 @@ const Projects = () => {
     { title: "Reinforcement Learning Agent", categories: ["Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.domain === activeFilter);
-
-  const filteredKaggle = kaggleFilter === 'All' 
-    ? kagglePlaceholders 
-    : kagglePlaceholders.filter(project => project.categories.includes(kaggleFilter));
+  // Show first 8 projects or all
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
+  const visibleKaggle = showAllKaggle ? kagglePlaceholders : kagglePlaceholders.slice(0, 8);
 
   return (
     <section id="projects" className="section-padding bg-card/30">
@@ -478,31 +452,18 @@ const Projects = () => {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
               Featured <span className="text-primary">Projects</span>
             </h2>
-            <p className="font-playfair text-muted-foreground text-lg max-w-2xl mx-auto">
-              AI solutions across industries - from healthcare to space exploration
+            <p className="font-playfair text-muted-foreground text-lg max-w-3xl mx-auto">
+              Built <span className="text-primary font-semibold">50+</span> AI projects across{' '}
+              <span className="text-primary font-semibold">Healthcare</span>,{' '}
+              <span className="text-primary font-semibold">Legal Tech</span>,{' '}
+              <span className="text-primary font-semibold">Education</span>,{' '}
+              <span className="text-primary font-semibold">Space Exploration</span>, and more — participating in hackathons, competitions, and open-source initiatives worldwide.
             </p>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {filters.map((filter) => (
-              <Button
-                key={filter}
-                variant={activeFilter === filter ? "default" : "outline"}
-                onClick={() => setActiveFilter(filter)}
-                className={activeFilter === filter 
-                  ? "bg-primary text-primary-foreground neon-glow" 
-                  : "border-primary/30 text-foreground hover:bg-primary/10"
-                }
-              >
-                {filter}
-              </Button>
-            ))}
-          </div>
-
-          {/* Featured Projects */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-            {filteredProjects.map((project, index) => (
+          {/* Featured Projects - 4 columns grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+            {visibleProjects.map((project, index) => (
               <Card 
                 key={project.title} 
                 className={`p-0 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 flex flex-col overflow-hidden ${
@@ -515,7 +476,7 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Preview Image */}
-                <div className="relative w-full h-48 overflow-hidden">
+                <div className="relative w-full h-36 overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -525,67 +486,60 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 </div>
 
-                <div className={`flex flex-col h-full ${project.isGoldWinner || project.isSilverWinner ? 'p-7' : 'p-5'}`}>
+                <div className={`flex flex-col h-full ${project.isGoldWinner || project.isSilverWinner ? 'p-5' : 'p-4'}`}>
                   {project.achievement && (
                     <Badge 
-                      className={`mb-3 w-fit ${
+                      className={`mb-2 w-fit ${
                         project.achievement.includes('#1') || project.achievement.includes('1st') 
-                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-sm px-3 py-1.5" 
+                          ? "bg-[#FFD700] text-black font-bold border-[#FFC107] text-xs px-2 py-1" 
                           : project.achievement.includes('Top 5') || project.achievement.includes('#2') || project.achievement.includes('2nd')
-                          ? "bg-[#C0C0C0] text-black font-bold border-[#A8A8A8] text-sm px-3 py-1.5"
+                          ? "bg-[#C0C0C0] text-black font-bold border-[#A8A8A8] text-xs px-2 py-1"
                           : project.achievement.includes('Runner Up') || project.achievement.includes('3rd')
-                          ? "bg-[#CD7F32] text-white font-bold border-[#8B5A3C] text-sm px-3 py-1.5"
-                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-sm px-3 py-1.5"
+                          ? "bg-[#CD7F32] text-white font-bold border-[#8B5A3C] text-xs px-2 py-1"
+                          : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20 text-xs px-2 py-1"
                       }`}
                     >
-                      <Trophy className="h-4 w-4 mr-1 inline" />
+                      <Trophy className="h-3 w-3 mr-1 inline" />
                       {project.achievement}
                     </Badge>
                   )}
                   
-                  <div className="flex justify-between items-start gap-2 mb-3">
-                    <h4 className="font-playfair text-xl font-semibold text-foreground">{project.title}</h4>
-                    <Badge className="bg-primary/10 text-primary text-xs whitespace-nowrap">{project.platform}</Badge>
+                  <div className="flex justify-between items-start gap-2 mb-2">
+                    <h4 className="font-playfair text-base font-semibold text-foreground line-clamp-1">{project.title}</h4>
                   </div>
                   
-                  <p className="font-playfair text-muted-foreground text-sm mb-4 line-clamp-2">
+                  <Badge className="bg-primary/10 text-primary text-xs w-fit mb-2">{project.platform}</Badge>
+                  
+                  <p className="font-playfair text-muted-foreground text-xs mb-3 line-clamp-2 flex-grow">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.techStack.slice(0, 3).map((tech) => (
-                      <span key={tech} className="skill-chip text-xs px-2 py-1 rounded">
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {project.techStack.slice(0, 2).map((tech) => (
+                      <span key={tech} className="skill-chip text-xs px-1.5 py-0.5 rounded text-[10px]">
                         {tech}
                       </span>
                     ))}
-                    {project.techStack.length > 3 && (
-                      <span className="text-xs text-muted-foreground px-2 py-1">
-                        +{project.techStack.length - 3}
+                    {project.techStack.length > 2 && (
+                      <span className="text-xs text-muted-foreground px-1">
+                        +{project.techStack.length - 2}
                       </span>
                     )}
                   </div>
                   
                   <div className="flex gap-2 mt-auto">
                     {project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-8 text-xs">
                         <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-1" />
+                          <ExternalLink className="h-3 w-3 mr-1" />
                           Demo
                         </a>
                       </Button>
                     )}
-                    {project.links.github && project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
+                    {project.links.github && (
+                      <Button size="sm" variant="outline" asChild className="flex-1 h-8 text-xs">
                         <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4 mr-1" />
-                          GitHub
-                        </a>
-                      </Button>
-                    )}
-                    {project.links.github && !project.links.demo && (
-                      <Button size="sm" variant="outline" asChild className="flex-1 h-9">
-                        <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4 mr-1" />
+                          <Github className="h-3 w-3 mr-1" />
                           GitHub
                         </a>
                       </Button>
@@ -596,31 +550,53 @@ const Projects = () => {
             ))}
           </div>
 
+          {/* Show More / View All Projects */}
+          <div className="flex flex-col items-center gap-4 mb-24">
+            {!showAllProjects && projects.length > 8 && (
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent -top-20 pointer-events-none" />
+                <Button 
+                  onClick={() => setShowAllProjects(true)}
+                  variant="outline"
+                  className="border-primary/30 hover:bg-primary/10 hover:border-primary gap-2"
+                >
+                  <ChevronDown className="h-4 w-4" />
+                  Show More Projects ({projects.length - 8} more)
+                </Button>
+              </div>
+            )}
+            {showAllProjects && (
+              <Button 
+                variant="default"
+                asChild
+                className="bg-primary hover:bg-primary/90"
+              >
+                <a href="https://github.com/muhammadibrahim313" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4 mr-2" />
+                  View All on GitHub
+                </a>
+              </Button>
+            )}
+          </div>
+
           {/* Kaggle Gallery */}
           <div>
-            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              Kaggle <span className="text-primary">Gallery</span>
-            </h3>
-            
-            {/* Kaggle Filter Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
-              {kaggleFilters.map((filter) => (
-                <Button
-                  key={filter}
-                  variant={kaggleFilter === filter ? "default" : "outline"}
-                  onClick={() => setKaggleFilter(filter)}
-                  className={kaggleFilter === filter 
-                    ? "bg-primary text-primary-foreground neon-glow" 
-                    : "border-primary/30 text-foreground hover:bg-primary/10"
-                  }
-                >
-                  {filter}
-                </Button>
-              ))}
+            <div className="text-center mb-12">
+              <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Kaggle <span className="text-primary">Gallery</span>
+              </h3>
+              <p className="font-playfair text-muted-foreground text-lg max-w-3xl mx-auto">
+                Completed <span className="text-primary font-semibold">80+</span> projects in{' '}
+                <span className="text-primary font-semibold">Data Analysis</span>,{' '}
+                <span className="text-primary font-semibold">Machine Learning</span>,{' '}
+                <span className="text-primary font-semibold">Deep Learning</span>,{' '}
+                <span className="text-primary font-semibold">NLP</span>, and{' '}
+                <span className="text-primary font-semibold">Computer Vision</span> — from exploratory data analysis to competition-winning models.
+              </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {filteredKaggle.map((project, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              {visibleKaggle.map((project, index) => (
                  <Card 
                    key={project.title} 
                    className="p-0 card-hover neon-border slide-up overflow-hidden group hover:shadow-xl hover:-translate-y-1"
@@ -666,6 +642,35 @@ const Projects = () => {
                   </div>
                 </Card>
               ))}
+            </div>
+
+            {/* Show More / View All Kaggle */}
+            <div className="flex flex-col items-center gap-4">
+              {!showAllKaggle && kagglePlaceholders.length > 8 && (
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent -top-20 pointer-events-none" />
+                  <Button 
+                    onClick={() => setShowAllKaggle(true)}
+                    variant="outline"
+                    className="border-primary/30 hover:bg-primary/10 hover:border-primary gap-2"
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                    Show More Projects ({kagglePlaceholders.length - 8} more)
+                  </Button>
+                </div>
+              )}
+              {showAllKaggle && (
+                <Button 
+                  variant="default"
+                  asChild
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  <a href="https://www.kaggle.com/ibrahimqasimi/code" target="_blank" rel="noopener noreferrer">
+                    <BarChart3 className="h-4 w-4 mr-2" />
+                    View All on Kaggle
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>
