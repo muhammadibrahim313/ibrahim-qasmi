@@ -551,25 +551,39 @@ const Projects = () => {
           </div>
 
           {/* Show More / View All Projects */}
-          <div className="flex flex-col items-center gap-4 mb-24">
+          <div className="flex flex-col items-center gap-4 mb-24 relative">
             {!showAllProjects && projects.length > 8 && (
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent -top-20 pointer-events-none" />
-                <Button 
-                  onClick={() => setShowAllProjects(true)}
-                  variant="outline"
-                  className="border-primary/30 hover:bg-primary/10 hover:border-primary gap-2"
-                >
-                  <ChevronDown className="h-4 w-4" />
-                  Show More Projects ({projects.length - 8} more)
-                </Button>
+              <div className="relative group cursor-pointer" onClick={() => setShowAllProjects(true)}>
+                {/* Gradient fade overlay above button */}
+                <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+                
+                {/* Glowing container */}
+                <div className="relative px-8 py-4 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(0,206,209,0.15)]">
+                  {/* Animated glow effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse" />
+                  </div>
+                  
+                  {/* Light beam effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
+                  
+                  <div className="flex items-center gap-3 relative z-10">
+                    <ChevronDown className="h-5 w-5 text-primary animate-bounce" />
+                    <span className="text-foreground/80 group-hover:text-foreground transition-colors">
+                      Show More Projects
+                    </span>
+                    <span className="text-primary font-semibold">
+                      ({projects.length - 8} more)
+                    </span>
+                  </div>
+                </div>
               </div>
             )}
             {showAllProjects && (
               <Button 
                 variant="default"
                 asChild
-                className="bg-primary hover:bg-primary/90"
+                className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(0,206,209,0.3)]"
               >
                 <a href="https://github.com/muhammadibrahim313" target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4 mr-2" />
@@ -645,25 +659,39 @@ const Projects = () => {
             </div>
 
             {/* Show More / View All Kaggle */}
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-4 relative">
               {!showAllKaggle && kagglePlaceholders.length > 8 && (
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent -top-20 pointer-events-none" />
-                  <Button 
-                    onClick={() => setShowAllKaggle(true)}
-                    variant="outline"
-                    className="border-primary/30 hover:bg-primary/10 hover:border-primary gap-2"
-                  >
-                    <ChevronDown className="h-4 w-4" />
-                    Show More Projects ({kagglePlaceholders.length - 8} more)
-                  </Button>
+                <div className="relative group cursor-pointer" onClick={() => setShowAllKaggle(true)}>
+                  {/* Gradient fade overlay above button */}
+                  <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+                  
+                  {/* Glowing container */}
+                  <div className="relative px-8 py-4 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(0,206,209,0.15)]">
+                    {/* Animated glow effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse" />
+                    </div>
+                    
+                    {/* Light beam effect */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
+                    
+                    <div className="flex items-center gap-3 relative z-10">
+                      <ChevronDown className="h-5 w-5 text-primary animate-bounce" />
+                      <span className="text-foreground/80 group-hover:text-foreground transition-colors">
+                        Show More Projects
+                      </span>
+                      <span className="text-primary font-semibold">
+                        ({kagglePlaceholders.length - 8} more)
+                      </span>
+                    </div>
+                  </div>
                 </div>
               )}
               {showAllKaggle && (
                 <Button 
                   variant="default"
                   asChild
-                  className="bg-primary hover:bg-primary/90"
+                  className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(0,206,209,0.3)]"
                 >
                   <a href="https://www.kaggle.com/ibrahimqasimi/code" target="_blank" rel="noopener noreferrer">
                     <BarChart3 className="h-4 w-4 mr-2" />
