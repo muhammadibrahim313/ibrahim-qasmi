@@ -61,22 +61,31 @@ const Navigation = () => {
     };
     const handleClickOutside = (event: MouseEvent) => {
       const navbar = document.getElementById('expandable-navbar');
-      if (navbar && !navbar.contains(event.target as Node)) {
-        setIsExpanded(false);
-        setIsDropdownOpen(false);
+      const target = event.target as Node;
+      
+      // Only close if clicking completely outside the navbar
+      if (navbar && !navbar.contains(target)) {
+        // Use a small delay for smoother transition
+        setTimeout(() => {
+          setIsExpanded(false);
+          setIsDropdownOpen(false);
+        }, 150);
       }
     };
+    
     const handleMouseLeave = () => {
-      // Only auto-collapse on desktop
+      // Only auto-collapse on desktop after a delay
       if (window.innerWidth >= 1024) {
         setTimeout(() => {
           setIsExpanded(false);
           setIsDropdownOpen(false);
-        }, 300);
+        }, 500);
       }
     };
+    
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('mousedown', handleClickOutside);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
@@ -107,16 +116,18 @@ const Navigation = () => {
         Skip to Content
       </a>
       
-      <nav id="expandable-navbar" className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-400 ease-in-out" style={{
+      <nav id="expandable-navbar" className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40" style={{
       perspective: '1000px'
     }} onMouseEnter={handleNavbarMouseEnter} onClick={handleNavbarClick}>
         <div className={`
-            relative bg-background/95 backdrop-blur-sm border border-border shadow-lg transition-all duration-400 ease-in-out
+            relative bg-background/95 backdrop-blur-md border border-border shadow-lg
+            transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
             ${isExpanded ? 'rounded-2xl w-[90vw] max-w-6xl' : 'rounded-full w-48 lg:w-56'}
           `} style={{
         transformStyle: 'preserve-3d',
-        transform: isExpanded ? 'rotateY(0deg)' : 'rotateY(-2deg)',
-        boxShadow: isExpanded ? '0 25px 50px -12px rgba(8, 145, 178, 0.25), 0 0 40px rgba(8, 145, 178, 0.1)' : '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
+        transform: isExpanded ? 'rotateY(0deg) scale(1)' : 'rotateY(-2deg) scale(1)',
+        boxShadow: isExpanded ? '0 25px 50px -12px rgba(8, 145, 178, 0.25), 0 0 40px rgba(8, 145, 178, 0.1)' : '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
+        willChange: 'transform, width, border-radius'
       }}>
           {/* Collapsed State - Logo Only */}
           {!isExpanded && <div className="flex items-center justify-center h-14 px-6">
