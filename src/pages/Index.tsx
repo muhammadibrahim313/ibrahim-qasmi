@@ -46,7 +46,7 @@ const Index = () => {
             {/* Social Icons */}
             <div className="flex justify-center items-center gap-6 text-muted-foreground">
               <a 
-                href="https://www.instagram.com/muhammad_ibrahim_313" 
+                href="https://www.instagram.com/muhammad_ibrahim_qasmi/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -57,7 +57,7 @@ const Index = () => {
                 </svg>
               </a>
               <a 
-                href="https://www.facebook.com/profile.php?id=100069228483015" 
+                href="https://web.facebook.com/profile.php?id=61560872765839" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -68,7 +68,7 @@ const Index = () => {
                 </svg>
               </a>
               <a 
-                href="https://www.youtube.com/@muhammadibrahim313" 
+                href="https://www.youtube.com/@Btajicrew" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -79,7 +79,7 @@ const Index = () => {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/muhammadibra313" 
+                href="https://x.com/ibrahim_qasmi92" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
