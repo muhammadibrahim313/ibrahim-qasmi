@@ -28,11 +28,11 @@ const Index = () => {
         <div id="skills"><Skills /></div>
         <div id="projects"><Projects /></div>
         
-        <div id="blogs"><Blogs /></div>
+        <div id="experience"><Experience /></div>
         <div id="mentorship"><MentorshipVolunteering /></div>
         <div id="community-leadership"><CommunityLeadership /></div>
         <Recommendations />
-        <div id="experience"><Experience /></div>
+        <div id="blogs"><Blogs /></div>
         <Education />
         <div id="testimonials"><Testimonials /></div>
 
