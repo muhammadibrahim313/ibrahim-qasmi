@@ -5,6 +5,11 @@
 /* Muhammad Ibrahim Qasmi Portfolio Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Global Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     /* Dark Portfolio Theme */
