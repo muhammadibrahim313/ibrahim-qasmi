@@ -19,7 +19,7 @@ import womensHealthImage from '@/assets/womens_health.jfif';
 import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
 
 // Import Kaggle competition images
-import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.jpeg';
+import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.png';
 import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
