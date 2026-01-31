@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Trophy, Award, Medal, Star, Target, Code, Users, Globe } from 'lucide-react';
+import { Trophy, Award, Medal, Star, Target, Code, Users, Globe, ExternalLink } from 'lucide-react';
 
 // Import achievement images
 import newyorkImage from '@/assets/newyork.jpg';
@@ -17,6 +17,14 @@ import nationalHackImage from '@/assets/national_hack_1.jfif';
 import top6HackImage from '@/assets/top6_hack.jfif';
 import womensHealthImage from '@/assets/womens_health.jfif';
 import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
+
+// Import Kaggle competition images
+import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.jpeg';
+import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
+import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
+import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
+import roadAccidentImage from '@/assets/kaggle-competitions/road-accident.jpg';
+import brainToTextImage from '@/assets/kaggle-competitions/brain-to-text.jpg';
 
 const Achievements = () => {
   const majorAchievements = [
@@ -127,6 +135,68 @@ const Achievements = () => {
       description: "Annual programming puzzle competition",
       image: adventImage,
       icon: <Code className="h-5 w-5" />
+    }
+  ];
+
+  const kaggleCompetitions = [
+    {
+      title: "Social Media Extremism Detection Challenge",
+      result: "🥇 1st Place",
+      description: "Machine Learning model to classify social media text as extremist or non-extremist. Won $100 prize!",
+      teams: "200+ teams",
+      image: extremismDetectionImage,
+      icon: <Trophy className="h-5 w-5" />,
+      medalColor: "border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.3)]"
+    },
+    {
+      title: "CSIRO - Image2Biomass Prediction",
+      result: "🥈 Silver Medal",
+      description: "Predict biomass using provided pasture images for agricultural analysis.",
+      teams: "3800+ teams",
+      rank: "33rd",
+      image: image2BiomassImage,
+      icon: <Medal className="h-5 w-5" />,
+      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+    },
+    {
+      title: "PhysioNet - Digitization of ECG Images",
+      result: "🥉 Bronze Medal",
+      description: "Extract ECG time-series data from scans and photographs of paper printouts.",
+      teams: "1400+ teams",
+      rank: "141st",
+      image: ecgDigitizationImage,
+      icon: <Award className="h-5 w-5" />,
+      medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
+    },
+    {
+      title: "Predicting Loan Payback",
+      result: "Top 1%",
+      description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
+      teams: "3500+ teams",
+      rank: "20th",
+      image: loanPredictionImage,
+      icon: <Target className="h-5 w-5" />,
+      medalColor: ""
+    },
+    {
+      title: "Predicting Road Accident Risk",
+      result: "Top 20%",
+      description: "Playground Series - Season 5, Episode 10. Traffic safety prediction.",
+      teams: "300+ teams",
+      rank: "60th",
+      image: roadAccidentImage,
+      icon: <Star className="h-5 w-5" />,
+      medalColor: ""
+    },
+    {
+      title: "Brain-to-text '25",
+      result: "Top 15%",
+      description: "Decode intracortical neural activity during attempted speech into words.",
+      teams: "450 teams",
+      rank: "70th",
+      image: brainToTextImage,
+      icon: <Code className="h-5 w-5" />,
+      medalColor: ""
     }
   ];
 
@@ -256,6 +326,59 @@ const Achievements = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">{contest.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Kaggle Competition Achievements */}
+        <div id="kaggle-competitions" className="mt-16">
+          <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+            <Trophy className="h-6 w-6 text-primary" />
+            Kaggle Competition Achievements
+            <a 
+              href="https://www.kaggle.com/ibrahimqasimi/competitions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-auto text-sm font-normal text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
+            >
+              View All Competitions <ExternalLink className="h-4 w-4" />
+            </a>
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            Proven track record in real-world machine learning competitions, from NLP classification to medical imaging and neural decoding challenges.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {kaggleCompetitions.map((competition, index) => (
+              <Card key={index} className={`group border-2 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl ${competition.medalColor}`}>
+                <div className="aspect-video relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={competition.image}
+                    alt={competition.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <Badge variant="secondary" className="text-xs">
+                      {competition.rank ? `${competition.rank} / ${competition.teams}` : competition.teams}
+                    </Badge>
+                  </div>
+                </div>
+                <CardHeader className="pb-3">
+                  <div className="flex items-start gap-3">
+                    <div className="text-primary mt-1">{competition.icon}</div>
+                    <div>
+                      <CardTitle className="text-lg leading-tight">{competition.title}</CardTitle>
+                      <Badge variant="default" className="mt-2 text-xs bg-primary/20 text-primary border-0">
+                        {competition.result}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{competition.description}</p>
                 </CardContent>
               </Card>
             ))}
