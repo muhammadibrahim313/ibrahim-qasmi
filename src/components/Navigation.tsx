@@ -31,6 +31,9 @@ const Navigation = () => {
     id: 'competitive-programming',
     label: 'Competitive Programming'
   }, {
+    id: 'kaggle-competitions',
+    label: 'Kaggle Competitions'
+  }, {
     id: 'mentorship',
     label: 'Mentorship & Volunteering'
   }, {
