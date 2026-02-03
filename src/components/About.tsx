@@ -47,7 +47,7 @@ const About = () => {
                   <div className="flex flex-wrap gap-4 pt-4">
                     <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10">
                       <a 
-                        href="#" 
+                        href="https://drive.google.com/file/d/1sLtg4vr4zjvbf39W14sOC_6MCJDpY7ni/view?usp=sharing" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         aria-label="Download Ibrahim's resume"
