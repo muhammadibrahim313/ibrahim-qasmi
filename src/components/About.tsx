@@ -53,7 +53,7 @@ const About = () => {
                         aria-label="Download Ibrahim's resume"
                       >
                         <Download className="mr-2 h-4 w-4" />
-                        Download Resume
+                        View My Resume
                         <ExternalLink className="ml-2 h-3 w-3" />
                       </a>
                     </Button>
