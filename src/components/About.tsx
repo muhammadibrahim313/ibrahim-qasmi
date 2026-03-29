@@ -50,10 +50,10 @@ const About = () => {
                         href="https://drive.google.com/file/d/1sLtg4vr4zjvbf39W14sOC_6MCJDpY7ni/view?usp=sharing" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        aria-label="Download Ibrahim's resume"
+                        aria-label="View Ibrahim's CV"
                       >
                         <Download className="mr-2 h-4 w-4" />
-                        View My Resume
+                        View My CV
                         <ExternalLink className="ml-2 h-3 w-3" />
                       </a>
                     </Button>
