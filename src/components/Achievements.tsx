@@ -23,7 +23,7 @@ import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-dete
 import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
-import roadAccidentImage from '@/assets/kaggle-competitions/road-accident.jpg';
+import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
 import brainToTextImage from '@/assets/kaggle-competitions/brain-to-text.jpg';
 
 const Achievements = () => {
@@ -159,14 +159,14 @@ const Achievements = () => {
       medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
-      title: "PhysioNet - Digitization of ECG Images",
-      result: "🥉 Bronze Medal",
-      description: "Extract ECG time-series data from scans and photographs of paper printouts.",
-      teams: "1400+ teams",
-      rank: "141st",
-      image: ecgDigitizationImage,
-      icon: <Award className="h-5 w-5" />,
-      medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
+      title: "The Deep Past Challenge",
+      result: "🥈 Silver Medal",
+      description: "Translated 4,000-year-old Old Assyrian Akkadian into English using AI. Fine-tuned ByT5 on 70-80K extracted parallel rows with MBR ensembling.",
+      teams: "2500+ teams",
+      rank: "79th",
+      image: deepPastImage,
+      icon: <Medal className="h-5 w-5" />,
+      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
       title: "Predicting Loan Payback",
@@ -176,16 +176,6 @@ const Achievements = () => {
       rank: "20th",
       image: loanPredictionImage,
       icon: <Target className="h-5 w-5" />,
-      medalColor: ""
-    },
-    {
-      title: "Predicting Road Accident Risk",
-      result: "Top 20%",
-      description: "Playground Series - Season 5, Episode 10. Traffic safety prediction.",
-      teams: "300+ teams",
-      rank: "60th",
-      image: roadAccidentImage,
-      icon: <Star className="h-5 w-5" />,
       medalColor: ""
     },
     {
