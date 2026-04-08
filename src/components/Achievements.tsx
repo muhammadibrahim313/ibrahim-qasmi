@@ -22,6 +22,7 @@ import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
 import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.png';
 import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
+import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
 import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
 import brainToTextImage from '@/assets/kaggle-competitions/brain-to-text.jpg';
 
