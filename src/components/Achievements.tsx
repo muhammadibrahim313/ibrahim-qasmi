@@ -169,6 +169,16 @@ const Achievements = () => {
       medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
+      title: "PhysioNet - Digitization of ECG Images",
+      result: "🥉 Bronze Medal",
+      description: "Extract ECG time-series data from scans and photographs of paper printouts.",
+      teams: "1400+ teams",
+      rank: "141st",
+      image: ecgDigitizationImage,
+      icon: <Award className="h-5 w-5" />,
+      medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
+    },
+    {
       title: "Predicting Loan Payback",
       result: "Top 1%",
       description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
