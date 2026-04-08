@@ -4,86 +4,164 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+import deployMlApi from '@/assets/blogs/deploy-ml-api.webp';
+import kaggleMcp from '@/assets/blogs/kaggle-mcp.webp';
+import nlp from '@/assets/blogs/nlp.webp';
+import revupPython from '@/assets/blogs/revup-python.webp';
+import zeroHero from '@/assets/blogs/zero-hero.webp';
+import kaggleNotebooks from '@/assets/blogs/kaggle-notebooks.png';
+
 const Blogs = () => {
   const [showAll, setShowAll] = useState(false);
 
   const blogs = [
     {
-      title: "Set a Deadline and watch your Productivity Skyrocket",
-      date: "Feb 13, 2024",
-      tags: ["Productivity", "Career"],
-      readTime: "5 min",
-      link: "https://medium.com/@ibrahim313"
+      title: "Deploy Your First Machine Learning Model as a Public API",
+      description: "A step-by-step guide for data science students who want to take their models from notebooks to production",
+      date: "Jan 25, 2025",
+      tags: ["Python", "ML"],
+      readTime: "8 min",
+      link: "https://medium.com/@ibrahim313",
+      image: deployMlApi,
+      featured: true,
     },
     {
-      title: "Prepare to Win the MIT Competition with Free Resources",
-      date: "Jan 8, 2024",
-      tags: ["Competitions", "Resources"],
+      title: "How to Submit to Kaggle Competitions Using MCP (VS Code)",
+      description: "A practical guide for Kaggle users who want to go from MCP setup to real competition submissions",
+      date: "Apr 1, 2025",
+      tags: ["Kaggle", "MCP"],
       readTime: "7 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
+      image: kaggleMcp,
+      featured: true,
     },
     {
       title: "NLP | Where Machines Meet Meaning",
+      description: "The Heart of Human-AI Communication",
       date: "Oct 22, 2024",
       tags: ["NLP", "AI"],
       readTime: "6 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
+      image: nlp,
+      featured: true,
     },
     {
-      title: "Rev Up Your Python Installation: Achieve 100x Faster Speeds ⚡",
+      title: "Rev Up 🚀 Your Python Installation: Achieve 100x Faster Speeds ⚡",
+      description: "Meet uv, a revolutionary tool designed to make your package management lightning fast",
       date: "Jul 16, 2024",
       tags: ["Python", "Tools"],
-      readTime: "8 min",
-      link: "https://medium.com/@ibrahim313"
-    },
-    {
-      title: "Cool Tricks of Python Tuple",
-      date: "Jul 14, 2024",
-      tags: ["Python", "Tips"],
-      readTime: "4 min",
-      link: "https://medium.com/@ibrahim313"
-    },
-    {
-      title: "The Priceless Value of Deep Conversations",
-      date: "Jul 11, 2024",
-      tags: ["Personal", "Growth"],
-      readTime: "5 min",
-      link: "https://medium.com/@ibrahim313"
-    },
-    {
-      title: "11 Python List Tricks for Efficient Coding",
-      date: "Jul 7, 2024",
-      tags: ["Python", "Tips"],
       readTime: "6 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
+      image: revupPython,
+      featured: true,
     },
     {
       title: "Zero | The Hero We Often Overlook",
+      description: "Zero is far from nothing — it's a powerful force that has shaped our world",
       date: "Jul 6, 2024",
       tags: ["Math", "Insights"],
       readTime: "5 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
+      image: zeroHero,
+      featured: true,
+    },
+    {
+      title: "29 Game-Changing Kaggle Notebooks Every Data Scientist Needs",
+      description: "A curated collection of the most impactful Kaggle notebooks for data science mastery",
+      date: "2024",
+      tags: ["Kaggle", "Data Science"],
+      readTime: "10 min",
+      link: "https://www.linkedin.com/pulse/29-game-changing-kaggle-notebooks-every-data-scientist-qasmi-vauhf/?trackingId=4aWzztLISjqieQeu9Fspiw%3D%3D",
+      image: kaggleNotebooks,
+      featured: true,
+    },
+    {
+      title: "Deploy Your First Deep Learning Model on Hugging Face and Share Live Demo (Gradio)",
+      description: "A step-by-step guide for data science students who want to give their models a real web interface",
+      date: "Feb 2, 2025",
+      tags: ["Deep Learning", "Gradio"],
+      readTime: "8 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "CSIRO Image2Biomass Prediction: 33rd Place Silver Medal Solution",
+      description: "Fine-tuning DINO v3 Huge (1.1B params) and combining it with SigLIP for pasture biomass prediction",
+      date: "Jan 31, 2025",
+      tags: ["Kaggle", "Computer Vision"],
+      readTime: "7 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "Google Gemini Pro Free for Students: The Complete Guide",
+      description: "Maximizing your 1-year subscription to Google Gemini Pro",
+      date: "Oct 16, 2025",
+      tags: ["AI", "Tools"],
+      readTime: "6 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "Set a Deadline and Watch Your Productivity Skyrocket!",
+      description: "The secret sauce to turning big ideas into reality",
+      date: "Feb 13, 2025",
+      tags: ["Productivity", "Career"],
+      readTime: "5 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "Prepare to Win the MIT Competition with Free Resources",
+      description: "Improve your problem-solving and coding skills for the prestigious MIT Competition",
+      date: "Jan 8, 2025",
+      tags: ["Competitions", "Resources"],
+      readTime: "7 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "Cool Tricks of Python Tuple",
+      description: "10 cool tuple tricks that you didn't use before",
+      date: "Jul 14, 2024",
+      tags: ["Python", "Tips"],
+      readTime: "4 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "The Priceless Value of Deep Conversations",
+      description: "The Transformative Power of Deep Conversations with the Right People",
+      date: "Jul 11, 2024",
+      tags: ["Personal", "Growth"],
+      readTime: "5 min",
+      link: "https://medium.com/@ibrahim313",
+    },
+    {
+      title: "11 Python List Tricks for Efficient Coding",
+      description: "Cool tricks about lists in Python that you didn't know before",
+      date: "Jul 7, 2024",
+      tags: ["Python", "Tips"],
+      readTime: "6 min",
+      link: "https://medium.com/@ibrahim313",
     },
     {
       title: "Meet Pakistan's Youngest 3x Grandmaster on Kaggle — Me!",
+      description: "1st Pakistani and 88th in the world to achieve this incredible feat on Kaggle",
       date: "May 30, 2024",
       tags: ["Achievement", "Kaggle"],
       readTime: "4 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
     },
     {
       title: "Top 10 Data Scientists",
+      description: "Established figures in the realm of data science to observe and learn from",
       date: "Apr 16, 2024",
       tags: ["Data Science", "Career"],
       readTime: "7 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
     },
     {
-      title: "Crafting a Data Science/Machine Learning Portfolio in 4–5 Months",
+      title: "Crafting a Data Science/ML Portfolio in 4–5 Months",
+      description: "A comprehensive guide to building a strong portfolio for data science internships",
       date: "Mar 3, 2024",
       tags: ["Career", "Portfolio"],
       readTime: "8 min",
-      link: "https://medium.com/@ibrahim313"
+      link: "https://medium.com/@ibrahim313",
     }
   ];
 
@@ -106,10 +184,20 @@ const Blogs = () => {
             {visibleBlogs.map((blog, index) => (
               <Card 
                 key={blog.title} 
-                className="p-6 card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300"
+                className="overflow-hidden card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="space-y-4">
+                {blog.image && (
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  </div>
+                )}
+                <div className="p-5 space-y-3">
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
@@ -118,9 +206,15 @@ const Blogs = () => {
                     <span className="text-xs">{blog.readTime} read</span>
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-foreground line-clamp-2">
+                  <h3 className="text-lg font-semibold text-foreground line-clamp-2 leading-snug">
                     {blog.title}
                   </h3>
+
+                  {blog.description && (
+                    <p className="text-sm text-muted-foreground line-clamp-2">
+                      {blog.description}
+                    </p>
+                  )}
                   
                   <div className="flex flex-wrap gap-1">
                     {blog.tags.map((tag) => (
@@ -133,7 +227,7 @@ const Blogs = () => {
                   
                   <Button size="sm" variant="outline" asChild className="w-full h-10 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                     <a href={blog.link} target="_blank" rel="noopener noreferrer">
-                      Read on Medium →
+                      {blog.link.includes('linkedin') ? 'Read on LinkedIn →' : 'Read on Medium →'}
                     </a>
                   </Button>
                 </div>
@@ -145,17 +239,13 @@ const Blogs = () => {
           <div className="flex flex-col items-center gap-4 relative">
             {!showAll && blogs.length > 6 && (
               <div className="relative group cursor-pointer" onClick={() => setShowAll(true)}>
-                {/* Gradient fade overlay above button */}
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
                 
-                {/* Glowing container */}
                 <div className="relative px-8 py-4 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(0,206,209,0.15)]">
-                  {/* Animated glow effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse" />
                   </div>
                   
-                  {/* Light beam effect */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
                   
                   <div className="flex items-center gap-3 relative z-10">
