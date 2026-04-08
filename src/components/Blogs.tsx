@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { ExternalLink, Calendar, Tag, ChevronDown } from 'lucide-react';
+import { ExternalLink, Calendar, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -12,7 +11,6 @@ import zeroHero from '@/assets/blogs/zero-hero.webp';
 import kaggleNotebooks from '@/assets/blogs/kaggle-notebooks.png';
 
 const Blogs = () => {
-  const [showAll, setShowAll] = useState(false);
 
   const blogs = [
     {
@@ -75,97 +73,9 @@ const Blogs = () => {
       image: kaggleNotebooks,
       featured: true,
     },
-    {
-      title: "Deploy Your First Deep Learning Model on Hugging Face and Share Live Demo (Gradio)",
-      description: "A step-by-step guide for data science students who want to give their models a real web interface",
-      date: "Feb 2, 2025",
-      tags: ["Deep Learning", "Gradio"],
-      readTime: "8 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "CSIRO Image2Biomass Prediction: 33rd Place Silver Medal Solution",
-      description: "Fine-tuning DINO v3 Huge (1.1B params) and combining it with SigLIP for pasture biomass prediction",
-      date: "Jan 31, 2025",
-      tags: ["Kaggle", "Computer Vision"],
-      readTime: "7 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Google Gemini Pro Free for Students: The Complete Guide",
-      description: "Maximizing your 1-year subscription to Google Gemini Pro",
-      date: "Oct 16, 2025",
-      tags: ["AI", "Tools"],
-      readTime: "6 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Set a Deadline and Watch Your Productivity Skyrocket!",
-      description: "The secret sauce to turning big ideas into reality",
-      date: "Feb 13, 2025",
-      tags: ["Productivity", "Career"],
-      readTime: "5 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Prepare to Win the MIT Competition with Free Resources",
-      description: "Improve your problem-solving and coding skills for the prestigious MIT Competition",
-      date: "Jan 8, 2025",
-      tags: ["Competitions", "Resources"],
-      readTime: "7 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Cool Tricks of Python Tuple",
-      description: "10 cool tuple tricks that you didn't use before",
-      date: "Jul 14, 2024",
-      tags: ["Python", "Tips"],
-      readTime: "4 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "The Priceless Value of Deep Conversations",
-      description: "The Transformative Power of Deep Conversations with the Right People",
-      date: "Jul 11, 2024",
-      tags: ["Personal", "Growth"],
-      readTime: "5 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "11 Python List Tricks for Efficient Coding",
-      description: "Cool tricks about lists in Python that you didn't know before",
-      date: "Jul 7, 2024",
-      tags: ["Python", "Tips"],
-      readTime: "6 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Meet Pakistan's Youngest 3x Grandmaster on Kaggle — Me!",
-      description: "1st Pakistani and 88th in the world to achieve this incredible feat on Kaggle",
-      date: "May 30, 2024",
-      tags: ["Achievement", "Kaggle"],
-      readTime: "4 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Top 10 Data Scientists",
-      description: "Established figures in the realm of data science to observe and learn from",
-      date: "Apr 16, 2024",
-      tags: ["Data Science", "Career"],
-      readTime: "7 min",
-      link: "https://medium.com/@ibrahim313",
-    },
-    {
-      title: "Crafting a Data Science/ML Portfolio in 4–5 Months",
-      description: "A comprehensive guide to building a strong portfolio for data science internships",
-      date: "Mar 3, 2024",
-      tags: ["Career", "Portfolio"],
-      readTime: "8 min",
-      link: "https://medium.com/@ibrahim313",
-    }
   ];
 
-  const visibleBlogs = showAll ? blogs : blogs.slice(0, 6);
+  
 
   return (
     <section id="blogs" className="section-padding">
@@ -181,7 +91,7 @@ const Blogs = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {visibleBlogs.map((blog, index) => (
+            {blogs.map((blog, index) => (
               <Card 
                 key={blog.title} 
                 className="overflow-hidden card-hover neon-border slide-up hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300"
@@ -235,43 +145,17 @@ const Blogs = () => {
             ))}
           </div>
 
-          {/* Show More / View All on Medium */}
-          <div className="flex flex-col items-center gap-4 relative">
-            {!showAll && blogs.length > 6 && (
-              <div className="relative group cursor-pointer" onClick={() => setShowAll(true)}>
-                <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
-                
-                <div className="relative px-8 py-4 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(0,206,209,0.15)]">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse" />
-                  </div>
-                  
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
-                  
-                  <div className="flex items-center gap-3 relative z-10">
-                    <ChevronDown className="h-5 w-5 text-primary animate-bounce" />
-                    <span className="text-foreground/80 group-hover:text-foreground transition-colors">
-                      Show More Articles
-                    </span>
-                    <span className="text-primary font-semibold">
-                      ({blogs.length - 6} more)
-                    </span>
-                  </div>
-                </div>
-              </div>
-            )}
-            {showAll && (
-              <Button 
-                variant="default"
-                asChild
-                className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(0,206,209,0.3)]"
-              >
-                <a href="https://medium.com/@ibrahim313" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View All on Medium
-                </a>
-              </Button>
-            )}
+          <div className="flex justify-center">
+            <Button 
+              variant="default"
+              asChild
+              className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(0,206,209,0.3)]"
+            >
+              <a href="https://medium.com/@ibrahim313" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4 mr-2" />
+                View All on Medium
+              </a>
+            </Button>
           </div>
         </div>
       </div>
