@@ -42,8 +42,8 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-12">
-        <div className="container-custom max-w-4xl mx-auto">
+      <footer className="bg-background border-t border-border py-8 sm:py-12 mb-14 lg:mb-0">
+        <div className="container-custom max-w-4xl mx-auto px-4">
           <div className="text-center space-y-6">
             {/* Social Icons */}
             <div className="flex justify-center items-center gap-6 text-muted-foreground">

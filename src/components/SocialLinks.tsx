@@ -92,7 +92,7 @@ const SocialLinks = () => {
   return (
     <>
       {/* Desktop - Right Sidebar */}
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-30 hidden lg:block">
+      <div className="fixed right-3 xl:right-6 top-1/2 transform -translate-y-1/2 z-30 hidden lg:block">
         <div className="flex flex-col gap-3">
           {socialLinks.map((link) => (
             <a
@@ -102,7 +102,7 @@ const SocialLinks = () => {
               rel="noopener noreferrer"
               aria-label={`Visit ${link.name} profile`}
               title={`${link.name} - ${link.description}`}
-              className="w-12 h-12 flex items-center justify-center rounded-lg bg-card/80 backdrop-blur-sm border transition-all duration-300 group hover:scale-105"
+              className="w-10 h-10 xl:w-12 xl:h-12 flex items-center justify-center rounded-lg bg-card/80 backdrop-blur-sm border transition-all duration-300 group hover:scale-105"
               style={{
                 borderColor: link.glowColor.replace('0.6', '0.3'),
                 boxShadow: `0 0 12px ${link.glowColor}, 0 0 20px ${link.glowColor.replace('0.6', '0.4')}`
@@ -123,8 +123,8 @@ const SocialLinks = () => {
       </div>
 
       {/* Mobile - Bottom Navigation Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-card/95 backdrop-blur-md border-t border-border pb-safe">
-        <div className="flex justify-around items-center px-2 py-3 max-w-lg mx-auto">
+      <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-card/95 backdrop-blur-md border-t border-border" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
+        <div className="flex justify-around items-center px-1 py-2 max-w-md mx-auto">
           {socialLinks.map((link) => (
             <a
               key={link.name}
@@ -132,7 +132,7 @@ const SocialLinks = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${link.name} profile`}
-              className="w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 active:scale-95"
+              className="w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-300 active:scale-95"
               style={{
                 boxShadow: `0 0 8px ${link.glowColor.replace('0.6', '0.3')}`
               }}

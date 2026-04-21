@@ -4,18 +4,18 @@ import { ExternalLink, Target } from 'lucide-react';
 
 const CommunityLeadership = () => {
   return (
-    <section id="community-leadership" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/20">
+    <section id="community-leadership" className="py-12 sm:py-16 md:py-20 px-3 sm:px-6 lg:px-8 bg-card/20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
             Community Leadership
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Building and empowering the tech community
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {/* Card 1: WebMind Hackathon */}
           <Card className="group border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
