@@ -202,20 +202,20 @@ const Achievements = () => {
 
 
   return (
-    <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="achievements" className="py-12 sm:py-16 md:py-20 px-3 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
             Achievements & Recognition
           </h2>
-          <p className="font-playfair text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="font-playfair text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             A collection of competitive victories, global recognition, and technical achievements 
             spanning hackathons, programming contests, and industry acknowledgments.
           </p>
         </div>
 
         {/* Major Achievements */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
           {majorAchievements.map((achievement, index) => (
             <Card key={index} className="group relative overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -238,7 +238,7 @@ const Achievements = () => {
                   <div className="flex items-center gap-3">
                     <div className="text-primary">{achievement.icon}</div>
                     <div>
-                      <CardTitle className="text-2xl">{achievement.title}</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl md:text-2xl">{achievement.title}</CardTitle>
                       <CardDescription className="text-lg font-medium text-primary">
                         {achievement.subtitle}
                       </CardDescription>
@@ -260,7 +260,7 @@ const Achievements = () => {
             <Trophy className="h-6 w-6 text-primary" />
             Hackathon Victories (7× International Winner)
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {hackathonWins.map((win, index) => (
               <Card key={index} className="group border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 {win.image && (
@@ -299,7 +299,7 @@ const Achievements = () => {
             <Code className="h-6 w-6 text-primary" />
             Competitive Programming & Contests
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {competitiveProgramming.map((contest, index) => (
               <Card key={index} className="group border-0 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 {contest.image && (
@@ -334,22 +334,24 @@ const Achievements = () => {
 
         {/* Kaggle Competition Achievements */}
         <div id="kaggle-competitions" className="mt-16">
-          <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-            <Trophy className="h-6 w-6 text-primary" />
-            Kaggle Competition Achievements
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold flex items-center gap-3">
+              <Trophy className="h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+              Kaggle Competition Achievements
+            </h3>
             <a 
               href="https://www.kaggle.com/ibrahimqasimi/competitions" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="ml-auto text-sm font-normal text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
+              className="text-sm font-normal text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
             >
               View All Competitions <ExternalLink className="h-4 w-4" />
             </a>
-          </h3>
+          </div>
           <p className="text-muted-foreground mb-8 max-w-3xl">
             Proven track record in real-world machine learning competitions, from NLP classification to medical imaging and neural decoding challenges.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {kaggleCompetitions.map((competition, index) => (
               <Card key={index} className={`group border-2 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl ${competition.medalColor}`}>
                 <div className="aspect-video relative overflow-hidden rounded-t-lg">

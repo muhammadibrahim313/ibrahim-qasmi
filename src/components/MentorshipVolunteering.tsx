@@ -74,16 +74,16 @@ const MentorshipVolunteering = () => {
       <div className="container-custom">
         <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
             Mentorship & Volunteering
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Empowering the next generation through knowledge sharing and community impact
           </p>
         </div>
 
         {/* Main Mentorship Activities */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
           {mentorshipActivities.map((activity, index) => (
             <Card key={index} className="p-6 card-hover neon-border slide-up group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />

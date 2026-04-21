@@ -3,18 +3,18 @@ import { Button } from '@/components/ui/button';
 import AnimatedGridBackground from './AnimatedGridBackground';
 import profileImage from '@/assets/profile-image.png';
 const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-6 pb-16">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-6 pb-16">
       {/* Animated Grid Background */}
       <AnimatedGridBackground />
 
       {/* Content */}
       <div className="relative z-10 container-custom section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12 items-center max-w-7xl mx-auto">
           {/* Left Column - Text Content (60%) */}
           <div className="lg:col-span-3 space-y-8">
             {/* Main Heading */}
             <div className="space-y-4 fade-in">
-              <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-left lg:text-left">
+              <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-left lg:text-left">
                 <span className="block bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent hover:from-primary hover:to-accent transition-all duration-500 ease-out">
                   Muhammad Ibrahim Qasmi
                 </span>
@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Profile Image (40%) */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-end">
+          <div className="lg:col-span-2 flex justify-center lg:justify-end order-first lg:order-last">
             <div className="relative group">
               {/* Connecting Particles */}
               <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 hidden lg:block">
@@ -89,7 +89,7 @@ const Hero = () => {
                 {/* Gradient Border Frame */}
                 <div className="relative p-1 rounded-3xl bg-gradient-to-r from-primary via-accent to-primary animate-pulse">
                   <div className="bg-background/10 backdrop-blur-md rounded-3xl p-2">
-                    <img src={profileImage} alt="Muhammad Ibrahim Qasmi - AI Engineer" className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl transition-all duration-500 group-hover:scale-105" style={{
+                    <img src={profileImage} alt="Muhammad Ibrahim Qasmi - AI Engineer" className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl transition-all duration-500 group-hover:scale-105" style={{
                     animation: 'float 6s ease-in-out infinite',
                     filter: 'drop-shadow(0 20px 40px rgba(8, 145, 178, 0.3))'
                   }} loading="lazy" onError={e => {

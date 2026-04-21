@@ -127,7 +127,7 @@ const Testimonials = () => {
 
           {/* Testimonial Slider */}
           <div className="relative">
-            <Card className="p-8 md:p-12 card-hover neon-border bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+            <Card className="p-5 sm:p-8 md:p-12 card-hover neon-border bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
               <div className="space-y-6">
                 {/* Large Quote Icon */}
                 <div className="flex justify-center">
@@ -141,7 +141,7 @@ const Testimonials = () => {
 
                 {/* Quote Text */}
                 <blockquote className="text-center">
-                  <p className="text-xl md:text-2xl text-foreground italic leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-2xl text-foreground italic leading-relaxed">
                     "{testimonials[currentIndex].quote}"
                   </p>
                 </blockquote>
@@ -162,7 +162,7 @@ const Testimonials = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-4 md:-translate-x-12 p-1.5 sm:p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -170,7 +170,7 @@ const Testimonials = () => {
             
             <button
               onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-4 md:translate-x-12 p-1.5 sm:p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-6 w-6" />
