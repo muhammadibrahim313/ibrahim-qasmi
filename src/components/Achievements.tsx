@@ -159,6 +159,16 @@ const Achievements = () => {
       medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
+      title: "Recod.ai/LUC - Scientific Image Forgery Detection",
+      result: "🥈 Silver",
+      description: "Develop methods that can accurately detect and segment copy-move forgeries within biomedical research images.",
+      teams: "1000+ teams",
+      rank: "65th",
+      image: forgeryDetectionImage,
+      icon: <Medal className="h-5 w-5" />,
+      medalColor: "border-gray-400 shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+    },
+    {
       title: "The Deep Past Challenge",
       result: "🥈 Silver Medal",
       description: "Translated 4,000-year-old Old Assyrian Akkadian into English using AI. Fine-tuned ByT5 on 70-80K extracted parallel rows with MBR ensembling.",
@@ -177,16 +187,6 @@ const Achievements = () => {
       image: ecgDigitizationImage,
       icon: <Award className="h-5 w-5" />,
       medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
-    },
-    {
-      title: "Recod.ai/LUC - Scientific Image Forgery Detection",
-      result: "🥈 Silver",
-      description: "Develop methods that can accurately detect and segment copy-move forgeries within biomedical research images.",
-      teams: "1000+ teams",
-      rank: "65th",
-      image: forgeryDetectionImage,
-      icon: <Medal className="h-5 w-5" />,
-      medalColor: "border-gray-400 shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
       title: "Brain-to-text '25",
