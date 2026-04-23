@@ -24,7 +24,7 @@ import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg'
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import forgeryDetectionImage from '@/assets/kaggle-forgery-detection.jpeg';
 import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
-import brainToTextImage from '@/assets/kaggle-competitions/brain-to-text.jpg';
+import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
 
 const Achievements = () => {
   const majorAchievements = [
@@ -189,13 +189,13 @@ const Achievements = () => {
       medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
     },
     {
-      title: "Brain-to-text '25",
-      result: "Top 15%",
-      description: "Decode intracortical neural activity during attempted speech into words.",
-      teams: "450 teams",
-      rank: "70th",
-      image: brainToTextImage,
-      icon: <Code className="h-5 w-5" />,
+      title: "Predicting Loan Payback",
+      result: "5th Place",
+      description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
+      teams: "3500+ teams",
+      rank: "5th",
+      image: loanPredictionImage,
+      icon: <Target className="h-5 w-5" />,
       medalColor: ""
     }
   ];
@@ -334,23 +334,15 @@ const Achievements = () => {
 
         {/* Kaggle Competition Achievements */}
         <div id="kaggle-competitions" className="mt-16">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-            <h3 className="text-xl sm:text-2xl font-bold flex items-center gap-3">
+          <div className="text-center mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold flex items-center justify-center gap-3 mb-3">
               <Trophy className="h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
               Kaggle Competition Achievements
             </h3>
-            <a 
-              href="https://www.kaggle.com/ibrahimqasimi/competitions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-sm font-normal text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
-            >
-              View All Competitions <ExternalLink className="h-4 w-4" />
-            </a>
+            <p className="text-muted-foreground max-w-3xl mx-auto mb-2">
+              I am a Kaggle Competition Expert, ranked <span className="text-primary font-semibold">652 out of 200,000+</span> competitors — placing me in the <span className="text-primary font-semibold">Top 0.1%</span> globally.
+            </p>
           </div>
-          <p className="text-muted-foreground mb-8 max-w-3xl">
-            Proven track record in real-world machine learning competitions, from NLP classification to medical imaging and neural decoding challenges.
-          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {kaggleCompetitions.map((competition, index) => (
               <Card key={index} className={`group border-2 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl ${competition.medalColor}`}>
@@ -384,6 +376,16 @@ const Achievements = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <a
+              href="https://www.kaggle.com/ibrahimqasimi/competitions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:shadow-[0_0_15px_rgba(0,188,212,0.3)] transition-all duration-300 font-medium"
+            >
+              View All Competitions <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
