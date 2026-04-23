@@ -22,7 +22,7 @@ import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
 import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.png';
 import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
-import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
+import forgeryDetectionImage from '@/assets/kaggle-forgery-detection.jpeg';
 import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
 import brainToTextImage from '@/assets/kaggle-competitions/brain-to-text.jpg';
 
@@ -179,14 +179,14 @@ const Achievements = () => {
       medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
     },
     {
-      title: "Predicting Loan Payback",
-      result: "Top 1%",
-      description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
-      teams: "3500+ teams",
-      rank: "20th",
-      image: loanPredictionImage,
-      icon: <Target className="h-5 w-5" />,
-      medalColor: ""
+      title: "Recod.ai/LUC - Scientific Image Forgery Detection",
+      result: "🥈 Silver",
+      description: "Develop methods that can accurately detect and segment copy-move forgeries within biomedical research images.",
+      teams: "1000+ teams",
+      rank: "65th",
+      image: forgeryDetectionImage,
+      icon: <Medal className="h-5 w-5" />,
+      medalColor: "border-gray-400 shadow-[0_0_15px_rgba(192,192,192,0.3)]"
     },
     {
       title: "Brain-to-text '25",
