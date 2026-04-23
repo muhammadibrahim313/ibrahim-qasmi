@@ -190,10 +190,10 @@ const Achievements = () => {
     },
     {
       title: "Predicting Loan Payback",
-      result: "5th Place",
+      result: "Top 1%",
       description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
       teams: "3500+ teams",
-      rank: "5th",
+      rank: "20th",
       image: loanPredictionImage,
       icon: <Target className="h-5 w-5" />,
       medalColor: ""
