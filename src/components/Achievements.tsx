@@ -24,7 +24,7 @@ import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg'
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import forgeryDetectionImage from '@/assets/kaggle-forgery-detection.jpeg';
 import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
-import loanPredictionImage from '@/assets/kaggle-competitions/loan-prediction.jpg';
+import loanPredictionImage from '@/assets/loan-payback-header.png';
 
 const Achievements = () => {
   const majorAchievements = [
