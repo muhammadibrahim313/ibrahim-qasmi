@@ -63,6 +63,7 @@ import reinforcementLearning from '@/assets/kaggle/reinforcement-learning.jpg';
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllKaggle, setShowAllKaggle] = useState(false);
+  const [selectedKaggleCats, setSelectedKaggleCats] = useState<string[]>([]);
 
   const projects = [
     // First 7 projects (WINNER PROJECTS)
@@ -409,7 +410,7 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
+    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Kaggle Competition", "Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
     { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score", image: sentimentAnalysis },
     { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy", image: imageClassification },
     { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
@@ -441,7 +442,20 @@ const Projects = () => {
 
   // Show first 8 projects or all
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
-  const visibleKaggle = showAllKaggle ? kagglePlaceholders : kagglePlaceholders.slice(0, 8);
+  const allKaggleCategories = Array.from(
+    new Set(kagglePlaceholders.flatMap((p) => p.categories))
+  ).sort();
+  const filteredKaggle = selectedKaggleCats.length === 0
+    ? kagglePlaceholders
+    : kagglePlaceholders.filter((p) =>
+        selectedKaggleCats.every((c) => p.categories.includes(c))
+      );
+  const visibleKaggle = showAllKaggle ? filteredKaggle : filteredKaggle.slice(0, 8);
+  const toggleKaggleCat = (cat: string) => {
+    setSelectedKaggleCats((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  };
 
   return (
     <section id="projects" className="section-padding bg-card/30">
