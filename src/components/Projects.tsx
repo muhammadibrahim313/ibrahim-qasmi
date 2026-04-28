@@ -447,8 +447,10 @@ const Projects = () => {
     "Machine Learning",
     "Deep Learning",
     "NLP",
+    "LLM",
     "Computer Vision",
     "Time Series",
+    "Agentic AI",
     "Kaggle Competition",
   ];
   const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
@@ -632,27 +634,27 @@ const Projects = () => {
             </div>
 
             {/* Category Filter */}
-            <div className="mb-8 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm p-5 shadow-[0_0_30px_rgba(0,206,209,0.08)]">
-              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="font-playfair text-sm font-semibold text-foreground/90 tracking-wide">
-                    Filter by Category
+            <div className="mb-8 rounded-lg border border-primary/15 bg-gradient-to-b from-primary/[0.04] to-transparent backdrop-blur-sm px-4 py-3 shadow-[0_0_20px_rgba(0,206,209,0.06)]">
+              <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-1 h-1 rounded-full bg-primary animate-pulse" />
+                  <span className="font-playfair text-[11px] font-semibold text-foreground/80 tracking-wider uppercase">
+                    Filter
                   </span>
-                  <span className="text-xs text-muted-foreground">
-                    ({filteredKaggle.length} of {kagglePlaceholders.length})
+                  <span className="text-[10px] text-muted-foreground tabular-nums">
+                    {filteredKaggle.length}/{kagglePlaceholders.length}
                   </span>
                 </div>
                 {selectedKaggleCats.length > 0 && (
                   <button
                     onClick={() => setSelectedKaggleCats([])}
-                    className="text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                    className="text-[10px] uppercase tracking-wider text-primary hover:text-primary/80 font-semibold transition-colors"
                   >
-                    Clear all
+                    Clear
                   </button>
                 )}
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {allKaggleCategories.map((cat) => {
                   const active = selectedKaggleCats.includes(cat);
                   return (
@@ -660,10 +662,10 @@ const Projects = () => {
                       key={cat}
                       onClick={() => toggleKaggleCat(cat)}
                       aria-pressed={active}
-                      className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                      className={`px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                         active
-                          ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(0,206,209,0.4)] scale-105'
-                          : 'bg-background/40 text-foreground/80 border-primary/20 hover:border-primary/50 hover:bg-primary/10 hover:text-foreground'
+                          ? 'bg-primary/90 text-primary-foreground border-primary shadow-[0_0_12px_rgba(0,206,209,0.35)]'
+                          : 'bg-background/30 text-foreground/70 border-primary/15 hover:border-primary/40 hover:bg-primary/10 hover:text-foreground'
                       }`}
                     >
                       {cat}
