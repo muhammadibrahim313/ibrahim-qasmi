@@ -622,6 +622,48 @@ const Projects = () => {
                 <span className="text-primary font-semibold">Computer Vision</span> — from exploratory data analysis to competition-winning models.
               </p>
             </div>
+
+            {/* Category Filter */}
+            <div className="mb-8 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm p-5 shadow-[0_0_30px_rgba(0,206,209,0.08)]">
+              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span className="font-playfair text-sm font-semibold text-foreground/90 tracking-wide">
+                    Filter by Category
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    ({filteredKaggle.length} of {kagglePlaceholders.length})
+                  </span>
+                </div>
+                {selectedKaggleCats.length > 0 && (
+                  <button
+                    onClick={() => setSelectedKaggleCats([])}
+                    className="text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                  >
+                    Clear all
+                  </button>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {allKaggleCategories.map((cat) => {
+                  const active = selectedKaggleCats.includes(cat);
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => toggleKaggleCat(cat)}
+                      aria-pressed={active}
+                      className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                        active
+                          ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(0,206,209,0.4)] scale-105'
+                          : 'bg-background/40 text-foreground/80 border-primary/20 hover:border-primary/50 hover:bg-primary/10 hover:text-foreground'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
               {visibleKaggle.map((project, index) => (
