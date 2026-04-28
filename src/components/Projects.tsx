@@ -31,7 +31,7 @@ import nemotronImg from '@/assets/projects/nemotron.jpg';
 import agentForceImg from '@/assets/projects/agent-force.jpg';
 
 // Anime-aesthetic Kaggle project images
-import customerSegmentation from '@/assets/kaggle/customer-segmentation.jpg';
+import ncaaMarchMadness from '@/assets/kaggle-ncaa-2026.webp';
 import sentimentAnalysis from '@/assets/kaggle/sentiment-analysis.jpg';
 import imageClassification from '@/assets/kaggle/image-classification.jpg';
 import timeSeries from '@/assets/kaggle/time-series.jpg';
@@ -409,7 +409,7 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "Customer Segmentation Analysis", categories: ["Machine Learning", "Tabular Data"], metric: "0.95 AUC", image: customerSegmentation },
+    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
     { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score", image: sentimentAnalysis },
     { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy", image: imageClassification },
     { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
@@ -647,7 +647,7 @@ const Projects = () => {
                       <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
                       <div className="text-xs text-primary font-mono">{project.metric}</div>
                       <Button size="sm" variant="outline" asChild className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
-                        <a href="https://www.kaggle.com/ibrahimqasimi/code" target="_blank" rel="noopener noreferrer">
+                        <a href={(project as any).link || "https://www.kaggle.com/ibrahimqasimi/code"} target="_blank" rel="noopener noreferrer">
                           <BarChart3 className="h-3 w-3 mr-1" />
                           View on Kaggle
                         </a>
