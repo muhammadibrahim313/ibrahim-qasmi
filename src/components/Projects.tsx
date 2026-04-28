@@ -414,13 +414,13 @@ const Projects = () => {
     { title: "Sentiment Analysis Challenge", categories: ["NLP", "Machine Learning"], metric: "0.89 F1-Score", image: sentimentAnalysis },
     { title: "Image Classification Contest", categories: ["Deep Learning", "Computer Vision"], metric: "0.92 Accuracy", image: imageClassification },
     { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
-    { title: "Text Generation Model", categories: ["NLP", "Deep Learning"], metric: "0.85 BLEU", image: textGeneration },
+    { title: "Text Generation Model", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.85 BLEU", image: textGeneration },
     { title: "Object Detection Task", categories: ["Deep Learning", "Computer Vision"], metric: "0.78 mAP", image: objectDetection },
     { title: "Recommendation System", categories: ["Machine Learning"], metric: "0.91 Precision", image: recommendationSystem },
-    { title: "Question Answering", categories: ["NLP", "Deep Learning"], metric: "0.88 Exact Match", image: questionAnswering },
+    { title: "Question Answering", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.88 Exact Match", image: questionAnswering },
     { title: "Medical Image Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.94 Sensitivity", image: medicalAnalysis },
     { title: "Financial Prediction", categories: ["Machine Learning", "Time Series"], metric: "0.16 MAE", image: financialPrediction },
-    { title: "Language Translation", categories: ["NLP", "Deep Learning"], metric: "0.82 COMET", image: languageTranslation },
+    { title: "Language Translation", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.82 COMET", image: languageTranslation },
     { title: "Video Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.76 IoU", image: videoAnalysis },
     { title: "Anomaly Detection", categories: ["Machine Learning", "Data Analysis"], metric: "0.93 ROC-AUC", image: anomalyDetection },
     { title: "Speech Recognition", categories: ["NLP", "Deep Learning"], metric: "0.87 WER", image: speechRecognition },
@@ -432,12 +432,12 @@ const Projects = () => {
     { title: "Performance Metrics", categories: ["Data Analysis"], metric: "Statistical Analysis", image: performanceMetrics },
     { title: "Hyperparameter Optimization", categories: ["Machine Learning"], metric: "15% Performance Boost", image: hyperparameterOptimization },
     { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
-    { title: "BERT Fine-tuning", categories: ["NLP", "Deep Learning"], metric: "0.94 F1-Score", image: bertFinetuning },
+    { title: "BERT Fine-tuning", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.94 F1-Score", image: bertFinetuning },
     { title: "CNN Architecture Design", categories: ["Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
     { title: "RNN Stock Prediction", categories: ["Deep Learning", "Time Series"], metric: "0.23 MSE", image: rnnStockPrediction },
     { title: "Graph Neural Networks", categories: ["Deep Learning", "Machine Learning"], metric: "0.91 Accuracy", image: graphNeuralNetworks },
-    { title: "Multimodal Learning System", categories: ["Deep Learning", "NLP", "Computer Vision"], metric: "0.86 Combined Score", image: multimodalLearning },
-    { title: "Reinforcement Learning Agent", categories: ["Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
+    { title: "Multimodal Learning System", categories: ["Deep Learning", "NLP", "LLM", "Computer Vision"], metric: "0.86 Combined Score", image: multimodalLearning },
+    { title: "Reinforcement Learning Agent", categories: ["Agentic AI", "Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
   ];
 
   // Show first 8 projects or all
@@ -447,8 +447,10 @@ const Projects = () => {
     "Machine Learning",
     "Deep Learning",
     "NLP",
+    "LLM",
     "Computer Vision",
     "Time Series",
+    "Agentic AI",
     "Kaggle Competition",
   ];
   const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
@@ -632,27 +634,27 @@ const Projects = () => {
             </div>
 
             {/* Category Filter */}
-            <div className="mb-8 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm p-5 shadow-[0_0_30px_rgba(0,206,209,0.08)]">
-              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="font-playfair text-sm font-semibold text-foreground/90 tracking-wide">
-                    Filter by Category
+            <div className="mb-8 rounded-lg border border-primary/15 bg-gradient-to-b from-primary/[0.04] to-transparent backdrop-blur-sm px-4 py-3 shadow-[0_0_20px_rgba(0,206,209,0.06)]">
+              <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-1 h-1 rounded-full bg-primary animate-pulse" />
+                  <span className="font-playfair text-[11px] font-semibold text-foreground/80 tracking-wider uppercase">
+                    Filter
                   </span>
-                  <span className="text-xs text-muted-foreground">
-                    ({filteredKaggle.length} of {kagglePlaceholders.length})
+                  <span className="text-[10px] text-muted-foreground tabular-nums">
+                    {filteredKaggle.length}/{kagglePlaceholders.length}
                   </span>
                 </div>
                 {selectedKaggleCats.length > 0 && (
                   <button
                     onClick={() => setSelectedKaggleCats([])}
-                    className="text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                    className="text-[10px] uppercase tracking-wider text-primary hover:text-primary/80 font-semibold transition-colors"
                   >
-                    Clear all
+                    Clear
                   </button>
                 )}
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {allKaggleCategories.map((cat) => {
                   const active = selectedKaggleCats.includes(cat);
                   return (
@@ -660,10 +662,10 @@ const Projects = () => {
                       key={cat}
                       onClick={() => toggleKaggleCat(cat)}
                       aria-pressed={active}
-                      className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                      className={`px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
                         active
-                          ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(0,206,209,0.4)] scale-105'
-                          : 'bg-background/40 text-foreground/80 border-primary/20 hover:border-primary/50 hover:bg-primary/10 hover:text-foreground'
+                          ? 'bg-primary/90 text-primary-foreground border-primary shadow-[0_0_12px_rgba(0,206,209,0.35)]'
+                          : 'bg-background/30 text-foreground/70 border-primary/15 hover:border-primary/40 hover:bg-primary/10 hover:text-foreground'
                       }`}
                     >
                       {cat}
