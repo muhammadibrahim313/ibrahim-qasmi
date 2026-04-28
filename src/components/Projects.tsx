@@ -685,7 +685,7 @@ const Projects = () => {
                   <div className="relative">
                     {/* Anime-aesthetic image */}
                     <div 
-                      className="w-full h-32 bg-cover bg-center relative overflow-hidden"
+                      className="w-full h-24 bg-cover bg-center relative overflow-hidden"
                       style={{ backgroundImage: `url(${project.image})` }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
@@ -701,18 +701,18 @@ const Projects = () => {
                     </div>
                     
                     {/* Content overlay */}
-                    <div className="p-4 space-y-3">
+                    <div className="p-3 space-y-2">
                       <div className="flex flex-wrap gap-1">
                         {project.categories.slice(0, 2).map((category) => (
-                          <Badge key={category} className="bg-primary/10 text-primary text-xs">{category}</Badge>
+                          <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{category}</Badge>
                         ))}
                         {project.categories.length > 2 && (
-                          <Badge className="bg-muted text-muted-foreground text-xs">+{project.categories.length - 2}</Badge>
+                          <Badge className="bg-muted text-muted-foreground text-[10px] px-1.5 py-0 leading-4 font-medium">+{project.categories.length - 2}</Badge>
                         )}
                       </div>
-                      <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2">{project.title}</h4>
-                      <div className="text-xs text-primary font-mono">{project.metric}</div>
-                      <Button size="sm" variant="outline" asChild className="w-full text-xs h-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                      <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2 leading-snug">{project.title}</h4>
+                      <div className="text-[11px] text-primary font-mono line-clamp-1">{project.metric}</div>
+                      <Button size="sm" variant="outline" asChild className="w-full text-[11px] h-7 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
                         <a href={(project as any).link || "https://www.kaggle.com/ibrahimqasimi/code"} target="_blank" rel="noopener noreferrer">
                           <BarChart3 className="h-3 w-3 mr-1" />
                           View on Kaggle
