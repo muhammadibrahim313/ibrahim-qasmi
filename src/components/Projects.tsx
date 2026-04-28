@@ -411,40 +411,48 @@ const Projects = () => {
 
   const kagglePlaceholders = [
     { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Kaggle Competition", "Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
-    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score", image: sentimentAnalysis },
-    { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy", image: imageClassification },
+    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Machine Learning"], metric: "0.89 F1-Score", image: sentimentAnalysis },
+    { title: "Image Classification Contest", categories: ["Deep Learning", "Computer Vision"], metric: "0.92 Accuracy", image: imageClassification },
     { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
-    { title: "Text Generation Model", categories: ["NLP", "LLM", "Transformers"], metric: "0.85 BLEU", image: textGeneration },
-    { title: "Object Detection Task", categories: ["Computer Vision", "Object Detection", "Deep Learning"], metric: "0.78 mAP", image: objectDetection },
-    { title: "Recommendation System", categories: ["Machine Learning", "Recommendation Systems"], metric: "0.91 Precision", image: recommendationSystem },
-    { title: "Question Answering", categories: ["NLP", "Transformers", "LLM"], metric: "0.88 Exact Match", image: questionAnswering },
-    { title: "Medical Image Analysis", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.94 Sensitivity", image: medicalAnalysis },
-    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series", "Tabular Data"], metric: "0.16 MAE", image: financialPrediction },
-    { title: "Language Translation", categories: ["NLP", "Transformers", "LLM"], metric: "0.82 COMET", image: languageTranslation },
-    { title: "Video Analysis", categories: ["Computer Vision", "Deep Learning", "CNN"], metric: "0.76 IoU", image: videoAnalysis },
-    { title: "Anomaly Detection", categories: ["Machine Learning", "Tabular Data"], metric: "0.93 ROC-AUC", image: anomalyDetection },
-    { title: "Speech Recognition", categories: ["NLP", "RNN", "Deep Learning"], metric: "0.87 WER", image: speechRecognition },
-    { title: "Facial Recognition", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.95 Verification", image: facialRecognition },
-    { title: "Market Analysis", categories: ["Data Analysis", "EDA"], metric: "Comprehensive Insights", image: marketAnalysis },
-    { title: "Social Media Analytics", categories: ["Data Analysis", "EDA", "NLP"], metric: "Interactive Dashboard", image: socialAnalytics },
+    { title: "Text Generation Model", categories: ["NLP", "Deep Learning"], metric: "0.85 BLEU", image: textGeneration },
+    { title: "Object Detection Task", categories: ["Deep Learning", "Computer Vision"], metric: "0.78 mAP", image: objectDetection },
+    { title: "Recommendation System", categories: ["Machine Learning"], metric: "0.91 Precision", image: recommendationSystem },
+    { title: "Question Answering", categories: ["NLP", "Deep Learning"], metric: "0.88 Exact Match", image: questionAnswering },
+    { title: "Medical Image Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.94 Sensitivity", image: medicalAnalysis },
+    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series"], metric: "0.16 MAE", image: financialPrediction },
+    { title: "Language Translation", categories: ["NLP", "Deep Learning"], metric: "0.82 COMET", image: languageTranslation },
+    { title: "Video Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.76 IoU", image: videoAnalysis },
+    { title: "Anomaly Detection", categories: ["Machine Learning", "Data Analysis"], metric: "0.93 ROC-AUC", image: anomalyDetection },
+    { title: "Speech Recognition", categories: ["NLP", "Deep Learning"], metric: "0.87 WER", image: speechRecognition },
+    { title: "Facial Recognition", categories: ["Deep Learning", "Computer Vision"], metric: "0.95 Verification", image: facialRecognition },
+    { title: "Market Analysis", categories: ["Data Analysis"], metric: "Comprehensive Insights", image: marketAnalysis },
+    { title: "Social Media Analytics", categories: ["Data Analysis", "NLP"], metric: "Interactive Dashboard", image: socialAnalytics },
     { title: "Sales Forecasting", categories: ["Data Analysis", "Time Series"], metric: "Business Intelligence", image: salesForecasting },
-    { title: "Customer Behavior Study", categories: ["Data Analysis", "EDA"], metric: "Actionable Insights", image: customerBehavior },
-    { title: "Performance Metrics", categories: ["Data Analysis", "EDA"], metric: "Statistical Analysis", image: performanceMetrics },
-    { title: "Hyperparameter Optimization", categories: ["Optuna Tuning", "Machine Learning"], metric: "15% Performance Boost", image: hyperparameterOptimization },
-    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Tabular Data", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
-    { title: "BERT Fine-tuning", categories: ["Fine-tuning", "NLP", "Transformers"], metric: "0.94 F1-Score", image: bertFinetuning },
-    { title: "CNN Architecture Design", categories: ["CNN", "Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
-    { title: "RNN Stock Prediction", categories: ["RNN", "Time Series", "Deep Learning"], metric: "0.23 MSE", image: rnnStockPrediction },
-    { title: "Graph Neural Networks", categories: ["Deep Learning", "Machine Learning", "CNN"], metric: "0.91 Accuracy", image: graphNeuralNetworks },
-    { title: "Multimodal Learning System", categories: ["NLP", "Computer Vision", "Transformers"], metric: "0.86 Combined Score", image: multimodalLearning },
+    { title: "Customer Behavior Study", categories: ["Data Analysis"], metric: "Actionable Insights", image: customerBehavior },
+    { title: "Performance Metrics", categories: ["Data Analysis"], metric: "Statistical Analysis", image: performanceMetrics },
+    { title: "Hyperparameter Optimization", categories: ["Machine Learning"], metric: "15% Performance Boost", image: hyperparameterOptimization },
+    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
+    { title: "BERT Fine-tuning", categories: ["NLP", "Deep Learning"], metric: "0.94 F1-Score", image: bertFinetuning },
+    { title: "CNN Architecture Design", categories: ["Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
+    { title: "RNN Stock Prediction", categories: ["Deep Learning", "Time Series"], metric: "0.23 MSE", image: rnnStockPrediction },
+    { title: "Graph Neural Networks", categories: ["Deep Learning", "Machine Learning"], metric: "0.91 Accuracy", image: graphNeuralNetworks },
+    { title: "Multimodal Learning System", categories: ["Deep Learning", "NLP", "Computer Vision"], metric: "0.86 Combined Score", image: multimodalLearning },
     { title: "Reinforcement Learning Agent", categories: ["Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
   ];
 
   // Show first 8 projects or all
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
-  const allKaggleCategories = Array.from(
-    new Set(kagglePlaceholders.flatMap((p) => p.categories))
-  ).sort();
+  const KAGGLE_CATEGORY_ORDER = [
+    "Data Analysis",
+    "Machine Learning",
+    "Deep Learning",
+    "NLP",
+    "Computer Vision",
+    "Time Series",
+    "Kaggle Competition",
+  ];
+  const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
+  const allKaggleCategories = KAGGLE_CATEGORY_ORDER.filter((c) => presentCats.has(c));
   const filteredKaggle = selectedKaggleCats.length === 0
     ? kagglePlaceholders
     : kagglePlaceholders.filter((p) =>
