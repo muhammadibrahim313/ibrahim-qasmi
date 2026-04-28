@@ -716,7 +716,7 @@ const Projects = () => {
 
             {/* Show More / View All Kaggle */}
             <div className="flex flex-col items-center gap-4 relative">
-              {!showAllKaggle && kagglePlaceholders.length > 8 && (
+              {!showAllKaggle && filteredKaggle.length > 8 && (
                 <div className="relative group cursor-pointer" onClick={() => setShowAllKaggle(true)}>
                   {/* Gradient fade overlay above button */}
                   <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
@@ -737,7 +737,7 @@ const Projects = () => {
                         Show More Projects
                       </span>
                       <span className="text-primary font-semibold">
-                        ({kagglePlaceholders.length - 8} more)
+                        ({filteredKaggle.length - 8} more)
                       </span>
                     </div>
                   </div>
