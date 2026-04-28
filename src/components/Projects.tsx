@@ -442,9 +442,17 @@ const Projects = () => {
 
   // Show first 8 projects or all
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
-  const allKaggleCategories = Array.from(
-    new Set(kagglePlaceholders.flatMap((p) => p.categories))
-  ).sort();
+  const KAGGLE_CATEGORY_ORDER = [
+    "Data Analysis",
+    "Machine Learning",
+    "Deep Learning",
+    "NLP",
+    "Computer Vision",
+    "Time Series",
+    "Kaggle Competition",
+  ];
+  const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
+  const allKaggleCategories = KAGGLE_CATEGORY_ORDER.filter((c) => presentCats.has(c));
   const filteredKaggle = selectedKaggleCats.length === 0
     ? kagglePlaceholders
     : kagglePlaceholders.filter((p) =>
