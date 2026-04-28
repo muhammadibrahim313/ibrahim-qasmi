@@ -63,6 +63,7 @@ import reinforcementLearning from '@/assets/kaggle/reinforcement-learning.jpg';
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllKaggle, setShowAllKaggle] = useState(false);
+  const [selectedKaggleCats, setSelectedKaggleCats] = useState<string[]>([]);
 
   const projects = [
     // First 7 projects (WINNER PROJECTS)
@@ -409,7 +410,7 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
+    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Kaggle Competition", "Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
     { title: "Sentiment Analysis Challenge", categories: ["NLP", "Transformers"], metric: "0.89 F1-Score", image: sentimentAnalysis },
     { title: "Image Classification Contest", categories: ["Computer Vision", "Image Classification", "CNN"], metric: "0.92 Accuracy", image: imageClassification },
     { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
@@ -441,7 +442,20 @@ const Projects = () => {
 
   // Show first 8 projects or all
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
-  const visibleKaggle = showAllKaggle ? kagglePlaceholders : kagglePlaceholders.slice(0, 8);
+  const allKaggleCategories = Array.from(
+    new Set(kagglePlaceholders.flatMap((p) => p.categories))
+  ).sort();
+  const filteredKaggle = selectedKaggleCats.length === 0
+    ? kagglePlaceholders
+    : kagglePlaceholders.filter((p) =>
+        selectedKaggleCats.every((c) => p.categories.includes(c))
+      );
+  const visibleKaggle = showAllKaggle ? filteredKaggle : filteredKaggle.slice(0, 8);
+  const toggleKaggleCat = (cat: string) => {
+    setSelectedKaggleCats((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  };
 
   return (
     <section id="projects" className="section-padding bg-card/30">
@@ -608,6 +622,48 @@ const Projects = () => {
                 <span className="text-primary font-semibold">Computer Vision</span> — from exploratory data analysis to competition-winning models.
               </p>
             </div>
+
+            {/* Category Filter */}
+            <div className="mb-8 rounded-xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent backdrop-blur-sm p-5 shadow-[0_0_30px_rgba(0,206,209,0.08)]">
+              <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span className="font-playfair text-sm font-semibold text-foreground/90 tracking-wide">
+                    Filter by Category
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    ({filteredKaggle.length} of {kagglePlaceholders.length})
+                  </span>
+                </div>
+                {selectedKaggleCats.length > 0 && (
+                  <button
+                    onClick={() => setSelectedKaggleCats([])}
+                    className="text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                  >
+                    Clear all
+                  </button>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {allKaggleCategories.map((cat) => {
+                  const active = selectedKaggleCats.includes(cat);
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => toggleKaggleCat(cat)}
+                      aria-pressed={active}
+                      className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+                        active
+                          ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(0,206,209,0.4)] scale-105'
+                          : 'bg-background/40 text-foreground/80 border-primary/20 hover:border-primary/50 hover:bg-primary/10 hover:text-foreground'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
               {visibleKaggle.map((project, index) => (
@@ -660,7 +716,7 @@ const Projects = () => {
 
             {/* Show More / View All Kaggle */}
             <div className="flex flex-col items-center gap-4 relative">
-              {!showAllKaggle && kagglePlaceholders.length > 8 && (
+              {!showAllKaggle && filteredKaggle.length > 8 && (
                 <div className="relative group cursor-pointer" onClick={() => setShowAllKaggle(true)}>
                   {/* Gradient fade overlay above button */}
                   <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[200%] h-20 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
@@ -681,7 +737,7 @@ const Projects = () => {
                         Show More Projects
                       </span>
                       <span className="text-primary font-semibold">
-                        ({kagglePlaceholders.length - 8} more)
+                        ({filteredKaggle.length - 8} more)
                       </span>
                     </div>
                   </div>
