@@ -454,6 +454,15 @@ const Projects = () => {
     "Agentic AI",
     "Kaggle Competition",
   ];
+  const KAGGLE_CATEGORY_LABELS: Record<string, string> = {
+    "Machine Learning": "Machine Learning (ML)",
+    "Deep Learning": "Deep Learning (DL)",
+    "Computer Vision": "Computer Vision (CV)",
+    "NLP": "NLP",
+    "LLM": "LLM",
+    "Agentic AI": "Agentic AI",
+  };
+  const labelFor = (c: string) => KAGGLE_CATEGORY_LABELS[c] ?? c;
   const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
   const allKaggleCategories = KAGGLE_CATEGORY_ORDER.filter((c) => presentCats.has(c));
   const filteredKaggle = selectedKaggleCats.length === 0
@@ -642,9 +651,6 @@ const Projects = () => {
                   <span className="font-playfair text-[11px] font-semibold text-foreground/80 tracking-wider uppercase">
                     Filter
                   </span>
-                  <span className="text-[10px] text-muted-foreground tabular-nums">
-                    {filteredKaggle.length}/{kagglePlaceholders.length}
-                  </span>
                 </div>
                 {selectedKaggleCats.length > 0 && (
                   <button
@@ -669,7 +675,7 @@ const Projects = () => {
                           : 'bg-background/30 text-foreground/70 border-primary/15 hover:border-primary/40 hover:bg-primary/10 hover:text-foreground'
                       }`}
                     >
-                      {cat}
+                      {labelFor(cat)}
                     </button>
                   );
                 })}
@@ -707,7 +713,7 @@ const Projects = () => {
                       {/* Tags row - fixed height */}
                       <div className="flex flex-wrap gap-1 min-h-[20px] items-start">
                         {project.categories.slice(0, 2).map((category) => (
-                          <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{category}</Badge>
+                          <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{labelFor(category)}</Badge>
                         ))}
                         {project.categories.length > 2 && (
                           <Tooltip>
@@ -724,7 +730,7 @@ const Projects = () => {
                             <TooltipContent side="top" className="bg-popover border-primary/30">
                               <div className="flex flex-wrap gap-1 max-w-[180px]">
                                 {project.categories.slice(2).map((c) => (
-                                  <Badge key={c} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{c}</Badge>
+                                  <Badge key={c} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{labelFor(c)}</Badge>
                                 ))}
                               </div>
                             </TooltipContent>
