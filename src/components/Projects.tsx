@@ -651,9 +651,6 @@ const Projects = () => {
                   <span className="font-playfair text-[11px] font-semibold text-foreground/80 tracking-wider uppercase">
                     Filter
                   </span>
-                  <span className="text-[10px] text-muted-foreground tabular-nums">
-                    {filteredKaggle.length}/{kagglePlaceholders.length}
-                  </span>
                 </div>
                 {selectedKaggleCats.length > 0 && (
                   <button
