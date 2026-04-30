@@ -454,6 +454,15 @@ const Projects = () => {
     "Agentic AI",
     "Kaggle Competition",
   ];
+  const KAGGLE_CATEGORY_LABELS: Record<string, string> = {
+    "Machine Learning": "Machine Learning (ML)",
+    "Deep Learning": "Deep Learning (DL)",
+    "Computer Vision": "Computer Vision (CV)",
+    "NLP": "NLP",
+    "LLM": "LLM",
+    "Agentic AI": "Agentic AI",
+  };
+  const labelFor = (c: string) => KAGGLE_CATEGORY_LABELS[c] ?? c;
   const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
   const allKaggleCategories = KAGGLE_CATEGORY_ORDER.filter((c) => presentCats.has(c));
   const filteredKaggle = selectedKaggleCats.length === 0
