@@ -3,6 +3,7 @@ import { ExternalLink, Github, Trophy, BarChart3, ChevronDown } from 'lucide-rea
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 // Project preview images
 import periodcareImg from '@/assets/projects/periodcare.jpg';
@@ -676,16 +677,17 @@ const Projects = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <TooltipProvider delayDuration={100}>
               {visibleKaggle.map((project, index) => (
                  <Card 
                    key={project.title} 
-                   className="p-0 card-hover neon-border slide-up overflow-hidden group hover:shadow-xl hover:-translate-y-1"
+                   className="p-0 card-hover neon-border slide-up overflow-hidden group hover:shadow-xl hover:-translate-y-1 flex flex-col h-full"
                    style={{ animationDelay: `${index * 0.05}s` }}
                  >
-                  <div className="relative">
-                    {/* Anime-aesthetic image */}
+                  <div className="relative flex flex-col flex-1">
+                    {/* Anime-aesthetic image - fixed height for consistency */}
                     <div 
-                      className="w-full h-24 bg-cover bg-center relative overflow-hidden"
+                      className="w-full h-24 bg-cover bg-center relative overflow-hidden flex-shrink-0"
                       style={{ backgroundImage: `url(${project.image})` }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
@@ -700,28 +702,53 @@ const Projects = () => {
                       </div>
                     </div>
                     
-                    {/* Content overlay */}
-                    <div className="p-3 space-y-2">
-                      <div className="flex flex-wrap gap-1">
+                    {/* Content - consistent layout for all cards */}
+                    <div className="p-3 flex flex-col flex-1 gap-2">
+                      {/* Tags row - fixed height */}
+                      <div className="flex flex-wrap gap-1 min-h-[20px] items-start">
                         {project.categories.slice(0, 2).map((category) => (
                           <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{category}</Badge>
                         ))}
                         {project.categories.length > 2 && (
-                          <Badge className="bg-muted text-muted-foreground text-[10px] px-1.5 py-0 leading-4 font-medium">+{project.categories.length - 2}</Badge>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <button
+                                type="button"
+                                onClick={(e) => e.preventDefault()}
+                                className="inline-flex items-center rounded-full bg-muted text-muted-foreground text-[10px] px-1.5 py-0 leading-4 font-medium border border-transparent hover:bg-primary/20 hover:text-primary transition-colors cursor-help"
+                                aria-label={`Show ${project.categories.length - 2} more tags`}
+                              >
+                                +{project.categories.length - 2}
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" className="bg-popover border-primary/30">
+                              <div className="flex flex-wrap gap-1 max-w-[180px]">
+                                {project.categories.slice(2).map((c) => (
+                                  <Badge key={c} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{c}</Badge>
+                                ))}
+                              </div>
+                            </TooltipContent>
+                          </Tooltip>
                         )}
                       </div>
-                      <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2 leading-snug">{project.title}</h4>
-                      <div className="text-[11px] text-primary font-mono line-clamp-1">{project.metric}</div>
-                      <Button size="sm" variant="outline" asChild className="w-full text-[11px] h-7 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
-                        <a href={(project as any).link || "https://www.kaggle.com/ibrahimqasimi/code"} target="_blank" rel="noopener noreferrer">
-                          <BarChart3 className="h-3 w-3 mr-1" />
-                          View on Kaggle
-                        </a>
-                      </Button>
+                      {/* Title - fixed 2 lines */}
+                      <h4 className="font-playfair text-sm font-medium text-foreground line-clamp-2 leading-snug min-h-[2.5rem]">{project.title}</h4>
+                      {/* Metric - fixed 1 line */}
+                      <div className="text-[11px] text-primary font-mono line-clamp-1 min-h-[1rem]">{project.metric}</div>
+                      {/* Button pinned to bottom */}
+                      <div className="mt-auto pt-1">
+                        <Button size="sm" variant="outline" asChild className="w-full text-[11px] h-7 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
+                          <a href={(project as any).link || "https://www.kaggle.com/ibrahimqasimi/code"} target="_blank" rel="noopener noreferrer">
+                            <BarChart3 className="h-3 w-3 mr-1" />
+                            View on Kaggle
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </Card>
               ))}
+              </TooltipProvider>
             </div>
 
             {/* Show More / View All Kaggle */}
