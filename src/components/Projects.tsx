@@ -713,7 +713,7 @@ const Projects = () => {
                       {/* Tags row - fixed height */}
                       <div className="flex flex-wrap gap-1 min-h-[20px] items-start">
                         {project.categories.slice(0, 2).map((category) => (
-                          <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{category}</Badge>
+                          <Badge key={category} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{labelFor(category)}</Badge>
                         ))}
                         {project.categories.length > 2 && (
                           <Tooltip>
