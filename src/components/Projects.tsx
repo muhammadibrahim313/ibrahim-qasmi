@@ -675,7 +675,7 @@ const Projects = () => {
                           : 'bg-background/30 text-foreground/70 border-primary/15 hover:border-primary/40 hover:bg-primary/10 hover:text-foreground'
                       }`}
                     >
-                      {cat}
+                      {labelFor(cat)}
                     </button>
                   );
                 })}
