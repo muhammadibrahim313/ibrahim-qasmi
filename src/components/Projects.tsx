@@ -34,32 +34,20 @@ import agentForceImg from '@/assets/projects/agent-force.jpg';
 // Anime-aesthetic Kaggle project images
 import ncaaMarchMadness from '@/assets/kaggle-ncaa-2026.webp';
 import sentimentAnalysis from '@/assets/kaggle/sentiment-analysis.jpg';
-import imageClassification from '@/assets/kaggle/image-classification.jpg';
-import timeSeries from '@/assets/kaggle/time-series.jpg';
 import textGeneration from '@/assets/kaggle/text-generation.jpg';
-import objectDetection from '@/assets/kaggle/object-detection.jpg';
-import recommendationSystem from '@/assets/kaggle/recommendation-system.jpg';
-import questionAnswering from '@/assets/kaggle/question-answering.jpg';
 import medicalAnalysis from '@/assets/kaggle/medical-analysis.jpg';
 import financialPrediction from '@/assets/kaggle/financial-prediction.jpg';
-import languageTranslation from '@/assets/kaggle/language-translation.jpg';
-import videoAnalysis from '@/assets/kaggle/video-analysis.jpg';
-import anomalyDetection from '@/assets/kaggle/anomaly-detection.jpg';
 import speechRecognition from '@/assets/kaggle/speech-recognition.jpg';
-import facialRecognition from '@/assets/kaggle/facial-recognition.jpg';
 import marketAnalysis from '@/assets/kaggle/market-analysis.jpg';
-import socialAnalytics from '@/assets/kaggle/social-analytics.jpg';
-import salesForecasting from '@/assets/kaggle/sales-forecasting.jpg';
 import customerBehavior from '@/assets/kaggle/customer-behavior.jpg';
-import performanceMetrics from '@/assets/kaggle/performance-metrics.jpg';
-import hyperparameterOptimization from '@/assets/kaggle/hyperparameter-optimization.jpg';
-import competitionWinner from '@/assets/kaggle/competition-winner.jpg';
 import bertFinetuning from '@/assets/kaggle/bert-finetuning.jpg';
-import cnnArchitecture from '@/assets/kaggle/cnn-architecture.jpg';
-import rnnStockPrediction from '@/assets/kaggle/rnn-stock-prediction.jpg';
-import graphNeuralNetworks from '@/assets/kaggle/graph-neural-networks.jpg';
-import multimodalLearning from '@/assets/kaggle/multimodal-learning.jpg';
-import reinforcementLearning from '@/assets/kaggle/reinforcement-learning.jpg';
+import widsWildfire from '@/assets/kaggle/wids-wildfire.jpg';
+import proteinFunction from '@/assets/kaggle/protein-function.jpg';
+import llmSaeSteering from '@/assets/kaggle/llm-sae-steering.jpg';
+import potatoDisease from '@/assets/kaggle/potato-disease.jpg';
+import santaPolygon from '@/assets/kaggle/santa-polygon.jpg';
+import mentalHealthCatboost from '@/assets/kaggle/mental-health-catboost.jpg';
+import fruitsResnet from '@/assets/kaggle/fruits-resnet.jpg';
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -411,57 +399,38 @@ const Projects = () => {
   ];
 
   const kagglePlaceholders = [
-    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Kaggle Competition", "Machine Learning", "Data Analysis"], metric: "0.10995 Brier · Gradient Boosting Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
-    { title: "Sentiment Analysis Challenge", categories: ["NLP", "Machine Learning"], metric: "0.89 F1-Score", image: sentimentAnalysis },
-    { title: "Image Classification Contest", categories: ["Deep Learning", "Computer Vision"], metric: "0.92 Accuracy", image: imageClassification },
-    { title: "Time Series Forecasting", categories: ["Machine Learning", "Time Series"], metric: "0.12 RMSE", image: timeSeries },
-    { title: "Text Generation Model", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.85 BLEU", image: textGeneration },
-    { title: "Object Detection Task", categories: ["Deep Learning", "Computer Vision"], metric: "0.78 mAP", image: objectDetection },
-    { title: "Recommendation System", categories: ["Machine Learning"], metric: "0.91 Precision", image: recommendationSystem },
-    { title: "Question Answering", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.88 Exact Match", image: questionAnswering },
-    { title: "Medical Image Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.94 Sensitivity", image: medicalAnalysis },
-    { title: "Financial Prediction", categories: ["Machine Learning", "Time Series"], metric: "0.16 MAE", image: financialPrediction },
-    { title: "Language Translation", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.82 COMET", image: languageTranslation },
-    { title: "Video Analysis", categories: ["Deep Learning", "Computer Vision"], metric: "0.76 IoU", image: videoAnalysis },
-    { title: "Anomaly Detection", categories: ["Machine Learning", "Data Analysis"], metric: "0.93 ROC-AUC", image: anomalyDetection },
-    { title: "Speech Recognition", categories: ["NLP", "Deep Learning"], metric: "0.87 WER", image: speechRecognition },
-    { title: "Facial Recognition", categories: ["Deep Learning", "Computer Vision"], metric: "0.95 Verification", image: facialRecognition },
-    { title: "Market Analysis", categories: ["Data Analysis"], metric: "Comprehensive Insights", image: marketAnalysis },
-    { title: "Social Media Analytics", categories: ["Data Analysis", "NLP"], metric: "Interactive Dashboard", image: socialAnalytics },
-    { title: "Sales Forecasting", categories: ["Data Analysis", "Time Series"], metric: "Business Intelligence", image: salesForecasting },
-    { title: "Customer Behavior Study", categories: ["Data Analysis"], metric: "Actionable Insights", image: customerBehavior },
-    { title: "Performance Metrics", categories: ["Data Analysis"], metric: "Statistical Analysis", image: performanceMetrics },
-    { title: "Hyperparameter Optimization", categories: ["Machine Learning"], metric: "15% Performance Boost", image: hyperparameterOptimization },
-    { title: "Competition Winner - Tabular", categories: ["Kaggle Competition", "Machine Learning"], metric: "Gold Medal", image: competitionWinner },
-    { title: "BERT Fine-tuning", categories: ["NLP", "LLM", "Deep Learning"], metric: "0.94 F1-Score", image: bertFinetuning },
-    { title: "CNN Architecture Design", categories: ["Deep Learning", "Computer Vision"], metric: "0.89 Accuracy", image: cnnArchitecture },
-    { title: "RNN Stock Prediction", categories: ["Deep Learning", "Time Series"], metric: "0.23 MSE", image: rnnStockPrediction },
-    { title: "Graph Neural Networks", categories: ["Deep Learning", "Machine Learning"], metric: "0.91 Accuracy", image: graphNeuralNetworks },
-    { title: "Multimodal Learning System", categories: ["Deep Learning", "NLP", "LLM", "Computer Vision"], metric: "0.86 Combined Score", image: multimodalLearning },
-    { title: "Reinforcement Learning Agent", categories: ["Agentic AI", "Deep Learning", "Machine Learning"], metric: "0.94 Reward Score", image: reinforcementLearning }
+    { title: "March Machine Learning Mania 2026 — NCAA Tournament Forecasting", categories: ["Kaggle Competition", "ML", "Data Analysis"], metric: "0.10995 Brier · GBM Ensemble", image: ncaaMarchMadness, link: "https://www.kaggle.com/code/ibrahimqasimi/ncaa-2026-eda-elo-ratings-and-gradient-esemble" },
+    { title: "WiDS 2026 Complete EDA + CatBoost/LGBM/XGBoost Ensemble", categories: ["Data Analysis", "ML", "Kaggle Competition"], metric: "Ensemble · Wildfire Risk", image: widsWildfire, link: "https://www.kaggle.com/code/ibrahimqasimi/wids-2026-complete-eda-cat-lgbm-xgb-ensemble" },
+    { title: "Biological Function of a Protein", categories: ["ML", "DL", "Kaggle Competition"], metric: "Score 0.375", image: proteinFunction, link: "https://www.kaggle.com/code/ibrahimqasimi/0-375-biological-function-of-a-protein" },
+    { title: "Steering an LLM at Inference with SAE Feature Vectors", categories: ["LLM", "Agentic AI"], metric: "LLM Steering", image: llmSaeSteering, link: "https://www.kaggle.com/code/ibrahimqasimi/steering-an-llm-at-inference-sae-feature-vectors" },
+    { title: "Polyp Segmentation with U-Net + ResNet", categories: ["CV", "DL"], metric: "Medical AI", image: medicalAnalysis, link: "https://www.kaggle.com/code/ibrahimqasimi/polyp-segmentation-unet-resnet-custom" },
+    { title: "Social Media Extremism Detection — Top 5% Solution", categories: ["NLP", "ML", "Kaggle Competition"], metric: "Top 5%", image: sentimentAnalysis, link: "https://www.kaggle.com/code/ibrahimqasimi/social-media-extremism-detection-top-5-sol" },
+    { title: "NVIDIA Multi-Timeframe Stock Analysis 1999–2025", categories: ["Time Series", "Data Analysis"], metric: "1999–2025", image: financialPrediction, link: "https://www.kaggle.com/code/ibrahimqasimi/nvidia-multi-timeframe-stock-analysis-1999-2025" },
+    { title: "Amazon Sales 2025 Complete EDA + ML Models", categories: ["Data Analysis", "ML"], metric: "95% Acc", image: marketAnalysis, link: "https://www.kaggle.com/code/ibrahimqasimi/amazon-sales-2025-complete-eda-ml-models-95-acc" },
+    { title: "BirdCLEF'26 Acoustic Species Identification", categories: ["Data Analysis", "DL", "Kaggle Competition"], metric: "Audio AI", image: speechRecognition, link: "https://www.kaggle.com/code/ibrahimqasimi/birdclef-26-acoustic-species-identification-eda" },
+    { title: "Advanced Potato Disease Detection with EfficientNetB3", categories: ["CV", "DL"], metric: "EfficientNetB3", image: potatoDisease, link: "https://www.kaggle.com/code/ibrahimqasimi/advanced-potato-disease-detection-efficientnetb3" },
+    { title: "DistilBERT Fine-Tuning on IMDb 50K", categories: ["NLP", "LLM", "DL"], metric: "Transformer NLP", image: bertFinetuning, link: "https://www.kaggle.com/code/ibrahimqasimi/distilbert-fine-tuning-on-imdb-50k-nlp-tutorial" },
+    { title: "Telco Customer Churn Prediction", categories: ["ML"], metric: "Churn ML", image: customerBehavior, link: "https://www.kaggle.com/code/ibrahimqasimi/telco-customer-churn-97-acc" },
+    { title: "Santa 2025 Optimal Polygon Packing Solution", categories: ["ML", "Kaggle Competition"], metric: "Optimization", image: santaPolygon, link: "https://www.kaggle.com/code/ibrahimqasimi/santa-2025-optimal-polygon-packing-solution" },
+    { title: "PS4E11 Mental Health Data with CatBoost", categories: ["ML", "Kaggle Competition"], metric: "CatBoost", image: mentalHealthCatboost, link: "https://www.kaggle.com/code/ibrahimqasimi/ps4e11-mental-health-data-catboost" },
+    { title: "Fruits 360 Classified by ResNet", categories: ["CV", "DL"], metric: "99.99% Acc", image: fruitsResnet, link: "https://www.kaggle.com/code/ibrahimqasimi/fruits-360-classified-by-resnet-acc-99-99" },
+    { title: "Kaggle Mastery: Summarize Kaggle Solution Write-Up", categories: ["LLM", "Agentic AI"], metric: "LLM Workflow", image: textGeneration, link: "https://www.kaggle.com/code/ibrahimqasimi/kaggle-mastery-summarize-kaggle-solution-write-up" }
   ];
 
   // Show first 8 projects or all
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 8);
   const KAGGLE_CATEGORY_ORDER = [
     "Data Analysis",
-    "Machine Learning",
-    "Deep Learning",
+    "ML",
+    "DL",
     "NLP",
     "LLM",
-    "Computer Vision",
+    "CV",
     "Time Series",
     "Agentic AI",
     "Kaggle Competition",
   ];
-  const KAGGLE_CATEGORY_LABELS: Record<string, string> = {
-    "Machine Learning": "Machine Learning (ML)",
-    "Deep Learning": "Deep Learning (DL)",
-    "Computer Vision": "Computer Vision (CV)",
-    "NLP": "NLP",
-    "LLM": "LLM",
-    "Agentic AI": "Agentic AI",
-  };
+  const KAGGLE_CATEGORY_LABELS: Record<string, string> = {};
   const labelFor = (c: string) => KAGGLE_CATEGORY_LABELS[c] ?? c;
   const presentCats = new Set(kagglePlaceholders.flatMap((p) => p.categories));
   const allKaggleCategories = KAGGLE_CATEGORY_ORDER.filter((c) => presentCats.has(c));
