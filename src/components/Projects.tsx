@@ -3,6 +3,7 @@ import { ExternalLink, Github, Trophy, BarChart3, ChevronDown } from 'lucide-rea
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 // Project preview images
 import periodcareImg from '@/assets/projects/periodcare.jpg';
