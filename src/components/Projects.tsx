@@ -730,7 +730,7 @@ const Projects = () => {
                             <TooltipContent side="top" className="bg-popover border-primary/30">
                               <div className="flex flex-wrap gap-1 max-w-[180px]">
                                 {project.categories.slice(2).map((c) => (
-                                  <Badge key={c} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{c}</Badge>
+                                  <Badge key={c} className="bg-primary/10 text-primary text-[10px] px-1.5 py-0 leading-4 font-medium">{labelFor(c)}</Badge>
                                 ))}
                               </div>
                             </TooltipContent>
