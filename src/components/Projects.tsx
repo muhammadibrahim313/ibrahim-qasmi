@@ -31,23 +31,23 @@ import spotConnectImg from '@/assets/projects/spot-connect.jpg';
 import nemotronImg from '@/assets/projects/nemotron.jpg';
 import agentForceImg from '@/assets/projects/agent-force.jpg';
 
-// Anime-aesthetic Kaggle project images
+// Kaggle project images — card 1 keeps NCAA art, cards 2–16 use curated Unsplash photos
 import ncaaMarchMadness from '@/assets/kaggle-ncaa-2026.webp';
-import sentimentAnalysis from '@/assets/kaggle/sentiment-analysis.jpg';
-import textGeneration from '@/assets/kaggle/text-generation.jpg';
-import medicalAnalysis from '@/assets/kaggle/medical-analysis.jpg';
-import financialPrediction from '@/assets/kaggle/financial-prediction.jpg';
-import speechRecognition from '@/assets/kaggle/speech-recognition.jpg';
-import marketAnalysis from '@/assets/kaggle/market-analysis.jpg';
-import customerBehavior from '@/assets/kaggle/customer-behavior.jpg';
-import bertFinetuning from '@/assets/kaggle/bert-finetuning.jpg';
-import widsWildfire from '@/assets/kaggle/wids-wildfire.jpg';
-import proteinFunction from '@/assets/kaggle/protein-function.jpg';
-import llmSaeSteering from '@/assets/kaggle/llm-sae-steering.jpg';
-import potatoDisease from '@/assets/kaggle/potato-disease.jpg';
-import santaPolygon from '@/assets/kaggle/santa-polygon.jpg';
-import mentalHealthCatboost from '@/assets/kaggle/mental-health-catboost.jpg';
-import fruitsResnet from '@/assets/kaggle/fruits-resnet.jpg';
+import widsWildfire from '@/assets/kaggle/unsplash/02-wids.jpg';
+import proteinFunction from '@/assets/kaggle/unsplash/03-protein.jpg';
+import llmSaeSteering from '@/assets/kaggle/unsplash/04-llm-sae.jpg';
+import medicalAnalysis from '@/assets/kaggle/unsplash/05-polyp.jpg';
+import sentimentAnalysis from '@/assets/kaggle/unsplash/06-extremism.jpg';
+import financialPrediction from '@/assets/kaggle/unsplash/07-nvidia.jpg';
+import marketAnalysis from '@/assets/kaggle/unsplash/08-amazon.jpg';
+import speechRecognition from '@/assets/kaggle/unsplash/09-birdclef.jpg';
+import potatoDisease from '@/assets/kaggle/unsplash/10-potato.jpg';
+import bertFinetuning from '@/assets/kaggle/unsplash/11-distilbert.jpg';
+import customerBehavior from '@/assets/kaggle/unsplash/12-telco.jpg';
+import santaPolygon from '@/assets/kaggle/unsplash/13-santa.jpg';
+import mentalHealthCatboost from '@/assets/kaggle/unsplash/14-mental.jpg';
+import fruitsResnet from '@/assets/kaggle/unsplash/15-fruits.jpg';
+import textGeneration from '@/assets/kaggle/unsplash/16-summarizer.jpg';
 
 const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
