@@ -85,7 +85,7 @@ const MentorshipVolunteering = () => {
         {/* Main Mentorship Activities */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
           {mentorshipActivities.map((activity, index) => (
-            <Card key={index} className="p-6 card-hover neon-border slide-up group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+            <Card key={index} className="p-6 card-hover neon-border slide-up group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 flex flex-col h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
               <CardHeader className="relative">
                 <div className="flex items-start gap-4">
@@ -103,8 +103,8 @@ const MentorshipVolunteering = () => {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="relative">
-                <div className="space-y-4">
+              <CardContent className="relative flex-1 flex flex-col">
+                <div className="flex flex-col flex-1 gap-4">
                   <div>
                     <h4 className="font-medium text-foreground mb-2">Topics Covered:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -115,19 +115,21 @@ const MentorshipVolunteering = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 text-primary">
                     <TrendingUp className="h-4 w-4" />
                     <span className="font-medium">{activity.impact}</span>
                   </div>
 
-                  <Button asChild variant="outline" size="sm" className="w-full border-primary/20 hover:bg-primary/10">
-                    <a href={activity.link} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      {activity.linkText}
-                      <ExternalLink className="ml-2 h-3 w-3" />
-                    </a>
-                  </Button>
+                  <div className="mt-auto pt-2">
+                    <Button asChild variant="outline" size="sm" className="w-full border-primary/20 hover:bg-primary/10">
+                      <a href={activity.link} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        {activity.linkText}
+                        <ExternalLink className="ml-2 h-3 w-3" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
