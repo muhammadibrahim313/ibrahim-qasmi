@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import topmateBanner from '@/assets/topmate-banner.png';
 import { 
   Users, 
   BookOpen, 
@@ -139,19 +140,17 @@ const MentorshipVolunteering = () => {
         {/* Topmate Stats */}
         <div className="mb-16">
           <Card className="p-0 card-hover neon-border bg-card/50 backdrop-blur-sm overflow-hidden">
-            {/* Banner area inside Topmate card (replace bg with image later) */}
+            {/* Banner area inside Topmate card */}
             <div
               className="relative w-full overflow-hidden border-b border-primary/20"
               style={{ aspectRatio: '1200 / 250' }}
-              aria-label="Topmate banner placeholder"
             >
-              {/* TODO: replace with your banner image — recommended 1200×250 (24:5) */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-cyan-500/10 to-primary/15" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-muted-foreground text-sm sm:text-base font-medium tracking-wide">
-                  Banner placeholder · 1200 × 250 (24:5)
-                </span>
-              </div>
+              <img
+                src={topmateBanner}
+                alt="Muhammad Ibrahim Qasmi — Topmate Mentorship banner"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent pointer-events-none" />
             </div>
 
