@@ -136,28 +136,26 @@ const MentorshipVolunteering = () => {
           ))}
         </div>
 
-        {/* Promo Banner Placeholder (replace bg image later) */}
-        <div className="mb-12 sm:mb-16">
-          <div
-            className="relative w-full overflow-hidden rounded-xl border border-primary/30 neon-border bg-card/40 backdrop-blur-sm"
-            style={{ aspectRatio: '1200 / 250' }}
-            aria-label="Mentorship banner placeholder"
-          >
-            {/* TODO: replace this with your banner image — recommended size 1200×250 (or 1600×333), keep aspect ratio 24:5 */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-cyan-500/5 to-primary/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-muted-foreground text-sm sm:text-base font-medium tracking-wide">
-                Banner placeholder · 1200 × 250 (24:5)
-              </span>
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent pointer-events-none" />
-          </div>
-        </div>
-
         {/* Topmate Stats */}
         <div className="mb-16">
-          <Card className="p-6 card-hover neon-border bg-card/50 backdrop-blur-sm">
-            <CardHeader className="text-center pb-6">
+          <Card className="p-0 card-hover neon-border bg-card/50 backdrop-blur-sm overflow-hidden">
+            {/* Banner area inside Topmate card (replace bg with image later) */}
+            <div
+              className="relative w-full overflow-hidden border-b border-primary/20"
+              style={{ aspectRatio: '1200 / 250' }}
+              aria-label="Topmate banner placeholder"
+            >
+              {/* TODO: replace with your banner image — recommended 1200×250 (24:5) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-cyan-500/10 to-primary/15" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-muted-foreground text-sm sm:text-base font-medium tracking-wide">
+                  Banner placeholder · 1200 × 250 (24:5)
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent pointer-events-none" />
+            </div>
+
+            <CardHeader className="text-center pt-6 pb-6">
               <CardTitle className="text-2xl mb-2 flex items-center justify-center gap-3">
                 <Users className="h-6 w-6 text-primary" />
                 Topmate Mentorship Impact
