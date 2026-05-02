@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import topmateBanner from '@/assets/topmate-banner.png';
 import { 
   Users, 
   BookOpen, 
@@ -139,22 +138,8 @@ const MentorshipVolunteering = () => {
 
         {/* Topmate Stats */}
         <div className="mb-16">
-          <Card className="p-0 card-hover neon-border bg-card/50 backdrop-blur-sm overflow-hidden">
-            {/* Banner area inside Topmate card */}
-            <div
-              className="relative w-full overflow-hidden border-b border-primary/20"
-              style={{ aspectRatio: '1200 / 250' }}
-            >
-              <img
-                src={topmateBanner}
-                alt="Muhammad Ibrahim Qasmi — Topmate Mentorship banner"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent pointer-events-none" />
-            </div>
-
-            <CardHeader className="text-center pt-6 pb-6">
+          <Card className="p-8 card-hover neon-border bg-card/50 backdrop-blur-sm">
+            <CardHeader className="text-center">
               <CardTitle className="text-2xl mb-2 flex items-center justify-center gap-3">
                 <Users className="h-6 w-6 text-primary" />
                 Topmate Mentorship Impact
