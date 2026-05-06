@@ -41,7 +41,7 @@ const SocialLinks = () => {
       name: 'Google Scholar',
       url: 'https://scholar.google.com/citations?hl=en&user=vo4psiEAAAAJ&view_op=list_works&citft=1&email_for_op=oppoibrahim23%40gmail.com&gmla=AIqSsVvQRrIb8FF0d4FTOvdKDu25j6utWYlaODPAeo0eGZfJGkLJWmfAxbhbHitLHQtyrlPSQNf2ZdUcriGJOCvvW5fMdGBDouXfbAVuLljdfppb1TcBfR8mGzEIZpOjIgVZtOcwJud8yxfgfjdwBxFLezv1g5l_PZ_qnoFiIPa1yqo-W7CEm4asRF7CB9IhxH0CKuY-trvbTXGeA494fNQC0kJQbH0U3uFHajnzUZJNg6MoVKE',
       logo: (
-        <img src={scholarLogo} alt="Google Scholar" className="h-5 w-5 object-contain" />
+        <img src={scholarLogo} alt="Google Scholar" className="h-7 w-7 object-contain" />
       ),
       description: 'Academic publications',
       glowColor: 'rgba(66, 133, 244, 0.6)'
