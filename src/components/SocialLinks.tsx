@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import kaggleLogo from '@/assets/kaggle-logo.png';
 import topmateLogo from '@/assets/topmate-logo.jfif';
 import lablabLogo from '@/assets/lablab-logo.png';
+import scholarLogo from '@/assets/google-scholar-logo.jfif';
 
 const SocialLinks = () => {
   const socialLinks = [
@@ -40,9 +41,7 @@ const SocialLinks = () => {
       name: 'Google Scholar',
       url: 'https://scholar.google.com/citations?hl=en&user=vo4psiEAAAAJ&view_op=list_works&citft=1&email_for_op=oppoibrahim23%40gmail.com&gmla=AIqSsVvQRrIb8FF0d4FTOvdKDu25j6utWYlaODPAeo0eGZfJGkLJWmfAxbhbHitLHQtyrlPSQNf2ZdUcriGJOCvvW5fMdGBDouXfbAVuLljdfppb1TcBfR8mGzEIZpOjIgVZtOcwJud8yxfgfjdwBxFLezv1g5l_PZ_qnoFiIPa1yqo-W7CEm4asRF7CB9IhxH0CKuY-trvbTXGeA494fNQC0kJQbH0U3uFHajnzUZJNg6MoVKE',
       logo: (
-        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 24L7.5 17.03H5.46V15.5h12.08v1.53H15.5L12 24zm-3.06-9.47H0V0h24v14.53H15.06V9.06H8.94v5.47z"/>
-        </svg>
+        <img src={scholarLogo} alt="Google Scholar" className="h-5 w-5 object-contain" />
       ),
       description: 'Academic publications',
       glowColor: 'rgba(66, 133, 244, 0.6)'
