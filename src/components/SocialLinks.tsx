@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import kaggleLogo from '@/assets/kaggle-logo.png';
 import topmateLogo from '@/assets/topmate-logo.jfif';
 import lablabLogo from '@/assets/lablab-logo.png';
-import scholarLogo from '@/assets/google-scholar-logo.jfif';
+import scholarLogo from '@/assets/google-scholar-logo.png';
 
 const SocialLinks = () => {
   const socialLinks = [
