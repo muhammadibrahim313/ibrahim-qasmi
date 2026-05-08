@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/hooks/useTheme';
+import { Button } from '@/components/ui/button';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { theme, toggle } = useTheme();
   const primaryNavItems = [{
     id: 'home',
     label: 'Home'
