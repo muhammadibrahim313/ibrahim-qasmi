@@ -2,17 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Muhammad Ibrahim Qasmi Portfolio Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Muhammad Ibrahim Qasmi Portfolio Design System — Light Editorial */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
 
-/* Global Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 @layer base {
   :root {
-    /* Dark Portfolio Theme */
+    /* Light editorial palette */
+    --background: 110 18% 97%;          /* #F8FAF7 */
+    --foreground: 130 7% 9%;            /* #141714 */
+
+    --card: 0 0% 100%;                  /* #FFFFFF */
+    --card-foreground: 130 7% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 130 7% 9%;
+
+    --primary: 177 100% 24%;            /* #007C75 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 175 84% 18%;       /* #075650 */
+
+    --secondary: 130 18% 95%;           /* #EEF4EF */
+    --secondary-foreground: 130 7% 9%;
+
+    --muted: 130 18% 95%;
+    --muted-foreground: 135 6% 39%;     /* #5E6861 */
+
+    --accent: 177 100% 24%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 130 13% 87%;              /* #D8E2DA */
+    --input: 130 13% 87%;
+    --ring: 177 100% 24%;
+
+    --gold: 32 80% 43%;                 /* #C77A14 */
+
+    --radius: 0.5rem;
+
+    --hero-gradient: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --neon-glow: 0 8px 24px -8px hsl(var(--primary) / 0.25);
+    --card-hover: 130 18% 92%;
+    --skill-chip: linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)));
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 130 7% 20%;
+    --sidebar-primary: 177 100% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 130 18% 95%;
+    --sidebar-accent-foreground: 130 7% 9%;
+    --sidebar-border: 130 13% 87%;
+    --sidebar-ring: 177 100% 24%;
+  }
+
+  .dark {
+    /* Original dark palette preserved */
     --background: 222 84% 5%;
     --foreground: 210 40% 98%;
 
@@ -24,6 +74,7 @@ html {
 
     --primary: 187 100% 42%;
     --primary-foreground: 222 84% 5%;
+    --primary-hover: 187 100% 36%;
 
     --secondary: 222 47% 11%;
     --secondary-foreground: 210 40% 98%;
@@ -41,63 +92,13 @@ html {
     --input: 217 32% 17%;
     --ring: 187 100% 42%;
 
-    --radius: 0.75rem;
+    --gold: 43 90% 55%;
 
-    /* Portfolio-specific design tokens */
     --hero-gradient: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 8%));
     --neon-glow: 0 0 20px hsl(var(--primary) / 0.3);
     --card-hover: 217 32% 20%;
     --skill-chip: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card-hover)));
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -110,130 +111,64 @@ html {
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
 
   body {
-    @apply bg-background text-foreground font-playfair;
+    @apply bg-background text-foreground font-sans;
     scroll-behavior: smooth;
   }
-  
-  /* Typography hierarchy */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
-  }
-  
-  p, span, div {
-    @apply font-playfair;
-  }
 
-  /* Skip to content accessibility */
+  h1, h2, h3, h4, h5, h6 { @apply font-serif; }
+
+  p, span, div, button, a, li { @apply font-sans; }
+
   .skip-link {
     @apply absolute -top-10 left-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-md;
     @apply focus:top-4 transition-all duration-200;
   }
 
-  /* Focus styles for accessibility */
-  *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-primary;
-  }
+  *:focus-visible { @apply outline-2 outline-offset-2 outline-primary; }
 }
 
 @layer components {
-  /* Portfolio-specific components */
-  .hero-gradient {
-    background: var(--hero-gradient);
-  }
+  .hero-gradient { background: var(--hero-gradient); }
+  .neon-glow { box-shadow: var(--neon-glow); }
+  .skill-chip { background: var(--skill-chip); @apply border border-border text-primary; }
+  .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/40; }
+  .section-padding { @apply py-12 px-3 sm:py-16 sm:px-6 md:py-20 lg:py-24 lg:px-8; }
+  .container-custom { @apply max-w-7xl mx-auto; }
+  .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+  .slide-up { animation: slideUp 0.6s ease-out forwards; }
+  .neon-border { @apply border border-border shadow-sm; }
 
-  .neon-glow {
-    box-shadow: var(--neon-glow);
+  .editorial-eyebrow {
+    @apply inline-block text-xs font-semibold tracking-[0.2em] uppercase text-primary;
   }
-
-  .skill-chip {
-    background: var(--skill-chip);
-    @apply border border-primary/20 text-primary;
+  .editorial-h2 {
+    @apply font-serif text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-foreground;
   }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-  }
-
-  .section-padding {
-    @apply py-12 px-3 sm:py-16 sm:px-6 md:py-20 lg:py-24 lg:px-8;
-  }
-
-  .container-custom {
-    @apply max-w-7xl mx-auto;
-  }
-
-  /* Animation utilities */
-  .fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .slide-up {
-    animation: slideUp 0.6s ease-out forwards;
-  }
-
-  .neon-border {
-    @apply border border-primary/30 shadow-[0_0_20px_rgba(0,188,212,0.15)];
-  }
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
 }
 
-main {
-  @apply pb-16 lg:pb-0;
-}
+main { @apply pb-16 lg:pb-0; }
 
-/* Safe area for mobile bottom nav */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
-  main {
-    padding-bottom: calc(4rem + env(safe-area-inset-bottom));
-  }
-  @media (min-width: 1024px) {
-    main {
-      padding-bottom: 0;
-    }
-  }
+  main { padding-bottom: calc(4rem + env(safe-area-inset-bottom)); }
+  @media (min-width: 1024px) { main { padding-bottom: 0; } }
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Button enhancements */
-button {
-  @apply transition-all duration-300;
-}
+button { @apply transition-all duration-300; }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
