@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/hooks/useTheme';
-import { Button } from '@/components/ui/button';
+import { Menu, X, ChevronDown } from 'lucide-react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isExpanded, setIsExpanded] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { theme, toggle } = useTheme();
   const primaryNavItems = [{
     id: 'home',
     label: 'Home'
@@ -197,16 +194,6 @@ const Navigation = () => {
                         </div>
                       </div>}
                   </div>
-                  <button
-                    onClick={(e) => { e.stopPropagation(); toggle(); }}
-                    aria-label="Toggle color theme"
-                    className="ml-2 p-2 rounded-md text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
-                  >
-                    {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                  </button>
-                  <Button asChild size="sm" className="ml-2 bg-primary text-primary-foreground hover:bg-primary-hover">
-                    <a href="https://topmate.io/ibrahim_qasmi" target="_blank" rel="noopener noreferrer">Book a Session</a>
-                  </Button>
                 </div>
 
                 {/* Mobile Menu Items */}

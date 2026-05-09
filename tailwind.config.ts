@@ -20,9 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				serif: ['"Playfair Display"', 'Georgia', 'serif'],
-				playfair: ['"Playfair Display"', 'serif'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -59,8 +57,6 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'card-hover': 'hsl(var(--card-hover))',
-				gold: 'hsl(var(--gold))',
-				'primary-hover': 'hsl(var(--primary-hover))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
