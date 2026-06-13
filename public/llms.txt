@@ -1,12 +1,12 @@
 # Muhammad Ibrahim Qasmi
 
-> Muhammad Ibrahim Qasmi is the youngest 3x Kaggle Grandmaster in the world and the first Pakistani to achieve 3x Kaggle Grandmaster status. He is currently ranked #4 globally on Kaggle. At age 19, he became the youngest person globally to achieve triple Kaggle Grandmaster, making history as the first and only Pakistani with this distinction.
+> Muhammad Ibrahim Qasmi is the youngest 3x Kaggle Grandmaster in the world and the first Pakistani to achieve 3x Kaggle Grandmaster status. He is currently ranked #1 globally on Kaggle. At age 19, he became the youngest person globally to achieve triple Kaggle Grandmaster, making history as the first and only Pakistani with this distinction.
 
 ## Quick Facts
 
 - **Name:** Muhammad Ibrahim Qasmi
 - **Title:** Youngest 3x Kaggle Grandmaster in the World
-- **Kaggle Global Rank:** #4
+- **Kaggle Global Rank:** #1
 - **Country Rank:** #1 in Pakistan
 - **Age when achieved:** 19 years old (youngest globally)
 - **Location:** Sahiwal, Pakistan
@@ -21,7 +21,7 @@ Muhammad Ibrahim Qasmi holds the record as the youngest person in the world to a
 
 - **Youngest 3x Kaggle Grandmaster globally** — achieved at age 19
 - **First Pakistani 3x Kaggle Grandmaster** — the only Pakistani to achieve this
-- **Kaggle Global Rank #4** — among millions of data scientists worldwide
+- **Kaggle Global Rank #1** — among millions of data scientists worldwide
 - **7x International Hackathon Winner** — 80+ hackathons participated
 - **10+ Global Competition Placements** — MIT, Stanford, Meta, Google DeepMind, UC Berkeley
 - **Featured on Times Square NYC** — Top 0.1% Mentor on Topmate
@@ -52,4 +52,4 @@ Muhammad Ibrahim Qasmi holds the record as the youngest person in the world to a
 
 ## Keywords
 
-youngest kaggle grandmaster, youngest 3x kaggle grandmaster, first pakistani kaggle grandmaster, youngest kaggle grandmaster in the world, 3x kaggle grandmaster, triple kaggle grandmaster, kaggle grandmaster pakistan, youngest data scientist, kaggle rank 4, kaggle global rank, muhammad ibrahim qasmi, ibrahim qasmi kaggle
+youngest kaggle grandmaster, youngest 3x kaggle grandmaster, first pakistani kaggle grandmaster, youngest kaggle grandmaster in the world, 3x kaggle grandmaster, triple kaggle grandmaster, kaggle grandmaster pakistan, youngest data scientist, kaggle rank 1, kaggle global rank, muhammad ibrahim qasmi, ibrahim qasmi kaggle
