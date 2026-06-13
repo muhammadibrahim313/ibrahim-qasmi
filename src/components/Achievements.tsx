@@ -340,7 +340,7 @@ const Achievements = () => {
               Kaggle Competition Achievements
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto mb-2">
-              I am a Kaggle Competition Expert, ranked <span className="text-primary font-semibold">652 out of 200,000+</span> competitors — placing me in the <span className="text-primary font-semibold">Top 0.1%</span> globally.
+              I am a 3× Kaggle Grandmaster, ranked <span className="text-primary font-semibold">#1 globally</span> among 200,000+ competitors worldwide.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
