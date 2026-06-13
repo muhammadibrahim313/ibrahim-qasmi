@@ -28,7 +28,7 @@ const About = () => {
                   </h3>
                   
                   <p className="font-playfair text-base leading-relaxed text-muted-foreground/90 mb-4">
-                    At 19, I became Pakistan's youngest and first-ever 3× Kaggle Grandmaster (Global Rank #20). I've competed in 50+ hackathons, winning several international competitions, while also judging, hosting, and organizing AI events.
+                    At 19, I became Pakistan's youngest and first-ever 3× Kaggle Grandmaster — ranked <span className="text-primary font-semibold">#1 globally</span>. I've competed in 50+ hackathons, winning several international competitions, while also judging, hosting, and organizing AI events.
                   </p>
                   
                   <p className="font-playfair text-base leading-relaxed text-muted-foreground/90 mb-4">
