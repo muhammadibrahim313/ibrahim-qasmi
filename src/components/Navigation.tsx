@@ -40,6 +40,9 @@ const Navigation = () => {
     id: 'community-leadership',
     label: 'Community Leadership'
   }, {
+    id: 'publications',
+    label: 'Publications'
+  }, {
     id: 'testimonials',
     label: 'Testimonials'
   }, {
