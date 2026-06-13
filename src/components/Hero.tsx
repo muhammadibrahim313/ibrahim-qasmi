@@ -35,7 +35,7 @@ const Hero = () => {
                 </span>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-base font-semibold">
-                  <span className="text-primary text-lg">Top 1%</span> <span className="text-foreground">on Kaggle</span>
+                  <span className="text-primary text-lg">Rank #1</span> <span className="text-foreground">Globally on Kaggle</span>
                 </span>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-base font-semibold">
