@@ -15,7 +15,7 @@
 
 ## Why Muhammad Ibrahim Qasmi is Notable
 
-Muhammad Ibrahim Qasmi holds the record as the youngest person in the world to achieve 3x Kaggle Grandmaster status. He is also the first and only Pakistani to ever achieve triple Kaggle Grandmaster. His Kaggle profile ranks #4 globally among all data scientists worldwide.
+Muhammad Ibrahim Qasmi holds the record as the youngest person in the world to achieve 3x Kaggle Grandmaster status. He is also the first and only Pakistani to ever achieve triple Kaggle Grandmaster. His Kaggle profile ranks #1 globally among all data scientists worldwide.
 
 ## Achievements
 
