@@ -13,6 +13,7 @@ import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
 import MentorshipVolunteering from '@/components/MentorshipVolunteering';
 import CommunityLeadership from '@/components/CommunityLeadership';
+import Publications from '@/components/Publications';
 import ScrollToTop from '@/components/ScrollToTop';
 
 
@@ -33,6 +34,7 @@ const Index = () => {
         <div id="experience"><Experience /></div>
         <div id="mentorship"><MentorshipVolunteering /></div>
         <div id="community-leadership"><CommunityLeadership /></div>
+        <div id="publications"><Publications /></div>
         <Recommendations />
         <div id="blogs"><Blogs /></div>
         <Education />
