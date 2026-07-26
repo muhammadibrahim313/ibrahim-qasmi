@@ -25,7 +25,7 @@ import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg'
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import forgeryDetectionImage from '@/assets/kaggle-forgery-detection.jpeg';
 import deepPastImage from '@/assets/kaggle-competitions/deep-past.jfif';
-import loanPredictionImage from '@/assets/loan-payback-header.png';
+
 
 const Achievements = () => {
   const majorAchievements = [
@@ -200,16 +200,6 @@ const Achievements = () => {
       icon: <Award className="h-5 w-5" />,
       medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
     },
-    {
-      title: "Predicting Loan Payback",
-      result: "Top 1%",
-      description: "Playground Series - Season 5, Episode 11. Financial prediction challenge.",
-      teams: "3500+ teams",
-      rank: "20th",
-      image: loanPredictionImage,
-      icon: <Target className="h-5 w-5" />,
-      medalColor: ""
-    }
   ];
 
 
