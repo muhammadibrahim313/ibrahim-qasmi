@@ -20,6 +20,7 @@ import metaHackerCupImage from '@/assets/meta_hacker_cup.jpg';
 
 // Import Kaggle competition images
 import extremismDetectionImage from '@/assets/kaggle-competitions/extremism-detection.png';
+import neurogolfImage from '@/assets/kaggle-competitions/neurogolf-2026.png';
 import image2BiomassImage from '@/assets/kaggle-competitions/image2biomass.jpeg';
 import ecgDigitizationImage from '@/assets/kaggle-competitions/ecg-digitization.jpeg';
 import forgeryDetectionImage from '@/assets/kaggle-forgery-detection.jpeg';
