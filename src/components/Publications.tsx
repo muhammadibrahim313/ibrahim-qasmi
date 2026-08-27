@@ -25,6 +25,36 @@ const Publications = () => {
         "A novel approach leveraging frozen self-supervised feature representations to detect and localise copy-move forgery in biomedical research imagery — addressing research integrity at scale.",
       link: "https://www.preprints.org/manuscript/202605.0174",
     },
+    {
+      title: "Patient-Level Biomechanical Pose Encoding and Temporal Gait Modeling for Pediatric EVGS Assessment",
+      authors: "Muhammad Ibrahim Qasmi",
+      date: "August 17, 2026",
+      publisher: "Engineering Archive",
+      tags: ["Biomechanics", "Healthcare", "Gait Analysis", "Temporal Modeling"],
+      description:
+        "Two-stage solution for the CVPR 2026 Children Gait Challenge: a temporal convolutional network predicts gait subtypes from multi-view pose sequences, and a patient-level clinical feature ensemble predicts 34 bilateral EVGS labels. Final submission scored 0.54177 on the public leaderboard.",
+      link: "https://engrxiv.org/preprint/view/7975/version/10268",
+    },
+    {
+      title: "How Robust Are ECG Image Digitizers to Image Damage? A Per-Type, Per-Method Study",
+      authors: "Muhammad Ibrahim Qasmi, Zulqarnain Ali",
+      date: "August 21, 2026",
+      publisher: "Engineering Archive",
+      tags: ["ECG Digitization", "Robustness", "PhysioNet", "Healthcare AI"],
+      description:
+        "Per-damage-type robustness benchmark of ECG image digitizers on the PhysioNet 2024 dataset. A full neural pipeline reaches ~25.6 dB overall SNR and holds tight variance (~0.46 dB) across all nine image damage types, outperforming classical baselines that fail uniformly.",
+      link: "https://engrxiv.org/preprint/view/8013",
+    },
+    {
+      title: "LoRA Rank as a Plasticity-Stability Lever: A Systematic Study of Catastrophic Forgetting in Sequential Fine-Tuning of Llama-3.1-8B",
+      authors: "Muhammad Ibrahim Qasmi Ibrahim",
+      date: "August 26, 2026",
+      publisher: "SSRN",
+      tags: ["LoRA", "LLMs", "Continual Learning", "Catastrophic Forgetting"],
+      description:
+        "Controlled factorial study across five tasks and 21 training runs showing LoRA rank acts as a plasticity-stability dial. Final accuracy peaks at r=16, while 5% experience replay at r=4 matches full fine-tuning using only 0.13% of trainable parameters.",
+      link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7343678",
+    },
   ];
 
   return (
