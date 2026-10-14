@@ -9,10 +9,21 @@ import nlp from '@/assets/blogs/nlp.webp';
 import revupPython from '@/assets/blogs/revup-python.webp';
 import zeroHero from '@/assets/blogs/zero-hero.webp';
 import kaggleNotebooks from '@/assets/blogs/kaggle-notebooks.png';
+import image2Biomass from '@/assets/kaggle-competitions/image2biomass.jpeg';
 
 const Blogs = () => {
 
   const blogs = [
+    {
+      title: "CSIRO Image2Biomass Prediction: 33rd Place Silver Medal Solution",
+      description: "Fine-tuning DINOv3 Huge and combining it with SigLIP for pasture biomass prediction",
+      date: "Jan 31, 2026",
+      tags: ["Kaggle", "Computer Vision"],
+      readTime: "4 min",
+      link: "https://medium.com/@ibrahim313/csiro-image2biomass-prediction-33rd-place-silver-medal-solution-b34f6c349e06",
+      image: image2Biomass,
+      featured: true,
+    },
     {
       title: "Deploy Your First Machine Learning Model as a Public API",
       description: "A step-by-step guide for data science students who want to take their models from notebooks to production",
