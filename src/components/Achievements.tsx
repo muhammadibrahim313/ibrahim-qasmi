@@ -148,7 +148,13 @@ const Achievements = () => {
       rank: "1st",
       image: extremismDetectionImage,
       icon: <Trophy className="h-5 w-5" />,
-      medalColor: "border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.3)]"
+      medalColor: "border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.3)]",
+      resources: [
+        {
+          label: "1st Place Write-up",
+          href: "https://www.kaggle.com/competitions/social-media-extremism-detection-challenge/writeups/social-media-extremism-detection-1st-place-solut"
+        }
+      ]
     },
     {
       title: "The 2026 NeuroGolf Championship",
@@ -158,7 +164,17 @@ const Achievements = () => {
       rank: "26th",
       image: neurogolfImage,
       icon: <Medal className="h-5 w-5" />,
-      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]",
+      resources: [
+        {
+          label: "Certificate",
+          href: "https://www.kaggle.com/certification/competitions/ibrahimqasimi/neurogolf-2026"
+        },
+        {
+          label: "Solution Write-up",
+          href: "https://www.kaggle.com/competitions/neurogolf-2026/writeups/neurogolf-26th-place-solution-writeup"
+        }
+      ]
     },
     {
       title: "CSIRO - Image2Biomass Prediction",
@@ -168,7 +184,21 @@ const Achievements = () => {
       rank: "35th",
       image: image2BiomassImage,
       icon: <Medal className="h-5 w-5" />,
-      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]",
+      resources: [
+        {
+          label: "Certificate",
+          href: "https://www.kaggle.com/certification/competitions/ibrahimqasimi/csiro-biomass"
+        },
+        {
+          label: "Solution Write-up",
+          href: "https://www.kaggle.com/competitions/csiro-biomass/writeups/33rd-place-silver-medal-solution"
+        },
+        {
+          label: "Medium Article",
+          href: "https://medium.com/@ibrahim313/csiro-image2biomass-prediction-33rd-place-silver-medal-solution-b34f6c349e06"
+        }
+      ]
     },
     {
       title: "Recod.ai/LUC - Scientific Image Forgery Detection",
@@ -178,7 +208,17 @@ const Achievements = () => {
       rank: "65th",
       image: forgeryDetectionImage,
       icon: <Medal className="h-5 w-5" />,
-      medalColor: "border-gray-400 shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+      medalColor: "border-gray-400 shadow-[0_0_15px_rgba(192,192,192,0.3)]",
+      resources: [
+        {
+          label: "Certificate",
+          href: "https://www.kaggle.com/certification/competitions/ibrahimqasimi/recodai-luc-scientific-image-forgery-detection"
+        },
+        {
+          label: "Solution Write-up",
+          href: "https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection/writeups/65th-place-solution-dinov2-with-a-tiny-convolu"
+        }
+      ]
     },
     {
       title: "The Deep Past Challenge",
@@ -188,7 +228,17 @@ const Achievements = () => {
       rank: "80th",
       image: deepPastImage,
       icon: <Medal className="h-5 w-5" />,
-      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]"
+      medalColor: "border-[#C0C0C0] shadow-[0_0_15px_rgba(192,192,192,0.3)]",
+      resources: [
+        {
+          label: "Zenodo Record",
+          href: "https://zenodo.org/records/22170624"
+        },
+        {
+          label: "Reproducibility Package",
+          href: "https://github.com/muhammadibrahim313/AkkadNMT-75K-reproducibility-package"
+        }
+      ]
     },
     {
       title: "PhysioNet - Digitization of ECG Images",
@@ -198,7 +248,13 @@ const Achievements = () => {
       rank: "137th",
       image: ecgDigitizationImage,
       icon: <Award className="h-5 w-5" />,
-      medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]"
+      medalColor: "border-[#CD7F32] shadow-[0_0_15px_rgba(205,127,50,0.3)]",
+      resources: [
+        {
+          label: "Certificate",
+          href: "https://www.kaggle.com/certification/competitions/ibrahimqasimi/physionet-ecg-image-digitization"
+        }
+      ]
     },
   ];
 
@@ -347,7 +403,18 @@ const Achievements = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {kaggleCompetitions.map((competition, index) => (
-              <Card key={index} className={`group border-2 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl ${competition.medalColor}`}>
+              <Card key={index} className={`group relative flex h-full flex-col overflow-hidden border-2 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-xl focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-background ${competition.medalColor}`}>
+                <a
+                  href={competition.resources[0].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10 rounded-lg"
+                  aria-label={`Open ${competition.resources[0].label} for ${competition.title}`}
+                >
+                  <span className="sr-only">
+                    Open {competition.resources[0].label} for {competition.title}
+                  </span>
+                </a>
                 <div className="aspect-video relative overflow-hidden rounded-t-lg">
                   <img
                     src={competition.image}
@@ -373,8 +440,23 @@ const Achievements = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex flex-1 flex-col">
                   <p className="text-sm text-muted-foreground">{competition.description}</p>
+                  <div className="relative z-20 mt-4 flex flex-wrap gap-2">
+                    {competition.resources.map((resource) => (
+                      <a
+                        key={resource.href}
+                        href={resource.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-md border border-primary/30 bg-primary/10 px-2.5 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        aria-label={`${resource.label} for ${competition.title}`}
+                      >
+                        {resource.label}
+                        <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      </a>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
